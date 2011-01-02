@@ -1,0 +1,1 @@
+. match-links | perl -lne 'if (/id=(\d+)/) { print "wget -O $1.html $_" }'

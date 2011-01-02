@@ -1,0 +1,1009 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64694: [BUG] Rakudo fails to build against parrot r38094</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64694">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64694: [BUG] Rakudo fails to build against parrot r38094</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64694">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64694</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64694">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cosmicnetworks
+&lt;webmaster [at] cosmicperl.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64694">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=64694">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64694">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551702" href="/rt3/Ticket/Display.html?id=64694#txn-551702">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;13&nbsp;07:02:55&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] Rakudo fails to build against parrot r38094</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 13 Apr 2009 15:02:30 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Lyle &lt;webmaster <!-- x --> at cosmicperl.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/551702/262302/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 393b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Vista32 &#40;haven&#39;t tested on Linux&#41; the latest Rakudo fails to build <br />
+against the latest Parrot.<br />
+<br />
+Rakudo commit version: 679e4804d969c8541b4c19ff62d5f27688fbe010<br />
+Parrot revision number: 38094<br />
+<br />
+Error:-<br />
+<br />
+C:\temp\rakudo&gt;mingw32-make<br />
+C:\Perl\bin\perl.exe -e &#34;&#34; &gt; src\gen_setting.pir<br />
+C:\temp\rakudo\parrot\parrot.exe  -o perl6_s1.pbc perl6.pir<br />
+mingw32-make: *** [perl6_s1.pbc] Error -1073741819<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551708" href="/rt3/Ticket/Display.html?id=64694#txn-551708">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;13&nbsp;07:02:57&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-553980" href="/rt3/Ticket/Display.html?id=64694#txn-553980">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;19&nbsp;14:25:12&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] Rakudo fails to build on vista against default parrot</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/553980/263480/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 112b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The default parrot build for Rakudo is now 38208, but the last known<br />
+version to build Rakudo on Vista was 37980.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554028" href="/rt3/Ticket/Display.html?id=64694#txn-554028">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;19&nbsp;17:47:13&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554028/263522/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 295b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+After a painful process of building different Parrots and trying to<br />
+build Rakudo I found the problem starts with Parrot r38030.<br />
+<br />
+This revision of Parrot has the files \src\pmc\sharedref.pmc and<br />
+src\pmc\ref.pmc removed.<br />
+<br />
+I guess there is something in Rakudo building on Vista that requires these?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554030" href="/rt3/Ticket/Display.html?id=64694#txn-554030">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;19&nbsp;17:47:14&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554466" href="/rt3/Ticket/Display.html?id=64694#txn-554466">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;20&nbsp;02:38:29&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554466/263648/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 773b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Apr 19 17:47:13 2009, cosmicnetworks wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; After a painful process of building different Parrots and trying to<br />
+&gt; build Rakudo I found the problem starts with Parrot r38030.<br />
+&gt; <br />
+&gt; This revision of Parrot has the files \src\pmc\sharedref.pmc and<br />
+&gt; src\pmc\ref.pmc removed.<br />
+&gt; <br />
+&gt; I guess there is something in Rakudo building on Vista that requires<br />
+</div>
+these?<br />
+<br />
+We&#39;re seeing very similar errors on a Darwin 32 bit machine -- fails at<br />
+the same step.  However, the failure also occurs in versions of Parrot<br />
+prior to r38030 &#40;including r37980&#41;.<br />
+<br />
+Can you double-check and verify that there&#39;s not some other installed<br />
+Parrot somewhere on the system that might be interfering here?<br />
+<br />
+Also, could others check Vista and Darwin to see if they&#39;re having<br />
+similar issues?<br />
+<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554482" href="/rt3/Ticket/Display.html?id=64694#txn-554482">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;20&nbsp;04:28:20&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554482/263664/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 422b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;ve just doubled checked with only one parrot installed. It definitely<br />
+builds against 38029 on Vista. Here are the versions I checked:-<br />
+38200 NO<br />
+38100 NO<br />
+38050 NO<br />
+38037 NO<br />
+38031 NO<br />
+38030 NO<br />
+<br />
+38029 YES<br />
+38028 YES<br />
+38025 YES<br />
+38000 YES<br />
+37980 YES<br />
+<br />
+The latest Rakudo does not build full stop. I&#39;m pretty sure this is<br />
+because it requires features that older parrots don&#39;t have. I had to<br />
+revert to d208e1c in order to build.<br />
+<br />
+Lyle<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554642" href="/rt3/Ticket/Display.html?id=64694#txn-554642">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;20&nbsp;09:21:39&nbsp;2009</td>
+    <td class="description">
+      infinoid -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554642/263760/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 962b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Apr 13 07:02:55 2009, cosmicnetworks wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Vista32 &#40;haven&#39;t tested on Linux&#41; the latest Rakudo fails to build <br />
+&gt; against the latest Parrot.<br />
+&gt; <br />
+&gt; Rakudo commit version: 679e4804d969c8541b4c19ff62d5f27688fbe010<br />
+&gt; Parrot revision number: 38094<br />
+&gt; <br />
+&gt; Error:-<br />
+&gt; <br />
+&gt; C:\temp\rakudo&gt;mingw32-make<br />
+&gt; C:\Perl\bin\perl.exe -e &#34;&#34; &gt; src\gen_setting.pir<br />
+&gt; C:\temp\rakudo\parrot\parrot.exe  -o perl6_s1.pbc perl6.pir<br />
+&gt; mingw32-make: *** [perl6_s1.pbc] Error -1073741819<br />
+</div>
+<br />
+To me, this looks like the aftermath of another, previous build failure.<br />
+<br />
+Is there any chance you can clean and rebuild rakudo, and post the full<br />
+log of that?<br />
+<br />
+I made a build with mingw on winxp, for comparison.  I had to fix some<br />
+path-quoting details in parrot to get it to build &#40;see<br />
+https://trac.parrot.org/parrot/changeset/38231/&#41;, but it built<br />
+successfully.  I didn&#39;t see any errors that looked like your error<br />
+above.  See http://nopaste.snit.ch/16330 for my full build log.<br />
+<br />
+Thanks,<br />
+<br />
+Mark<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554700" href="/rt3/Ticket/Display.html?id=64694#txn-554700">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;20&nbsp;13:06:34&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554700/263812/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 52b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+My full build log http://nopaste.snit.ch/16333<br />
+<br />
+Lyle<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554794" href="/rt3/Ticket/Display.html?id=64694#txn-554794">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;20&nbsp;17:09:07&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554794/263868/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 635b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is an issue with &#34;make realclean&#34; and not an issue with parrot.<br />
+Details:-<br />
+http://nopaste.snit.ch/16341<br />
+http://nopaste.snit.ch/16342<br />
+<br />
+Rakudo&#39;s &#39;make Realclean&#39; is leaving libparrot.dll and a load of stuff<br />
+in src/ops and src/pmc which is causing problems in some future builds<br />
+where files have been dropped or changed.<br />
+<br />
+This makes sense that one of these leftover libraries is not being<br />
+rebuilt and still trying to link to \src\pmc\sharedref.pmc and<br />
+src\pmc\ref.pmc. Hence the problem occurring on the build that these<br />
+files were dropped.<br />
+<br />
+Realclean has cost me several hours of my life. I have a new found<br />
+hatred for realclean :&#40;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555912" href="/rt3/Ticket/Display.html?id=64694#txn-555912">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;15:03:41&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555912/264386/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 75b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Have opened a new ticket for the realclean bug [#65006] closing this ticket<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555916" href="/rt3/Ticket/Display.html?id=64694#txn-555916">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;15:04:03&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555916/264390/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555918" href="/rt3/Ticket/Display.html?id=64694#txn-555918">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;15:04:03&nbsp;2009</td>
+    <td class="description">
+      cosmicnetworks -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.345274</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

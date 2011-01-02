@@ -1,0 +1,1048 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#66560: #line directives in src/pmc confuse Sun&#39;s compiler.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D66560">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#66560: #line directives in src/pmc confuse Sun&#39;s compiler.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66560">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">66560</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=66560">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+doughera
+&lt;doughera [at] lafayette.edu&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66560">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=66560">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=66560">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-574612" href="/rt3/Ticket/Display.html?id=66560#txn-574612">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jun&nbsp;12&nbsp;13:42:59&nbsp;2009</td>
+    <td class="description">
+      doughera -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">#line directives in src/pmc confuse Sun&#39;s compiler.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 12 Jun 2009 16:42:26 -0400 &#40;EDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Andy Dougherty &lt;doughera <!-- x --> at lafayette.edu&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/574612/272984/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Trying a build with the rakudo &#34;ins&#34; branch today on OpenSolaris/x86 with <br />
+Sun&#39;s compiler, I hit the following error:<br />
+<br />
+cd src/pmc &#38;&#38; cc -c -I/export/home/doughera/src/parrot/rakudo-ins/parrot/install/include/1.2.0-devel -I/export/home/doughera/src/parrot/rakudo-ins/parrot/install/include/1.2.0-devel/pmc -D_REENTRANT -DPTR_IS_LONG -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_FORMAT  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHAS_GETTEXT -KPIC -g   -DHAVE_COMPUTED_GOTO  *.c<br />
+p6invocation.c:<br />
+&#34;./src/pmc/p6invocation.pmc&#34;, line 22: cannot find include file: &#34;pmc_perl6multisub.h&#34;<br />
+cc: acomp failed for p6invocation.c<br />
+gmake: *** [dynext/perl6_group.so] Error 1<br />
+<br />
+What&#39;s happening is this:  p6invocation.c starts like this &#40;I&#39;ve omitted <br />
+irrelevant lines&#41;:<br />
+<br />
+    #include &#34;parrot/parrot.h&#34;<br />
+<br />
+    [ . . . ]<br />
+<br />
+    #line 1 &#34;./src/pmc/p6invocation.pmc&#34;<br />
+<br />
+    [ . . . ]<br />
+<br />
+    #include &#34;pmc_perl6multisub.h&#34;<br />
+<br />
+The &#39;./src/pmc/&#39; part of the #line directive is what is confusing Sun&#39;s compiler. <br />
+It tries to #include &#34;src/pmc/pmc_perl6multisub.h&#34;.  However, since we are *in*<br />
+the src/pmc directory already, that fails.<br />
+<br />
+Removing the &#39;./src/pmc/&#39; part of the #line directive fixes it.<br />
+<br />
+-- <br />
+    Andy Dougherty              doughera <!-- x --> at lafayette.edu<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590146" href="/rt3/Ticket/Display.html?id=66560#txn-590146">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;24&nbsp;20:08:10&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/590146/281164/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 962b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Jun 12 13:42:59 2009, doughera wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Trying a build with the rakudo &#34;ins&#34; branch today on OpenSolaris/x86<br />
+&gt;    with<br />
+&gt; Sun&#39;s compiler, I hit the following error:<br />
+&gt; <br />
+&gt; [...]<br />
+&gt; &#34;./src/pmc/p6invocation.pmc&#34;, line 22: cannot find include file:<br />
+&gt;    &#34;pmc_perl6multisub.h&#34;<br />
+&gt; cc: acomp failed for p6invocation.c<br />
+&gt; gmake: *** [dynext/perl6_group.so] Error 1<br />
+&gt; ...<br />
+&gt;     #line 1 &#34;./src/pmc/p6invocation.pmc&#34;<br />
+&gt; ...<br />
+&gt; <br />
+&gt; The &#39;./src/pmc/&#39; part of the #line directive is what is confusing<br />
+&gt;    Sun&#39;s compiler.<br />
+&gt; It tries to #include &#34;src/pmc/pmc_perl6multisub.h&#34;.  However, since we<br />
+&gt;    are *in*<br />
+&gt; the src/pmc directory already, that fails.<br />
+&gt; <br />
+&gt; Removing the &#39;./src/pmc/&#39; part of the #line directive fixes it.<br />
+</div>
+<br />
+<br />
+Unfortunately, the #line directives are generated code, so I don&#39;t know<br />
+that Rakudo has any direct control over this.  We may need to report it<br />
+as a Parrot toolchain bug.<br />
+<br />
+Can you verify that this is still a problem in the &#39;ins2&#39; branch?  Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590150" href="/rt3/Ticket/Display.html?id=66560#txn-590150">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;24&nbsp;20:08:11&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590154" href="/rt3/Ticket/Display.html?id=66560#txn-590154">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;24&nbsp;20:08:13&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590982" href="/rt3/Ticket/Display.html?id=66560#txn-590982">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;27&nbsp;10:03:43&nbsp;2009</td>
+    <td class="description">
+      doughera -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66560] #line directives in src/pmc confuse Sun&#39;s compiler.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 27 Jul 2009 13:03:04 -0400 &#40;EDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud via RT&#34; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Andy Dougherty &lt;doughera <!-- x --> at lafayette.edu&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/590982/281614/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, 24 Jul 2009, Patrick R. Michaud via RT wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri Jun 12 13:42:59 2009, doughera wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Trying a build with the rakudo &#34;ins&#34; branch today on OpenSolaris/x86<br />
+&gt; &gt;    with<br />
+&gt; &gt; Sun&#39;s compiler, I hit the following error:<br />
+&gt; &gt; <br />
+&gt; &gt; [...]<br />
+&gt; &gt; &#34;./src/pmc/p6invocation.pmc&#34;, line 22: cannot find include file:<br />
+&gt; &gt;    &#34;pmc_perl6multisub.h&#34;<br />
+&gt; &gt; cc: acomp failed for p6invocation.c<br />
+&gt; &gt; gmake: *** [dynext/perl6_group.so] Error 1<br />
+&gt; &gt; ...<br />
+&gt; &gt;     #line 1 &#34;./src/pmc/p6invocation.pmc&#34;<br />
+&gt; &gt; ...<br />
+&gt; &gt; <br />
+&gt; &gt; The &#39;./src/pmc/&#39; part of the #line directive is what is confusing<br />
+&gt; &gt;    Sun&#39;s compiler.<br />
+&gt; &gt; It tries to #include &#34;src/pmc/pmc_perl6multisub.h&#34;.  However, since we<br />
+&gt; &gt;    are *in*<br />
+&gt; &gt; the src/pmc directory already, that fails.<br />
+&gt; &gt; <br />
+&gt; &gt; Removing the &#39;./src/pmc/&#39; part of the #line directive fixes it.<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; Unfortunately, the #line directives are generated code, so I don&#39;t know<br />
+&gt; that Rakudo has any direct control over this.  We may need to report it<br />
+&gt; as a Parrot toolchain bug.<br />
+&gt; <br />
+&gt; Can you verify that this is still a problem in the &#39;ins2&#39; branch?  Thanks!<br />
+</div>
+<br />
+Yes, it&#39;s still there.  It&#39;s the &#39;cd&#39; at the beginning of this line:<br />
+<br />
+        cd $&#40;PMC_DIR&#41; &#38;&#38; $&#40;CC&#41; -c $&#40;CINCLUDES&#41; $&#40;CFLAGS&#41; *.c<br />
+<br />
+If memory serves, parrot doesn&#39;t change directories like that.  Instead, it sets<br />
+the output location directly, with something like<br />
+<br />
+        $&#40;CC&#41; -c $&#40;CINCLUDES&#41; $&#40;CFLAGS&#41; -o src/pmc/p6invocation.o src/pmc/p6invocation.c<br />
+<br />
+-- <br />
+    Andy Dougherty              doughera <!-- x --> at lafayette.edu<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-591978" href="/rt3/Ticket/Display.html?id=66560#txn-591978">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;29&nbsp;11:30:10&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/591978/282076/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 817b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; Yes, it&#39;s still there.  It&#39;s the &#39;cd&#39; at the beginning of this line:<br />
+&gt; <br />
+&gt;       cd $&#40;PMC_DIR&#41; &#38;&#38; $&#40;CC&#41; -c $&#40;CINCLUDES&#41; $&#40;CFLAGS&#41; *.c<br />
+&gt; <br />
+&gt; If memory serves, parrot doesn&#39;t change directories like that.<br />
+&gt; Instead, it sets<br />
+&gt; the output location directly, with something like<br />
+&gt; <br />
+&gt;       $&#40;CC&#41; -c $&#40;CINCLUDES&#41; $&#40;CFLAGS&#41; -o src/pmc/p6invocation.o<br />
+&gt; src/pmc/p6invocation.c<br />
+</div>
+<br />
+<br />
+That&#39;s a bit of a pain, isn&#39;t it?  It means we have to explicitly list<br />
+every .c file generated from the *.pmc files explicitly in the Makefile,<br />
+instead of just using &#34;*.c&#34; .<br />
+<br />
+I guess we&#39;ll have to do it that way, but I wish there was something<br />
+better.  I don&#39;t know of an easy &#34;macro-ish&#34; way to solve that problem<br />
+in the Makefile &#40;which is one of the reasons I&#39;m disappointed that<br />
+Parrot eliminated the dynpmc.pl script that could handle this for us&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-591984" href="/rt3/Ticket/Display.html?id=66560#txn-591984">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;29&nbsp;11:35:17&nbsp;2009</td>
+    <td class="description">
+      doughera -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66560] #line directives in src/pmc confuse Sun&#39;s compiler.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 29 Jul 2009 14:34:43 -0400 &#40;EDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud via RT&#34; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Andy Dougherty &lt;doughera <!-- x --> at lafayette.edu&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/591984/282082/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 916b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, 29 Jul 2009, Patrick R. Michaud via RT wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; Yes, it&#39;s still there.  It&#39;s the &#39;cd&#39; at the beginning of this line:<br />
+&gt; &gt; <br />
+&gt; &gt;     cd $&#40;PMC_DIR&#41; &#38;&#38; $&#40;CC&#41; -c $&#40;CINCLUDES&#41; $&#40;CFLAGS&#41; *.c<br />
+&gt; &gt; <br />
+&gt; &gt; If memory serves, parrot doesn&#39;t change directories like that.<br />
+&gt; &gt; Instead, it sets<br />
+&gt; &gt; the output location directly, with something like<br />
+&gt; &gt; <br />
+&gt; &gt;     $&#40;CC&#41; -c $&#40;CINCLUDES&#41; $&#40;CFLAGS&#41; -o src/pmc/p6invocation.o<br />
+&gt; &gt; src/pmc/p6invocation.c<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; That&#39;s a bit of a pain, isn&#39;t it?  It means we have to explicitly list<br />
+&gt; every .c file generated from the *.pmc files explicitly in the Makefile,<br />
+&gt; instead of just using &#34;*.c&#34; .<br />
+</div>
+<br />
+Yes, it&#39;s a bit of a pain.  &#40;Though reasonably automated.&#41;  I wonder if it <br />
+would be easier to convince the parrot tool to stop emitting the line <br />
+numbers.  I vaguely recall that at one time, at least one of the scripts <br />
+had an option to do that.<br />
+<br />
+-- <br />
+    Andy Dougherty              doughera <!-- x --> at lafayette.edu<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-591990" href="/rt3/Ticket/Display.html?id=66560#txn-591990">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;29&nbsp;11:37:17&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/591990/282088/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 515b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Jul 29 11:30:10 2009, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I guess we&#39;ll have to do it that way, but I wish there was something<br />
+&gt; better.  I don&#39;t know of an easy &#34;macro-ish&#34; way to solve that problem<br />
+&gt; in the Makefile &#40;which is one of the reasons I&#39;m disappointed that<br />
+&gt; Parrot eliminated the dynpmc.pl script that could handle this for us&#41;.<br />
+</div>
+<br />
+Actually, perhaps I&#39;ll just create a build/gen_*.pl script that builds<br />
+Makefiles in the src/pmc directory, and then recursively call &#34;make&#34; in<br />
+the src/pmc directory from that.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-592026" href="/rt3/Ticket/Display.html?id=66560#txn-592026">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;29&nbsp;12:55:31&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/592026/282108/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 499b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Jul 29 11:35:17 2009, doughera wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I wonder if it <br />
+&gt; would be easier to convince the parrot tool to stop emitting the line <br />
+&gt; numbers.  I vaguely recall that at one time, at least one of the scripts <br />
+&gt; had an option to do that.<br />
+</div>
+<br />
+Aha!  It does have an option, and I&#39;ve now updated the ins2 branch to<br />
+use that option.  Let me know if it works on Sun now &#40;within the bounds<br />
+of &#34;working&#34;, given your comments on other tickets about difficulty<br />
+getting Parrot+Rakudo to compile on Sun&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-592698" href="/rt3/Ticket/Display.html?id=66560#txn-592698">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;31&nbsp;08:59:48&nbsp;2009</td>
+    <td class="description">
+      doughera -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/592698/282536/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 327b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Omitting the line numbers worked.  This is fixed in the ins2 branch by<br />
+<br />
+commit 5d8fc611d2b9b7eacd506f94771b5ba0f7ed8200<br />
+Author: pmichaud &lt;pmichaud <!-- x --> at pobox.com&gt;<br />
+Date:   Wed Jul 29 14:53:02 2009 -0500<br />
+<br />
+    Don&#39;t generate #line directives in pmc2c output &#40;for Sun compilers&#41;.<br />
+    See RT #66560 &#40;suggestion courtesy Andy Dougherty&#41;.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-592702" href="/rt3/Ticket/Display.html?id=66560#txn-592702">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;31&nbsp;08:59:49&nbsp;2009</td>
+    <td class="description">
+      doughera -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.973616</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

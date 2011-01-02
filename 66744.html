@@ -1,0 +1,541 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#66744: Segfault or error when running rakudo on a spectest/spectest extract</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D66744">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#66744: Segfault or error when running rakudo on a spectest/spectest extract</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66744">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">66744</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">new</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=66744">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+avarab [at] gmail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66744">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=66744">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=66744">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-576292" href="/rt3/Ticket/Display.html?id=66744#txn-576292">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jun&nbsp;19&nbsp;06:19:14&nbsp;2009</td>
+    <td class="description">
+      avarab <!-- x --> at gmail.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Segfault or error when running rakudo on a spectest/spectest extract</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 19 Jun 2009 13:18:36 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ævar Arnfjörð Bjarmason &lt;avarab <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/576292/273794/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Tested on 1b06df80900096dab8a9f74467f504f73a6115dd<br />
+<br />
+avar@aoeu:~/src/rakudo$ ./perl6 -e &#39;use Test; plan 1; package Empty<br />
+{}; lives_ok {Empty.perl ne &#34;tbd&#34;}, &#34;test for working .perl method&#34;&#39;<br />
+1..1<br />
+not ok 1 - test for working .perl method<br />
+<div class="message-stanza-depth-1">
+# Looks like you failed 1 tests of 1<br />
+</div>
+Segmentation fault<br />
+<br />
+That&#39;s a reduced version of this test which was spewing errors:<br />
+<br />
+avar@aoeu:~/src/rakudo$ ./perl6 t/spec/S10-packages/basic.rakudo<br />
+1..22<br />
+ok 1 - class test<br />
+not ok 2 - autovivification&#40;?&#41; for nested packages# TODO ticket uses<br />
+role; RT #62900<br />
+not ok 3 - test for working .perl method# TODO RT #65404<br />
+not ok 4 - Non-existant sub through package# TODO RT #62970<br />
+not ok 5 - dot notation with package# TODO RT #63432<br />
+not ok 6 - enum in package# TODO RT #63826<br />
+not ok 7 - access to $?PACKAGE variable# TODO RT #59484<br />
+not ok 8 - some WHO implementation# TODO ticket based only on class; RT #60446<br />
+not ok 9 - WHO implementation with longname# TODO ticket based only on<br />
+class; RT #60446<br />
+ok 10 - can refer to role using package<br />
+not ok 11 - since role is in package should not need package name#<br />
+TODO ticket based on module; RT #63510<br />
+not ok 12 - two different packages should be two different Baz# TODO<br />
+ticket based on class&#40;es&#41; not package; RT #65022<br />
+not ok 13 - two different packages should be two different EHomeE#<br />
+TODO ticket based on class&#40;es&#41; not package; RT #65022<br />
+ok 14 - # SKIP ticket based on module; RT #64876<br />
+not ok 15 - map in package# TODO RT #64606<br />
+not ok 16 - use outer lexical# TODO ticket used class; RT #61356<br />
+not ok 17 - use outer package var# TODO ticket used class; RT #63588<br />
+not ok 18 - Should be able to update outer package var# TODO ticket<br />
+used class; RT #63588<br />
+not ok 19 - simple package case that should not blow platform# TODO RT #64204<br />
+not ok 20 - another simple package case that should not blow platform#<br />
+TODO RT #64204<br />
+ok 21 - # SKIP RT #64606<br />
+ok 22 - array initialization works fine in imported subs<br />
+<div class="message-stanza-depth-1">
+# FUDGED!<br />
+</div>
+src/call/pcc.c:613: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+Backtrace - Obtained 27 stack frames &#40;max trace depth is 32&#41;.<br />
+  &#40;unknown&#41;<br />
+    Parrot_confess<br />
+      Parrot_init_arg_op<br />
+        &#40;unknown&#41;<br />
+          &#40;unknown&#41;<br />
+            Parrot_run_meth_fromc_args<br />
+              &#40;unknown&#41;<br />
+                &#40;unknown&#41;<br />
+                  &#40;unknown&#41;<br />
+                    &#40;unknown&#41;<br />
+                      &#40;unknown&#41;<br />
+                        &#40;unknown&#41;<br />
+                          &#40;unknown&#41;<br />
+                            Parrot_runops_fromc_args<br />
+                              Parrot_ex_throw_from_c<br />
+                                &#40;unknown&#41;<br />
+                                  &#40;unknown&#41;<br />
+                                    &#40;unknown&#41;<br />
+                                      &#40;unknown&#41;<br />
+                                        &#40;unknown&#41;<br />
+                                          &#40;unknown&#41;<br />
+                                            &#40;unknown&#41;<br />
+                                              Parrot_runops_fromc_args<br />
+                                                Parrot_runcode<br />
+                                                  &#40;unknown&#41;<br />
+                                                    __libc_start_main<br />
+                                                      &#40;unknown&#41;<br />
+Aborted<br />
+<br />
+<br />
+Other people in #perl6 tried this without getting a segfault, my platform is:<br />
+<br />
+avar@aoeu:~/src/rakudo$ uname -a<br />
+Linux aoeu 2.6.28-11-generic #42-Ubuntu SMP Fri Apr 17 01:57:59 UTC<br />
+2009 i686 GNU/Linux<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.742625</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

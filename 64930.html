@@ -1,0 +1,926 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64930: Weird error building rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64930">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64930: Weird error building rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64930">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64930</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64930">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+PacoLinux
+&lt;paco.linux [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64930">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=64930">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64930">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555016" href="/rt3/Ticket/Display.html?id=64930#txn-555016">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;21&nbsp;07:41:21&nbsp;2009</td>
+    <td class="description">
+      PacoLinux -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Weird error building rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 21 Apr 2009 16:40:36 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Paco Linux &lt;paco.linux <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555016/263962/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi:<br />
+<br />
+I&#39;m having a very weird error while building latest rakudo with parrot<br />
+r38208 &#40;gcc  4.1.3 20070929&#41; :<br />
+<br />
+cc -c -o perl6_ops_cg.o -I/tmp/rakudo/parrot/include<br />
+-I/tmp/rakudo/parrot/src/pmc -D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS<br />
+-DDEBIAN  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE<br />
+-D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED<br />
+-DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN<br />
+-DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED<br />
+-DHASATTRIBUTE_WARN_UNUSED_RESULT  -falign-functions=16 -fvisibility=hidden<br />
+-funit-at-a-time -maccumulate-outgoing-args -W -Wall -Waggregate-return<br />
+-Wcast-align -Wcast-qual -Wchar-subscripts -Wcomment -Wdisabled-optimization<br />
+-Wendif-labels -Wextra -Wformat -Wformat-extra-args -Wformat-nonliteral<br />
+-Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline<br />
+-Winvalid-pch -Wmissing-braces -Wmissing-field-initializers<br />
+-Wno-missing-format-attribute -Wmissing-include-dirs -Wpacked -Wparentheses<br />
+-Wpointer-arith -Wreturn-type -Wsequence-point -Wno-shadow -Wsign-compare<br />
+-Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Wtrigraphs<br />
+-Wundef -Wunknown-pragmas -Wno-unused -Wvariadic-macros -Wwrite-strings<br />
+-Wbad-function-cast -Wc++-compat -Wdeclaration-after-statement<br />
+-Wimplicit-function-declaration -Wimplicit-int -Wmain -Wmissing-declarations<br />
+-Wmissing-prototypes -Wnested-externs -Wnonnull -Wold-style-definition<br />
+-Wstrict-prototypes -DHAS_GETTEXT -fPIC -g   -DHAS_JIT -DI386<br />
+-DHAVE_COMPUTED_GOTO  perl6_ops_cg.c<br />
+perl6.ops: In function &#39;cg_perl6&#39;:<br />
+perl6.ops:128: warning: assignment discards qualifiers from pointer target<br />
+type<br />
+perl6.ops:128: warning: assignment discards qualifiers from pointer target<br />
+type<br />
+perl6.ops:218: error: unable to find a register to spill in class &#39;SIREG&#39;<br />
+perl6.ops:218: error: this is the insn:<br />
+&#40;insn 2620 2619 2621 138 perl6.ops:151 &#40;parallel [<br />
+            &#40;set &#40;reg:CC 17 flags&#41;<br />
+                &#40;compare:CC &#40;mem:BLK &#40;reg/f:SI 3049 [ cstr ]&#41; [0 A8]&#41;<br />
+                    &#40;mem/s/j:BLK &#40;reg/f:SI 3050&#41; [0 A8]&#41;&#41;&#41;<br />
+            &#40;use &#40;reg:SI 3051&#41;&#41;<br />
+            &#40;use &#40;const_int 1 [0x1]&#41;&#41;<br />
+            &#40;use &#40;reg:SI 19 dirflag&#41;&#41;<br />
+            &#40;clobber &#40;reg/f:SI 3049 [ cstr ]&#41;&#41;<br />
+            &#40;clobber &#40;reg/f:SI 3050&#41;&#41;<br />
+            &#40;clobber &#40;reg:SI 3051&#41;&#41;<br />
+        ]&#41; 720 {*cmpstrnqi_nz_1} &#40;nil&#41;<br />
+    &#40;expr_list:REG_UNUSED &#40;reg:SI 3051&#41;<br />
+        &#40;expr_list:REG_UNUSED &#40;reg/f:SI 3050&#41;<br />
+            &#40;expr_list:REG_UNUSED &#40;reg/f:SI 3049 [ cstr ]&#41;<br />
+                &#40;expr_list:REG_DEAD &#40;reg:SI 19 dirflag&#41;<br />
+                    &#40;expr_list:REG_DEAD &#40;reg:SI 3051&#41;<br />
+                        &#40;expr_list:REG_DEAD &#40;reg/f:SI 3049 [ cstr ]&#41;<br />
+                            &#40;expr_list:REG_DEAD &#40;reg/f:SI 3050&#41;<br />
+                                &#40;expr_list:REG_UNUSED &#40;reg:SI 3051&#41;<br />
+                                    &#40;expr_list:REG_UNUSED &#40;reg/f:SI 3050&#41;<br />
+                                        &#40;expr_list:REG_UNUSED &#40;reg/f:SI 3049<br />
+[ cstr ]&#41;<br />
+                                            &#40;nil&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;<br />
+perl6.ops:218: confused by earlier errors, bailing out<br />
+<br />
+In  /parrot/languages/rakudo/src/ops/perl6.ops there is this comment :<br />
+<br />
+<br />
+ 73         /* Using memcpy here may trigger gcc optimizations, which at<br />
+this point<br />
+ 74          * can wreak havoc on register-starved x86:<br />
+ 75          * error: unable to find a register to spill in class &#39;SIREG&#39;<br />
+ 76          * Use memmove instead, which is slower, but isn&#39;t inlined by<br />
+gcc. */<br />
+<br />
+I have tried in other machines and have no problem, so I think is a problem<br />
+of this version of gcc<br />
+<br />
+paco@javier:/tmp/rakudo$ gcc --version<br />
+gcc &#40;GCC&#41; 4.1.3 20070929 &#40;prerelease&#41; &#40;Ubuntu 4.1.2-16ubuntu2&#41;<br />
+Copyright &#40;C&#41; 2006 Free Software Foundation, Inc.<br />
+This is free software; see the source for copying conditions.  There is NO<br />
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br />
+<br />
+The problem went away using other switches  while compiling rakudo &#40;using<br />
+--optimize&#41; and the spectest :<br />
+<br />
+All tests successful.<br />
+Files=373, Tests=12884, 909 wallclock secs &#40;10.10 usr  1.25 sys + 1605.36<br />
+cusr 59.56 csys = 1676.27 CPU&#41;<br />
+Result: PASS<br />
+<br />
+<br />
+/rakudo/parrot$ cat myconfig<br />
+Summary of my parrot 1.0.0 &#40;r38208&#41; configuration:<br />
+  configdate=&#39;Tue Apr 21 13:52:08 2009 GMT&#39;<br />
+  Platform:<br />
+    osname=linux, archname=i486-linux-gnu-thread-multi<br />
+    jitcapable=1, jitarchname=i386-linux,<br />
+    jitosname=LINUX, jitcpuarch=i386<br />
+    execcapable=1<br />
+    perl=/usr/bin/perl<br />
+  Compiler:<br />
+    cc=&#39;cc&#39;, ccflags=&#39;-D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS<br />
+-DDEBIAN  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE<br />
+-D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED<br />
+-DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN<br />
+-DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED<br />
+-DHASATTRIBUTE_WARN_UNUSED_RESULT  -falign-functions=16 -fvisibility=hidden<br />
+-funit-at-a-time -maccumulate-outgoing-args -W -Wall -Waggregate-return<br />
+-Wcast-align -Wcast-qual -Wchar-subscripts -Wcomment -Wdisabled-optimization<br />
+-Wendif-labels -Wextra -Wformat -Wformat-extra-args -Wformat-nonliteral<br />
+-Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline<br />
+-Winvalid-pch -Wmissing-braces -Wmissing-field-initializers<br />
+-Wno-missing-format-attribute -Wmissing-include-dirs -Wpacked -Wparentheses<br />
+-Wpointer-arith -Wreturn-type -Wsequence-point -Wno-shadow -Wsign-compare<br />
+-Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Wtrigraphs<br />
+-Wundef -Wunknown-pragmas -Wno-unused -Wvariadic-macros -Wwrite-strings<br />
+-Wbad-function-cast -Wc++-compat -Wdeclaration-after-statement<br />
+-Wimplicit-function-declaration -Wimplicit-int -Wmain -Wmissing-declarations<br />
+-Wmissing-prototypes -Wnested-externs -Wnonnull -Wold-style-definition<br />
+-Wstrict-prototypes -DHAS_GETTEXT&#39;,<br />
+  Linker and Libraries:<br />
+    ld=&#39;cc&#39;, ldflags=&#39; -L/usr/local/lib&#39;,<br />
+    cc_ldflags=&#39;&#39;,<br />
+    libs=&#39;-ldl -lm -lpthread -lcrypt -lgmp -lreadline &#39;<br />
+  Dynamic Linking:<br />
+    share_ext=&#39;.so&#39;, ld_share_flags=&#39;-shared -L/usr/local/lib -fPIC&#39;,<br />
+    load_ext=&#39;.so&#39;, ld_load_flags=&#39;-shared -L/usr/local/lib -fPIC&#39;<br />
+  Types:<br />
+    iv=long, intvalsize=4, intsize=4, opcode_t=long, opcode_t_size=4,<br />
+    ptrsize=4, ptr_alignment=1 byteorder=1234,<br />
+    nv=double, numvalsize=8, doublesize=8, longdoublesize=12<br />
+<br />
+Paco<br />
+<br />
+-- <br />
+|_|0|_|<br />
+|_|_|0|<br />
+|0|0|0|<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555016/263964/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 6.9k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-562458" href="/rt3/Ticket/Display.html?id=64930#txn-562458">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;09&nbsp;08:21:45&nbsp;2009</td>
+    <td class="description">
+      jhorwitz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/562458/267634/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;ve reproduced this problem on my machine &#40;CentOS 5, x86 VMware ESX, <br />
+gcc 4.1.2&#41;.  No solution yet, but here&#39;s my analysis.<br />
+<br />
+Building Rakudo with ICU enabled on x86 &#40;gcc 4.1.2&#41; results in the<br />
+following error:<br />
+<br />
+perl6.ops: In function cg_perl6:<br />
+perl6.ops:218: error: unable to find a register to spill in class SIREG<br />
+perl6.ops:218: error: this is the insn:<br />
+&#40;insn 2620 2619 2621 138 perl6.ops:152 &#40;parallel [<br />
+            &#40;set &#40;reg:CC 17 flags&#41;<br />
+                &#40;compare:CC &#40;mem:BLK &#40;reg/f:SI 3049 [ cstr ]&#41; [0 A8]&#41;<br />
+                    &#40;mem/s/j:BLK &#40;reg/f:SI 3050&#41; [0 A8]&#41;&#41;&#41;<br />
+            &#40;use &#40;reg:SI 3051&#41;&#41;<br />
+            &#40;use &#40;const_int 1 [0x1]&#41;&#41;<br />
+            &#40;use &#40;reg:SI 19 dirflag&#41;&#41;<br />
+            &#40;clobber &#40;reg/f:SI 3049 [ cstr ]&#41;&#41;<br />
+            &#40;clobber &#40;reg/f:SI 3050&#41;&#41;<br />
+            &#40;clobber &#40;reg:SI 3051&#41;&#41;<br />
+        ]&#41; 535 {*cmpstrnqi_nz_1} &#40;nil&#41;<br />
+    &#40;expr_list:REG_UNUSED &#40;reg:SI 3051&#41;<br />
+        &#40;expr_list:REG_UNUSED &#40;reg/f:SI 3050&#41;<br />
+            &#40;expr_list:REG_UNUSED &#40;reg/f:SI 3049 [ cstr ]&#41;<br />
+                &#40;expr_list:REG_DEAD &#40;reg:SI 19 dirflag&#41;<br />
+                    &#40;expr_list:REG_DEAD &#40;reg:SI 3051&#41;<br />
+                        &#40;expr_list:REG_DEAD &#40;reg/f:SI 3049 [ cstr ]&#41;<br />
+                            &#40;expr_list:REG_DEAD &#40;reg/f:SI 3050&#41;<br />
+                                &#40;expr_list:REG_UNUSED &#40;reg:SI 3051&#41;<br />
+                                    &#40;expr_list:REG_UNUSED &#40;reg/f:SI <br />
+3050&#41;<br />
+                                        &#40;expr_list:REG_UNUSED &#40;reg/f:SI<br />
+3049 [ cstr ]&#41;<br />
+                                            &#40;nil&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;&#41;<br />
+perl6.ops:218: confused by earlier errors, bailing out<br />
+<br />
+<div class="message-stanza-depth-1">
+==========<br />
+</div>
+<br />
+This output is similar to the memcpy issue I patched in the same file <br />
+last<br />
+November, but this is a separate issue.  The error indicates the problem<br />
+lies at &#40;or around&#41; line 152 in perl6.ops, which is in the &#34;is_uprop&#34; <br />
+op.<br />
+The offending code is only compiled if PARROT_HAS_ICU is defined, and <br />
+the<br />
+error occurs when compiling the CG core &#40;no surprise there&#41;.<br />
+<br />
+135 inline op is_uprop&#40;out INT, in STR, in STR, in INT&#41; :base_core {<br />
+136 #if PARROT_HAS_ICU<br />
+137     char     *cstr;<br />
+138     INTVAL    ord;<br />
+139     int32_t   strwhich, ordwhich;<br />
+140     UProperty strprop;<br />
+141     opcode_t  *handler;<br />
+142<br />
+143     if &#40;$4 &gt; 0 &#38;&#38; &#40;UINTVAL&#41;$4 == &#40;$3-&gt;strlen&#41;&#41; {<br />
+144         $1 = 0;<br />
+145         goto NEXT&#40;&#41;;<br />
+146     }<br />
+147<br />
+148     ord = string_ord&#40;interp, $3, $4&#41;;<br />
+149     cstr = Parrot_str_to_cstring&#40;interp, $2&#41;;<br />
+150<br />
+151     /* try block tests */<br />
+152     if &#40;strncmp&#40;cstr, &#34;In&#34;, 2&#41; == 0&#41; {<br />
+153         strwhich = u_getPropertyValueEnum&#40;UCHAR_BLOCK, cstr+2&#41;;<br />
+154         ordwhich = u_getIntPropertyValue&#40;ord, UCHAR_BLOCK&#41;;<br />
+155         if &#40;strwhich != UCHAR_INVALID_CODE&#41; {<br />
+156             $1 = &#40;strwhich == ordwhich&#41;;<br />
+157             Parrot_str_free_cstring&#40;cstr&#41;;<br />
+158             goto NEXT&#40;&#41;;<br />
+159         }<br />
+160     }<br />
+<br />
+There is likely some compiler optimization going on in that block that<br />
+we need to work around, but it&#39;s not entirely clear what it is.  <br />
+Disabling ICU in Parrot will allow you to compile Rakudo for the time <br />
+being, but that&#39;s not a solution.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-562462" href="/rt3/Ticket/Display.html?id=64930#txn-562462">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;09&nbsp;08:21:46&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-564704" href="/rt3/Ticket/Display.html?id=64930#txn-564704">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;17&nbsp;12:16:57&nbsp;2009</td>
+    <td class="description">
+      heidnes -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/564704/268632/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 959b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tir. 21. Apr. 2009 07:41:21, PacoLinux wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi:<br />
+&gt; <br />
+&gt; I&#39;m having a very weird error while building latest rakudo with parrot<br />
+&gt; r38208 &#40;gcc  4.1.3 20070929&#41; :<br />
+</div>
+<br />
+I&#39;m seeing the same problem with gcc version 4.1.2 20061021 prerelease<br />
+&#40;NetBSD nb3 20061125&#41;, i.e. the system compiler on NetBSD/i386 4.0.<br />
+<br />
+In my case, I found out that what caused the error was not optimization,<br />
+but a lack of optimization -- you&#39;ll see that the gcc invocation does<br />
+not specify any -O option.  After some hints from the friendly souls on<br />
+#parrot, I found out a way to work around this problem:<br />
+<br />
+  perl ./Configure.pl --gen-parrot --gen-parrot-option=--optimize<br />
+<br />
+in the rakudo root directory.  That way, the relevant file gets compiled<br />
+with optimization &#40;together with most if not all the others...&#41;, and the<br />
+build completes and produces a perl6 executable which so far is working<br />
+for me &#40;running spectests now&#41;.<br />
+<br />
+Yes, this is actually a gcc bug...<br />
+<br />
+Hope this helps,<br />
+<br />
+- Håvard<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-571442" href="/rt3/Ticket/Display.html?id=64930#txn-571442">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;03&nbsp;10:42:15&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/571442/271624/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun May 17 12:16:57 2009, heidnes wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tir. 21. Apr. 2009 07:41:21, PacoLinux wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hi:<br />
+&gt; &gt; <br />
+&gt; &gt; I&#39;m having a very weird error while building latest rakudo with parrot<br />
+&gt; &gt; r38208 &#40;gcc  4.1.3 20070929&#41; :<br />
+</div>
+&gt; <br />
+&gt; I&#39;m seeing the same problem with gcc version 4.1.2 20061021 prerelease<br />
+&gt; &#40;NetBSD nb3 20061125&#41;, i.e. the system compiler on NetBSD/i386 4.0.<br />
+&gt; <br />
+&gt; In my case, I found out that what caused the error was not optimization,<br />
+&gt; but a lack of optimization -- you&#39;ll see that the gcc invocation does<br />
+&gt; not specify any -O option.  After some hints from the friendly souls on<br />
+&gt; #parrot, I found out a way to work around this problem:<br />
+&gt; <br />
+&gt;   perl ./Configure.pl --gen-parrot --gen-parrot-option=--optimize<br />
+&gt; <br />
+&gt; in the rakudo root directory.  That way, the relevant file gets compiled<br />
+&gt; with optimization &#40;together with most if not all the others...&#41;, and the<br />
+&gt; build completes and produces a perl6 executable which so far is working<br />
+&gt; for me &#40;running spectests now&#41;.<br />
+&gt; <br />
+&gt; Yes, this is actually a gcc bug...<br />
+&gt; <br />
+</div>
+Yup, and there&#39;s no obvious workaround we can do in the code. So, going<br />
+to close this ticket as resolved since we have a good enough workaround,<br />
+and I did add to the Get Rakudo page at:<br />
+http://www.rakudo.org/how-to-get-rakudo<br />
+Where hopefully people will notice it and be able to work around it.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-571448" href="/rt3/Ticket/Display.html?id=64930#txn-571448">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;03&nbsp;10:42:18&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.814145</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

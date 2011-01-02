@@ -1,0 +1,709 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#66574: [BUG] inc branch: make perl6 fails, parrot-includes aren&#39;t passed to $&#40;CC&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D66574">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#66574: [BUG] inc branch: make perl6 fails, parrot-includes aren&#39;t passed to $&#40;CC&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66574">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">66574</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=66574">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ingmar [at] exherbo.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66574">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=66574">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=66574">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-574784" href="/rt3/Ticket/Display.html?id=66574#txn-574784">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;13&nbsp;19:07:16&nbsp;2009</td>
+    <td class="description">
+      ingmar <!-- x --> at exherbo.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] inc branch: make perl6 fails, parrot-includes aren&#39;t passed to $&#40;CC&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 14 Jun 2009 04:06:37 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobugs &lt;rakudobugs <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ingmar Vanhassel &lt;ingmar <!-- x --> at exherbo.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/574784/273064/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is using Rakudo&#39;s inc branch, building against parrot trunk, r39541.<br />
+<br />
+Seems to work fine up until it tries to build the perl6 executable.<br />
+When building the perl6 executable, $&#40;CINCLUDES&#41; isn&#39;t passed to the compiler,<br />
+as you can see from the snippet below:<br />
+<br />
+cc -o dynext/perl6_group.so perl6_group.o src/pmc/*.o -L/usr/local/lib  -shared -march=core2 -pipe -O2 -ggdb -D__INGMAR_CFLAGS__ -L/usr/local/lib -fPIC<br />
+/usr/bin/perl5.10.0 -e &#34;&#34; &gt; src/gen_setting.pir<br />
+/usr/bin/parrot  -o perl6_s1.pbc perl6.pir<br />
+/usr/bin/parrot  perl6_s1.pbc --target=pir src/gen_setting.pm &gt; src/gen_setting.pir<br />
+/usr/bin/parrot  -o perl6.pbc perl6.pir<br />
+/usr/bin/pbc_to_exe perl6.pbc<br />
+cc -o perl6.o -I/var/tmp/paludis/build/dev-lang-parrot-scm/work/parrot-scm/include -DDEBUGGING  -pipe -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL  -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED  -DHASATTRIBUTE_WARN_UNUSED_RESULT  -falign-functions=16 -fvisibility=hidden -funit-at-a-time -maccumulate-outgoing-args -W -Wall -Waggregate-return -Wcast-align -Wcast-qual -Wchar-subscripts -Wcomment -Wdisabled-optimization -Wendif-labels -Wextra -Wformat -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch -Wlogical-op -Wmissing-braces -Wmissing-field-initializers -Wno-missing-format-attribute -Wmissing-include-dirs -Wpacked -Wparentheses -Wpointer-arith -Wreturn-type -Wsequence-point -Wno-shadow -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2 -Wswitch -Wswitch-default -Wtrigraphs -Wundef -Wunknown-pragmas -Wno-unused -Wvariadic-macros -Wwrite-strings -Wbad-function-cast -Wc++-compat -Wdeclaration-after-statement -Werror=declaration-after-statement -Wimplicit-function-declaration -Wimplicit-int -Wmain -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wnonnull -DDISABLE_GC_DEBUG=1 -DNDEBUG -march=core2 -pipe -O2 -ggdb -D__INGMAR_CFLAGS__ -c perl6.c<br />
+cc1: warning: /var/tmp/paludis/build/dev-lang-parrot-scm/work/parrot-scm/include: No such file or directory<br />
+perl6.c:1:27: error: parrot/parrot.h: No such file or directory<br />
+perl6.c:2:26: error: parrot/embed.h: No such file or directory<br />
+perl6.c: In function &#39;main&#39;:<br />
+perl6.c:231922: error: &#39;PackFile&#39; undeclared &#40;first use in this function&#41;<br />
+perl6.c:231922: error: &#40;Each undeclared identifier is reported only once<br />
+perl6.c:231922: error: for each function it appears in.&#41;<br />
+perl6.c:231922: error: &#39;pf&#39; undeclared &#40;first use in this function&#41;<br />
+perl6.c:231923: error: &#39;Parrot_Interp&#39; undeclared &#40;first use in this function&#41;<br />
+perl6.c:231923: error: expected &#39;;&#39; before &#39;interp&#39;<br />
+<br />
+$&#40;CINCLUDES&#41; is set correctly to contain /usr/src/parrot/1.2.0-devel,<br />
+/usr/src/parrot/1.2.0-devel/pmc for earlier targets, the former contains both<br />
+parrot/parrot.h and parrot/embed.h, so I&#39;m quite confident that this is indeed the issue.<br />
+<br />
+Regards,<br />
+Ingmar<br />
+-- <br />
+Exherbo KDE, X.org maintainer<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-574790" href="/rt3/Ticket/Display.html?id=66574#txn-574790">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;13&nbsp;19:07:18&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590136" href="/rt3/Ticket/Display.html?id=66574#txn-590136">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;24&nbsp;20:05:12&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/590136/281156/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 592b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jun 13 19:07:16 2009, ingmar <!-- x --> at exherbo.org wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; This is using Rakudo&#39;s inc branch, building against parrot trunk,<br />
+&gt;    r39541.<br />
+&gt; <br />
+&gt; Seems to work fine up until it tries to build the perl6 executable.<br />
+&gt; When building the perl6 executable, $&#40;CINCLUDES&#41; isn&#39;t passed to the<br />
+&gt;    compiler,<br />
+&gt; as you can see from the snippet below:<br />
+</div>
+<br />
+I think this problem may be fixed in the &#34;ins2&#34; branch -- could you try<br />
+it there and let me know?<br />
+<br />
+Note that you&#39;ll need to build against the release version of Parrot<br />
+1.4.0 -- the Rakudo in the &#34;ins2&#34; branch won&#39;t build against parrot trunk.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590140" href="/rt3/Ticket/Display.html?id=66574#txn-590140">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;24&nbsp;20:05:13&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-590568" href="/rt3/Ticket/Display.html?id=66574#txn-590568">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;26&nbsp;11:33:24&nbsp;2009</td>
+    <td class="description">
+      ingmar <!-- x --> at exherbo.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66574] [BUG] inc branch: make perl6 fails, parrot-includes aren&#39;t passed to $&#40;CC&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 26 Jul 2009 16:11:01 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">ingmar &lt;ingmar <!-- x --> at exherbo.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/590568/281392/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Excerpts from Patrick R. Michaud via RT&#39;s message of Sat Jul 25 05:05:12 +0200 2009:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jun 13 19:07:16 2009, ingmar <!-- x --> at exherbo.org wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; This is using Rakudo&#39;s inc branch, building against parrot trunk,<br />
+&gt; &gt;    r39541.<br />
+&gt; &gt; <br />
+&gt; &gt; Seems to work fine up until it tries to build the perl6 executable.<br />
+&gt; &gt; When building the perl6 executable, $&#40;CINCLUDES&#41; isn&#39;t passed to the<br />
+&gt; &gt;    compiler,<br />
+&gt; &gt; as you can see from the snippet below:<br />
+</div>
+&gt; <br />
+&gt; I think this problem may be fixed in the &#34;ins2&#34; branch -- could you try<br />
+&gt; it there and let me know?<br />
+</div>
+<br />
+It works, with two patches that I&#39;ve pushed to the ins2 branch at<br />
+git://github.com/ingmarv/rakudo.git / http://github.com/ingmarv/rakudo/commits/ins2<br />
+<br />
+- Creates $&#40;PARROT_LIB_DIR&#41;/dynext &#38; $&#40;PARROT_BIN_DIR&#41; explicitly:<br />
+  According to<br />
+    perldoc ExtUtils::Command | less -p&#39;cp source_file source_file&#39;<br />
+  the destination argument needs to be an existing directory for cp with<br />
+  multiple source files to work.<br />
+<br />
+  Create $&#40;PARROT_BIN_DIR&#41;, otherwise perl6 is installed as /usr/bin &#40;a<br />
+  file&#41;<br />
+<br />
+- Add DESTDIR support<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Note that you&#39;ll need to build against the release version of Parrot<br />
+&gt; 1.4.0 -- the Rakudo in the &#34;ins2&#34; branch won&#39;t build against parrot trunk.<br />
+</div>
+<br />
+<br />
+With these two patches applied I have working Exherbo packages [1], that<br />
+build against an installed rakudo-1.4.0.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Thanks!<br />
+&gt; <br />
+&gt; Pm<br />
+</div>
+<br />
+Thank *you* for fixing this one!<br />
+-Ingmar<br />
+<br />
+[1] http://git.exherbo.org/?p=dev/ingmar.git;a=tree;f=packages/dev-lang/rakudo<br />
+<br />
+-- <br />
+Exherbo KDE, X.org maintainer<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.108595</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

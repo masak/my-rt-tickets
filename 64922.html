@@ -1,0 +1,836 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64922: An unamiguous case of dispatch treated as an ambiguous one</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64922">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64922: An unamiguous case of dispatch treated as an ambiguous one</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64922">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64922</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64922">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64922">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=64922">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64922">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554952" href="/rt3/Ticket/Display.html?id=64922#txn-554952">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;21&nbsp;03:50:19&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">An unamiguous case of dispatch treated as an ambiguous one</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 21 Apr 2009 12:49:47 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554952/263932/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 607b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This might be in RT already, but I didn&#39;t find it, so...<br />
+<br />
+&lt;ihrd&gt; rakudo: multi foo &#40;@a&#41; { 1 }; multi foo &#40;$a, %h?&#41; { 2 }; say<br />
+foo&#40;&lt;1 2 3&gt;&#41;;<br />
+&lt;p6eval&gt; rakudo 69b318: OUTPUT«Ambiguous dispatch to multi &#39;foo&#39;.<br />
+Ambiguous candidates had signatures:␤:&#40;Positional.new&#40;&#41; @a&#41;␤:&#40;Any $a,<br />
+Associative.new&#40;&#41; %h?&#41; [...]<br />
+* masak submits rakudobug<br />
+<br />
+As for arity, both methods can match. But the first candidate has a<br />
+type constraint Positional on its first parameter, so it should be<br />
+narrower than the second one, which doesn&#39;t. Therefore, the dispatch<br />
+shouldn&#39;t be ambiguous, and the first candidate should be called.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555494" href="/rt3/Ticket/Display.html?id=64922#txn-555494">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;03:36:27&nbsp;2009</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64922] An unamiguous case of dispatch treated as an ambiguous one</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 22 Apr 2009 12:35:51 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555494/264168/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Carl Mäsak &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Carl Mäsak&#34; <br />
+&gt; # Please include the string:  [perl #64922]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=64922 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; This might be in RT already, but I didn&#39;t find it, so...<br />
+&gt;<br />
+&gt; &lt;ihrd&gt; rakudo: multi foo &#40;@a&#41; { 1 }; multi foo &#40;$a, %h?&#41; { 2 }; say<br />
+&gt; foo&#40;&lt;1 2 3&gt;&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 69b318: OUTPUT«Ambiguous dispatch to multi &#39;foo&#39;.<br />
+&gt; Ambiguous candidates had signatures:␤:&#40;Positional.new&#40;&#41; @a&#41;␤:&#40;Any $a,<br />
+&gt; Associative.new&#40;&#41; %h?&#41; [...]<br />
+&gt; * masak submits rakudobug<br />
+&gt;<br />
+&gt; As for arity, both methods can match. But the first candidate has a<br />
+&gt; type constraint Positional on its first parameter, so it should be<br />
+&gt; narrower than the second one, which doesn&#39;t. <br />
+</div>
+It&#39;s not so clear cut that this is a bug. Positional is a role, and is <br />
+done by some things &#40;like List, Array, etc&#41;, but doesn&#39;t have a <br />
+relationship with Any in any way. The default parameter type is Any. <br />
+Thus if you try Positional ~~ Any, you&#39;ll get false &#40;and vice versa - <br />
+they are tied types so far as the dispatcher is concerned&#41;.<br />
+<br />
+Anyway, the dispatcher is behaving as I would have expected in terms of <br />
+considering those candidates tied. I do agree it isn&#39;t very dwim-y, but <br />
+nothing occurs to me right away that we could do in order to make it <br />
+dwim more...<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555498" href="/rt3/Ticket/Display.html?id=64922#txn-555498">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;03:36:28&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555634" href="/rt3/Ticket/Display.html?id=64922#txn-555634">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;07:36:44&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555634/264234/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Jonathan &#40;&gt;&#41;, Carl &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; This might be in RT already, but I didn&#39;t find it, so...<br />
+&gt; &gt;<br />
+&gt; &gt; &lt;ihrd&gt; rakudo: multi foo &#40;@a&#41; { 1 }; multi foo &#40;$a, %h?&#41; { 2 }; say<br />
+&gt; &gt; foo&#40;&lt;1 2 3&gt;&#41;;<br />
+&gt; &gt; &lt;p6eval&gt; rakudo 69b318: OUTPUT«Ambiguous dispatch to multi &#39;foo&#39;.<br />
+&gt; &gt; Ambiguous candidates had signatures:␤:&#40;Positional.new&#40;&#41; @a&#41;␤:&#40;Any $a,<br />
+&gt; &gt; Associative.new&#40;&#41; %h?&#41; [...]<br />
+&gt; &gt; * masak submits rakudobug<br />
+&gt; &gt;<br />
+&gt; &gt; As for arity, both methods can match. But the first candidate has a<br />
+&gt; &gt; type constraint Positional on its first parameter, so it should be<br />
+&gt; &gt; narrower than the second one, which doesn&#39;t. <br />
+</div>
+&gt; It&#39;s not so clear cut that this is a bug. Positional is a role, and is <br />
+&gt; done by some things &#40;like List, Array, etc&#41;, but doesn&#39;t have a <br />
+&gt; relationship with Any in any way. The default parameter type is Any. <br />
+&gt; Thus if you try Positional ~~ Any, you&#39;ll get false &#40;and vice versa - <br />
+&gt; they are tied types so far as the dispatcher is concerned&#41;.<br />
+&gt; <br />
+&gt; Anyway, the dispatcher is behaving as I would have expected in terms of <br />
+&gt; considering those candidates tied. I do agree it isn&#39;t very dwim-y, but <br />
+&gt; nothing occurs to me right away that we could do in order to make it <br />
+&gt; dwim more...<br />
+</div>
+<br />
+I see. In short, there&#39;s a tie because Positional isn&#39;t narrower than<br />
+Any. I get it now, and agree on a formal level.<br />
+<br />
+...the problem is just that the sigils &#39;@&#39; and &#39;%&#39; _feel_ like they<br />
+should be narrower than &#39;$&#39;, because the latter can contain anything.<br />
+The question is probably whether it&#39;s possible to reflect that intuition<br />
+in the MMDer without breaking something important.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555772" href="/rt3/Ticket/Display.html?id=64922#txn-555772">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;10:31:07&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64922] An unamiguous case of dispatch treated as an ambiguous one</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 22 Apr 2009 19:30:09 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555772/264294/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Jonathan Worthington wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Carl Mäsak &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  &#34;Carl Mäsak&#34; <br />
+&gt;&gt; # Please include the string:  [perl #64922]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=64922 &gt;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; This might be in RT already, but I didn&#39;t find it, so...<br />
+&gt;&gt;<br />
+&gt;&gt; &lt;ihrd&gt; rakudo: multi foo &#40;@a&#41; { 1 }; multi foo &#40;$a, %h?&#41; { 2 }; say<br />
+&gt;&gt; foo&#40;&lt;1 2 3&gt;&#41;;<br />
+&gt;&gt; &lt;p6eval&gt; rakudo 69b318: OUTPUT«Ambiguous dispatch to multi &#39;foo&#39;.<br />
+&gt;&gt; Ambiguous candidates had signatures:␤:&#40;Positional.new&#40;&#41; @a&#41;␤:&#40;Any $a,<br />
+&gt;&gt; Associative.new&#40;&#41; %h?&#41; [...]<br />
+&gt;&gt; * masak submits rakudobug<br />
+&gt;&gt;<br />
+&gt;&gt; As for arity, both methods can match. But the first candidate has a<br />
+&gt;&gt; type constraint Positional on its first parameter, so it should be<br />
+&gt;&gt; narrower than the second one, which doesn&#39;t. <br />
+</div>
+&gt; It&#39;s not so clear cut that this is a bug. Positional is a role, and is <br />
+&gt; done by some things &#40;like List, Array, etc&#41;, but doesn&#39;t have a <br />
+&gt; relationship with Any in any way.<br />
+</div>
+<br />
+I thought all types match Any, except for Object and junction?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; The default parameter type is Any. <br />
+&gt; Thus if you try Positional ~~ Any, you&#39;ll get false &#40;and vice versa - <br />
+&gt; they are tied types so far as the dispatcher is concerned&#41;.<br />
+</div>
+<br />
+Not in my copy of Rakudo, Positional ~~ Any is True there.<br />
+<br />
+And if Positional !~~ Any, shouldn&#39;t it be a type check failure to bind<br />
+an array to $a?<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555776" href="/rt3/Ticket/Display.html?id=64922#txn-555776">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;22&nbsp;10:45:18&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555776/264298/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;jnthn&gt; rakudo: say Positional[Int] ~~ Any<br />
+&lt;p6eval&gt; rakudo e8f624: OUTPUT«1␤»<br />
+&lt;jnthn&gt; oh hmm<br />
+&lt;jnthn&gt; rakudo: say Any ~~ Positional[Int]<br />
+&lt;p6eval&gt; rakudo e8f624: OUTPUT«0␤»<br />
+&lt;jnthn&gt; But it kinda surprises me...<br />
+&lt;jnthn&gt; &#40;I thought this was why Positional and Any were sorting to same<br />
+precedence level.&#41;<br />
+&lt;jnthn&gt; rakudo: multi f&#40;$x&#41; { 1 }; multi f&#40;@x&#41; { 2 }; say f&#40;1&#41;; say f&#40;[1,2]&#41;<br />
+&lt;p6eval&gt; rakudo e8f624: OUTPUT«1␤2␤»<br />
+&lt;jnthn&gt; oh hmm<br />
+&lt;masak&gt; strange that the above case resolves, but not the one in the RT<br />
+thread.<br />
+&lt;jnthn&gt; So the RT ticket I responded to actually brings up an issue<br />
+that&#39;s nothing to do with sigil based dispatch...<br />
+&lt;jnthn&gt; masak: Yeah.<br />
+&lt;moritz_&gt; jnthn: I think it&#39;s something else<br />
+&lt;jnthn&gt; rakudo: multi f&#40;$x, %h?&#41; { 1 }; multi f&#40;@x&#41; { 2 }; say f&#40;1&#41;; say<br />
+f&#40;[1,2]&#41;<br />
+&lt;p6eval&gt; rakudo 5c8015: OUTPUT«1␤Ambiguous dispatch to multi &#39;f&#39;.<br />
+Ambiguous candidates had signatures:␤:&#40;Any $x, Associative.new&#40;&#41;<br />
+%h?&#41;␤:&#40;Positional.new&#40;&#41; @x&#41; [...]<br />
+&lt;moritz_&gt; not matching the sigil-implied type is one malus<br />
+&lt;moritz_&gt; and not filling up an optional parameter is also one malus<br />
+&lt;jnthn&gt; Ah, something to do with optional parameters...<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.969261</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

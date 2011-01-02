@@ -1,0 +1,11 @@
+use v6;
+use SVG;
+
+say SVG.serialize(
+    'svg' => [
+        :marker[
+            :refX(0), :refY(0), :orient<auto>, :id<Arrow2Lend>,
+            :style<overflow:visible>,
+        ]
+    ]
+);

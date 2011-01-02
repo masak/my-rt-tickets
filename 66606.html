@@ -1,0 +1,629 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#66606: Statmenet modifier&#39;s &#34;implied&#34; lexical scope hides my declaration</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D66606">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#66606: Statmenet modifier&#39;s &#34;implied&#34; lexical scope hides my declaration</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66606">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">66606</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=66606">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+not.com [at] gmail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66606">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=66606">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=66606">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-575154" href="/rt3/Ticket/Display.html?id=66606#txn-575154">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;15&nbsp;13:36:27&nbsp;2009</td>
+    <td class="description">
+      not.com <!-- x --> at gmail.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Statmenet modifier&#39;s &#34;implied&#34; lexical scope hides my declaration</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 15 Jun 2009 13:35:32 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/575154/273208/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+yary    perl6: &#40;my @random_numbers&#41;.push: int 10.rand for ^3; say<br />
+@random_numbers.join: &#39; &#39;;<br />
+12:36   p6eval  ..STD_red…<br />
+12:36   p6eval  ..pugs: OUTPUT«3 4 3␤»<br />
+12:36   p6eval  ..rakudo 77f9d7: OUTPUT«Lexical &#39;@random_numbers&#39; not found␤»<br />
+12:37   yary    Methinks pugs wins in that statement- anyone think that bug<br />
+looks familiar? Or should I submit?<br />
+...pmichaud     rakudo:  my @random_numbers; @random_numbers.push&#40;<br />
+int&#40;10.rand&#41; &#41; for ^3;   say @random_numbers.join&#40;&#39; &#39;&#41;;<br />
+12:43   p6eval  rakudo 77f9d7: OUTPUT«3 3 9␤»<br />
+...12:55        pmichaud        it&#39;s the declaration of the &#34;my&#34; as modified by the &#34;for&#34;<br />
+<br />
+<div class="message-stanza-depth-1">
+# bug here vvv<br />
+</div>
+12:55   pmichaud        rakudo:   my $x = 1 for ^3;  say $x;<br />
+12:55   p6eval  rakudo ba09b2: OUTPUT«Lexical &#39;$x&#39; not found␤»<br />
+<div class="message-stanza-depth-1">
+# bug there ^^^<br />
+</div>
+<br />
+12:55   pmichaud        the &#34;for&#34; modifier is imposing a block on what it modifies.<br />
+<br />
+#discussion<br />
+yary    So the next question is, does it make sense for a lexical<br />
+declaration in an implied block &#40;no curlies&#41; to have a lifetime<br />
+limited to that implied block?<br />
+13:02   PerlJam What does S04 say about it?  &#40;if anything&#41;<br />
+13:16   pmurias yary: what do you mean by an implied block?<br />
+13:17   pmurias yary: generally only curlies introduce a new lexical scope<br />
+13:18   pmichaud        rakudo:   $_ = &#39;hello&#39;;   .say for ^3;   say $_;<br />
+13:18   p6eval  rakudo ba09b2: OUTPUT«0␤1␤2␤hello␤»<br />
+13:18   pmichaud        pmurias: the &#34;.say&#34; has an implied block around it.<br />
+13:19   yary    Rakudo&#39;s behavior suggests that a &#34;for&#34; modifier at the end<br />
+of a statement which includes a declaration gives a lexical scope to<br />
+that declaration, and then the variable is invisible outside<br />
+13:19   yary    sorry for the verbosity<br />
+13:20   pmurias yary: verbosity is better then ambiguity<br />
+13:21   pmichaud        it&#39;s very possible that implying a block on the lhs<br />
+isn&#39;t correct, and that we need to be making a temporary $_ or<br />
+something.<br />
+13:22   pmichaud        at any rate, the $_ that is used on the lhs of a for<br />
+modifier isn&#39;t the same as the $_.<br />
+13:22   pmichaud        at any rate, the $_ that is used on the lhs of a for<br />
+modifier isn&#39;t the same as the $_ outside of the for modifier.<br />
+13:25   yary    That much &#40;about $_&#41; I understand from p5... haven&#39;t<br />
+digested S04 yet, but I&#39;ll submit this as a bug for folks to ponder<br />
+and accept/reject<br />
+13:28   pmurias there is a &#34;Remeber, no implicit block scopes.&#34; sentence<br />
+in S04, although in a different context<br />
+13:28   pmichaud        Yes -- a bit later it talks about the handling of $_<br />
+and the for modifier.<br />
+13:28   pmichaud        It says to get to the outer $_ one uses OUTER::&lt;$_&gt;<br />
+13:29   pmichaud        which will be a little weird, since it means that<br />
+OUTER::&lt;$foo&gt; would refer to a different scope from OUTER::&lt;$_&gt; if<br />
+used inside a for modifier.<br />
+13:29   TimToady        that&#39;s true for any lexical in any lexical scope<br />
+13:30   TimToady        if $_ is declared internally and $foo externally<br />
+13:30   pmichaud        TimToady: We&#39;re looking at the case of:<br />
+13:30   pmichaud            say $_ for ^3;<br />
+13:30   TimToady        yes, I&#39;ve been thinking about it<br />
+13:30   pmichaud        okay.<br />
+13:30   TimToady        the spec only requires a private copy for $_ currently<br />
+13:31   pmichaud        correct.<br />
+13:31   TimToady        doesn&#39;t require a block<br />
+13:31   pmichaud        I think the use of a block might&#39;ve been a Rakudo shortcut.<br />
+TimToady        we could say it is implciit<br />
+13:31   TimToady        but...<br />
+13:31   TimToady        we can&#39;t really allow $^a to pay attention to implicit {}<br />
+13:31   pmichaud        interestingly, I&#39;m not sure that it does in Rakudo&#39;s case.<br />
+13:32   pmichaud        rakudo:   say $^a for ^3;<br />
+13:32   p6eval  rakudo ba09b2: OUTPUT«too few arguments passed &#40;0&#41; - 1<br />
+params expected␤in Main &#40;/tmp/jBX8Gm96fv:0&#41;␤»<br />
+13:32   TimToady        well, could use a better error<br />
+13:32   pmichaud        sure.<br />
+13:32   pmichaud        rakudo:    { say $^a for ^3 }&#40;&#39;hello&#39;&#41;;<br />
+13:32   p6eval  rakudo ba09b2: OUTPUT«hello␤hello␤hello␤»<br />
+13:32   moritz_ std: say $^a for ^3;<br />
+13:32   p6eval  std 27084: OUTPUT«ok 00:02 38m␤»<br />
+... TimToady    this is also all related to $a ?? my $bar !! my $baz<br />
+13:34   TimToady        thunks aren&#39;t quite blocks<br />
+<br />
+<br />
+  etcetera!<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-575440" href="/rt3/Ticket/Display.html?id=66606#txn-575440">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;16&nbsp;11:00:14&nbsp;2009</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66606] Statmenet modifier&#39;s &#34;implied&#34; lexical scope hides my declaration</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 16 Jun 2009 10:59:23 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/575440/273348/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 149b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+We now spec a simple temporization &#40;doesn&#39;t even have to be implemented<br />
+using &#34;temp&#34;&#41; for topicalizing statement modifiers.  See latest S04.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-575442" href="/rt3/Ticket/Display.html?id=66606#txn-575442">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;16&nbsp;11:00:16&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.785763</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

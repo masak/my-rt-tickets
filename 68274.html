@@ -1,0 +1,755 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#68274: Script runs for ~18,000 iterations then seg faults</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D68274">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#68274: Script runs for ~18,000 iterations then seg faults</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=68274">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">68274</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=68274">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+colomon [at] gmail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=68274">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=68274">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=68274">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-594984" href="/rt3/Ticket/Display.html?id=68274#txn-594984">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;03:06:34&nbsp;2009</td>
+    <td class="description">
+      colomon <!-- x --> at gmail.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Script runs for ~18,000 iterations then seg faults</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 7 Aug 2009 06:06:03 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Solomon Foster &lt;colomon <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/594984/283664/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 467b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+use v6;<br />
+<br />
+loop &#40;my $n = 2; $n &lt;= 354294; $n++&#41;<br />
+{<br />
+    my @digits = $n.comb&#40;/\d/&#41;;<br />
+    my $sum = [+] &#40;@digits &gt;&gt;**&gt;&gt; 5&#41;;<br />
+    say &#34;$n, $sum&#34; if &#40;$n % 1234 == 0&#41;;<br />
+    say &#34;$n = sum of its digits to the 5th power!!!&#34; if &#40;$sum == $n&#41;;<br />
+}<br />
+<br />
+This simple Project Euler script dies with &#34;Segmentation fault&#34; after<br />
+18,000 iterations or so.<br />
+<br />
+Platform: Mac OS X 10.5.6.<br />
+&#34;Chicago&#34; release of Rakudo.<br />
+<br />
+-- <br />
+Solomon Foster: colomon <!-- x --> at gmail.com<br />
+HarmonyWare, Inc: http://www.harmonyware.com<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595312" href="/rt3/Ticket/Display.html?id=68274#txn-595312">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;18:41:28&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595312/283842/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 151b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I ran this on my x86_64 GNU/Linux and it completed successfully after 108 <br />
+minutes.  Memory usage grew over its lifetime, but it never got <br />
+outrageous.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595314" href="/rt3/Ticket/Display.html?id=68274#txn-595314">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;18:41:28&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595676" href="/rt3/Ticket/Display.html?id=68274#txn-595676">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;09&nbsp;01:02:39&nbsp;2009</td>
+    <td class="description">
+      payload -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #68274] Script runs for ~18,000 iterations then seg faults</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 08 Aug 2009 19:32:03 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Gilbert R. Röhrbein&#34; &lt;g.roehrbein <!-- x --> at gmx.de&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595676/283980/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 862b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Solomon Foster &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; use v6;<br />
+&gt; <br />
+&gt; loop &#40;my $n = 2; $n &lt;= 354294; $n++&#41;<br />
+&gt; {<br />
+&gt;     my @digits = $n.comb&#40;/\d/&#41;;<br />
+&gt;     my $sum = [+] &#40;@digits &gt;&gt;**&gt;&gt; 5&#41;;<br />
+&gt;     say &#34;$n, $sum&#34; if &#40;$n % 1234 == 0&#41;;<br />
+&gt;     say &#34;$n = sum of its digits to the 5th power!!!&#34; if &#40;$sum == $n&#41;;<br />
+&gt; }<br />
+&gt; <br />
+&gt; This simple Project Euler script dies with &#34;Segmentation fault&#34; after<br />
+&gt; 18,000 iterations or so.<br />
+&gt; <br />
+&gt; Platform: Mac OS X 10.5.6.<br />
+&gt; &#34;Chicago&#34; release of Rakudo.<br />
+</div>
+<br />
+$ perl6 RT68274.pl<br />
+1234, 1300<br />
+2468, 41600<br />
+3702, 17082<br />
+4150 = sum of its digits to the 5th power!!!<br />
+4151 = sum of its digits to the 5th power!!!<br />
+4936, 68092<br />
+6170, 24584<br />
+7404, 18855<br />
+8638, 73555<br />
+9872, 108656<br />
+11106, 7779<br />
+12340, 1300<br />
+13574, 21200<br />
+14808, 66561<br />
+16042, 8833<br />
+17276, 41423<br />
+18510, 35895<br />
+19744, 77905<br />
+Segmentation fault<br />
+$ uname -a<br />
+Linux bay 2.6.27-14-generic #1 SMP Fri Jul 24 22:19:33 UTC 2009 i686 <br />
+GNU/Linux<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595714" href="/rt3/Ticket/Display.html?id=68274#txn-595714">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;09&nbsp;06:18:01&nbsp;2009</td>
+    <td class="description">
+      kyle6 -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595714/283994/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Looks like it could be related to garbage collection, I got SIGFAULT<br />
+with the original script, but freeing the scope variables by hand did<br />
+the trick.<br />
+<br />
+tore@desktop:~/work/rakudo$ uname -a<br />
+Linux desktop 2.6.28-14-generic #47-Ubuntu SMP Sat Jul 25 00:28:35 UTC<br />
+2009 i686 GNU/Linux<br />
+<br />
+Run of the original script, reporting memory usage every 30 seconds<br />
+&#40;some output removed for readability&#41;<br />
+<br />
+~~~<br />
+tore@desktop:~/work$ perl6 projectEuler.p6 &#38;<br />
+[1] 14680<br />
+tore@desktop:~/work$ top -p 14680 -d 30 -b  | grep perl6<br />
+3702, 17082<br />
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND<br />
+14680 tore      20   0 57232  50m 7048 R  100  1.7   0:35.07 perl6<br />
+4150 = sum of its digits to the 5th power!!!<br />
+4151 = sum of its digits to the 5th power!!!<br />
+14680 tore      20   0 64536  59m 7048 R  100  2.0   0:45.09 perl6<br />
+14680 tore      20   0  141m 138m 7048 R  100  4.7   2:35.20 perl6<br />
+14680 tore      20   0  207m 203m 7048 R  100  6.9   4:45.34 perl6<br />
+14680 tore      20   0  209m 205m 7048 R  100  6.9   4:55.36 perl6<br />
+20978, 108656<br />
+[1]+  Segmentation fault      perl6 projectEuler.p6<br />
+~~~<br />
+<br />
+added manual gc of &#39;my&#39; variables in localscope &#40;@digits = &#40;&#41;; and $sum<br />
+<div class="message-stanza-depth-1">
+= undef;&#41; to end of loop, reporting memory usage every second minute<br />
+</div>
+&#40;some output removed for readability&#41;.<br />
+<br />
+~~~<br />
+tore@desktop:~/work$ perl6 projectEuler_cleanup.p6 &#38;<br />
+[1] 15211<br />
+tore@desktop:~/work$ top -p 15211 -d 120 -b  | grep perl6<br />
+  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND<br />
+15211 tore      20   0 30056  25m 7044 R  100  0.9   0:09.94 perl6<br />
+4150 = sum of its digits to the 5th power!!!<br />
+4151 = sum of its digits to the 5th power!!!<br />
+15211 tore      20   0 43984  38m 7048 R  100  1.3   2:10.08 perl6<br />
+15211 tore      20   0 56640  51m 7048 R  100  1.7   4:10.16 perl6<br />
+&#40;passing 22212&#41;<br />
+15211 tore      20   0 71700  66m 7048 R  100  2.2   6:10.16 perl6<br />
+15211 tore      20   0 78564  72m 7048 R  100  2.5   8:10.17 perl6<br />
+15211 tore      20   0 93492  87m 7048 R  100  2.9  10:10.16 perl6<br />
+54748 = sum of its digits to the 5th power!!!<br />
+15211 tore      20   0 97.9m  93m 7048 R  100  3.2  12:10.16 perl6<br />
+15211 tore      20   0  112m 108m 7048 R  100  3.7  14:10.16 perl6<br />
+15211 tore      20   0  127m 123m 7048 R  100  4.2  16:10.26 perl6<br />
+92727 = sum of its digits to the 5th power!!!<br />
+93084 = sum of its digits to the 5th power!!!<br />
+15211 tore      20   0  133m 129m 7048 R  100  4.4  18:10.38 perl6<br />
+15211 tore      20   0  147m 142m 7048 R  100  4.8  20:10.51 perl6<br />
+15211 tore      20   0  151m 147m 7048 R  100  5.0  22:10.63 perl6<br />
+15211 tore      20   0  155m 151m 7048 R  100  5.1  24:10.76 perl6<br />
+15211 tore      20   0  167m 163m 7048 R  100  5.5  26:10.88 perl6<br />
+15211 tore      20   0  172m 168m 7048 R  100  5.7  28:11.02 perl6<br />
+15211 tore      20   0  184m 180m 7048 R  100  6.1  30:11.13 perl6<br />
+15211 tore      20   0  188m 184m 7048 R  100  6.2  32:11.26 perl6<br />
+15211 tore      20   0  193m 189m 7048 R  100  6.4  34:11.38 perl6<br />
+15211 tore      20   0  205m 201m 7048 R  100  6.8  36:11.50 perl6<br />
+15211 tore      20   0  210m 205m 7048 R  100  6.9  38:11.63 perl6<br />
+15211 tore      20   0  221m 217m 7048 R  100  7.4  40:11.76 perl6<br />
+15211 tore      20   0  226m 222m 7048 R  100  7.5  42:11.89 perl6<br />
+15211 tore      20   0  238m 234m 7048 R  100  7.9  44:11.97 perl6<br />
+15211 tore      20   0  243m 239m 7048 R  100  8.1  46:12.09 perl6<br />
+194979 = sum of its digits to the 5th power!!!<br />
+15211 tore      20   0  257m 253m 7048 R  100  8.6  48:12.20 perl6<br />
+15211 tore      20   0  262m 258m 7048 R  100  8.7  50:12.32 perl6<br />
+15211 tore      20   0  264m 260m 7048 R  100  8.8  51:12.37 perl6<br />
+15211 tore      20   0  274m 270m 7048 R  100  9.1  52:12.42 perl6<br />
+&#40;and still running....&#41;<br />
+~~~<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.900896</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

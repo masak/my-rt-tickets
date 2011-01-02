@@ -1,0 +1,984 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#67358: [BUG] less than awesome error message for 1 param expected in Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D67358">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#67358: [BUG] less than awesome error message for 1 param expected in Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67358">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">67358</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=67358">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67358">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=67358">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=67358">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583738" href="/rt3/Ticket/Display.html?id=67358#txn-583738">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;14:50:30&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] less than awesome error message for 1 param expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 8 Jul 2009 23:49:55 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583738/277414/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 435b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;masak&gt; actually, I see another bug there... :&#41;<br />
+&lt;masak&gt; rakudo: say log&#40;1, 10&#41;<br />
+&lt;p6eval&gt; rakudo 70bfd5: OUTPUT«too many arguments passed &#40;2&#41; - 1<br />
+params expected [...]<br />
+&lt;masak&gt; I don&#39;t know about you, but &#39;1 params&#39; does not make an<br />
+awesome message...<br />
+* masak submits a rakudobug about that<br />
+<br />
+See what the standard of &#39;awesome error messages&#39; is doing to us? But<br />
+I do think English grammar mandates &#34;param&#34; when it&#39;s only 1<br />
+parameter. :&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583744" href="/rt3/Ticket/Display.html?id=67358#txn-583744">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;14:50:32&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583746" href="/rt3/Ticket/Display.html?id=67358#txn-583746">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;14:56:43&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67358] [BUG] less than awesome error message for 1 param  expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 8 Jul 2009 16:56:11 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583746/277420/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 365b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Jul 8, 2009 at 4:50 PM, Carl Mäsak&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;p6eval&gt; rakudo 70bfd5: OUTPUT«too many arguments passed &#40;2&#41; - 1<br />
+&gt; params expected [...]<br />
+</div>
+<br />
+In this case, it might be easiest to leave the word out:<br />
+<br />
+Too many arguments passed &#40;2&#41; - 1 expected.<br />
+<br />
+Even this looks not too bad to me:<br />
+<br />
+Too many arguments passed &#40;1&#41; - 0 expected.<br />
+<br />
+Kyle.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583750" href="/rt3/Ticket/Display.html?id=67358#txn-583750">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;14:56:44&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583768" href="/rt3/Ticket/Display.html?id=67358#txn-583768">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;15:14:30&nbsp;2009</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67358] [BUG] less than awesome error message for 1 param expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 8 Jul 2009 15:13:52 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583768/277434/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 392b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wednesday 08 July 2009 14:56:11 Kyle Hasselbacher wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; In this case, it might be easiest to leave the word out:<br />
+&gt;<br />
+&gt; Too many arguments passed &#40;2&#41; - 1 expected.<br />
+&gt;<br />
+&gt; Even this looks not too bad to me:<br />
+&gt;<br />
+&gt; Too many arguments passed &#40;1&#41; - 0 expected.<br />
+</div>
+<br />
+It&#39;s Parrot behavior.  It&#39;s trivial to change to &#34;Too many params passed&#34; or <br />
+&#34;Too many results passed&#34;.  Would that be clearer?<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583776" href="/rt3/Ticket/Display.html?id=67358#txn-583776">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;15:29:05&nbsp;2009</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;,  bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67358] [BUG] less than awesome error message for 1 param  expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 9 Jul 2009 00:28:33 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583776/277446/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 488b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+chromatic &#40;&gt;&#41;, Kyle &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; In this case, it might be easiest to leave the word out:<br />
+&gt;&gt;<br />
+&gt;&gt; Too many arguments passed &#40;2&#41; - 1 expected.<br />
+&gt;&gt;<br />
+&gt;&gt; Even this looks not too bad to me:<br />
+&gt;&gt;<br />
+&gt;&gt; Too many arguments passed &#40;1&#41; - 0 expected.<br />
+</div>
+&gt;<br />
+&gt; It&#39;s Parrot behavior.  It&#39;s trivial to change to &#34;Too many params passed&#34; or<br />
+&gt; &#34;Too many results passed&#34;.  Would that be clearer?<br />
+</div>
+<br />
+Maybe, but the problem as described in the original ticket was the<br />
+inconsistency of &#39;1&#39; and &#39;params&#39; with an &#39;s&#39;.<br />
+<br />
+// Carl<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583846" href="/rt3/Ticket/Display.html?id=67358#txn-583846">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;17:25:40&nbsp;2009</td>
+    <td class="description">
+      not.com <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org,  Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67358] [BUG] less than awesome error message for 1 param  expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 8 Jul 2009 17:24:47 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583846/277480/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 417b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Jul 8, 2009 at 3:28 PM, Carl Mäsak&lt;cmasak <!-- x --> at gmail.com&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; It&#39;s Parrot behavior.  It&#39;s trivial to change to &#34;Too many params passed&#34; or<br />
+&gt;&gt; &#34;Too many results passed&#34;.  Would that be clearer?<br />
+</div>
+&gt;<br />
+&gt; Maybe, but the problem as described in the original ticket was the<br />
+&gt; inconsistency of &#39;1&#39; and &#39;params&#39; with an &#39;s&#39;.<br />
+</div>
+<br />
+There&#39;s also the inconsistency of &#34;arguments&#34; vs &#34;params&#34;! Drop the<br />
+&#34;params&#34; altogether.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-584062" href="/rt3/Ticket/Display.html?id=67358#txn-584062">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;09&nbsp;01:55:31&nbsp;2009</td>
+    <td class="description">
+      matt-w -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;,  chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org,  Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67358] [BUG] less than awesome error message for 1 param  expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 9 Jul 2009 09:54:56 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Matthew Walton &lt;matthew@matthew-walton.co.uk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/584062/277606/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 791b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Jul 9, 2009 at 1:24 AM, yary&lt;not.com <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed, Jul 8, 2009 at 3:28 PM, Carl Mäsak&lt;cmasak <!-- x --> at gmail.com&gt; wrote:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; It&#39;s Parrot behavior.  It&#39;s trivial to change to &#34;Too many params passed&#34; or<br />
+&gt;&gt;&gt; &#34;Too many results passed&#34;.  Would that be clearer?<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; Maybe, but the problem as described in the original ticket was the<br />
+&gt;&gt; inconsistency of &#39;1&#39; and &#39;params&#39; with an &#39;s&#39;.<br />
+</div>
+&gt;<br />
+&gt; There&#39;s also the inconsistency of &#34;arguments&#34; vs &#34;params&#34;! Drop the<br />
+&gt; &#34;params&#34; altogether.<br />
+&gt;<br />
+</div>
+<br />
+There&#39;s also also the fact that &#39;param&#39; is an abbreviation and looks<br />
+sloppy, so it should be &#39;parameter&#39; vs &#39;argument&#39;. Which is right? I<br />
+don&#39;t know, but I know that &#39;param&#39; is wrong. PIR might use it, but<br />
+that&#39;s not the kind of thing we want to expose in error messages.<br />
+<br />
+Or at least, I don&#39;t.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-584508" href="/rt3/Ticket/Display.html?id=67358#txn-584508">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;10&nbsp;01:50:12&nbsp;2009</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67358] [BUG] less than awesome error message for 1 param expected in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 10 Jul 2009 01:49:28 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/584508/277778/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 438b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wednesday 08 July 2009 17:24:47 yary wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed, Jul 8, 2009 at 3:28 PM, Carl Mäsak&lt;cmasak <!-- x --> at gmail.com&gt; wrote:<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; Maybe, but the problem as described in the original ticket was the<br />
+&gt; &gt; inconsistency of &#39;1&#39; and &#39;params&#39; with an &#39;s&#39;.<br />
+</div>
+</div>
+<br />
+<div class="message-stanza-depth-1">
+&gt; There&#39;s also the inconsistency of &#34;arguments&#34; vs &#34;params&#34;! Drop the<br />
+&gt; &#34;params&#34; altogether.<br />
+</div>
+<br />
+I declare that &#34;beyond the scope of this ticket&#34;, which I have resolved as of <br />
+Parrot r39964.<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.56454</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

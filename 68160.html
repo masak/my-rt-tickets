@@ -1,0 +1,688 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#68160: [TODO] File test operations should work as $str.IO ~~ :e</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D68160">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#68160: [TODO] File test operations should work as $str.IO ~~ :e</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=68160">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">68160</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=68160">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz
+&lt;moritz [at] faui2k3.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=68160">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Todo    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=68160">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=68160">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-593620" href="/rt3/Ticket/Display.html?id=68160#txn-593620">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;03&nbsp;12:25:41&nbsp;2009</td>
+    <td class="description">
+      moritz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] File test operations should work as $str.IO ~~ :e</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 03 Aug 2009 21:24:10 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/593620/282994/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 4.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The spec for file test operations changed; basically it&#39;s now $str.IO ~~<br />
+$pair instead of just $str ~~ $pair.<br />
+<br />
+Below you can find the relevant commit mail.<br />
+<br />
+-------- Original Message --------<br />
+Subject: r27503 - docs/Perl6/Spec<br />
+Date: Sat, 11 Jul 2009 01:11:48 +0200<br />
+From: pugs-commits <!-- x --> at perl6.nl<br />
+To: perl6-language <!-- x --> at perl.org<br />
+<br />
+Author: lwall<br />
+Date: 2009-07-11 01:11:48 +0200 &#40;Sat, 11 Jul 2009&#41;<br />
+New Revision: 27503<br />
+<br />
+Modified:<br />
+   docs/Perl6/Spec/S03-operators.pod<br />
+Log:<br />
+[S03] Reduce power of Pair.ACCEPTS to work only on booleans, moritz++<br />
+&#40;but we keep the pair forms for ease-of-use via switches and junctions<br />
+as well as for &#34;doesn&#39;t look like anything else&#34; readability&#41;.<br />
+Specify that numeric comparisons must use the method forms &#40;except for<br />
+<div class="message-stanza-depth-1">
+== 0&#41;.<br />
+</div>
+Filetest methods and pair matching no longer work on Str.<br />
+&#40;They do, however work on IO, Statbuf, and will presumably work extensibly<br />
+on any other resource handles we care to define in the future.&#41;<br />
+<br />
+<br />
+Modified: docs/Perl6/Spec/S03-operators.pod<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- docs/Perl6/Spec/S03-operators.pod   2009-07-10 19:36:51 UTC &#40;rev 27502&#41;<br />
++++ docs/Perl6/Spec/S03-operators.pod   2009-07-10 23:11:48 UTC &#40;rev 27503&#41;<br />
+@@ -14,8 +14,8 @@<br />
+<br />
+     Created: 8 Mar 2004<br />
+<br />
+-    Last Modified: 10 Jun 2009<br />
+-    Version: 168<br />
++    Last Modified: 10 Jul 2009<br />
++    Version: 169<br />
+<br />
+ =head1 Overview<br />
+<br />
+@@ -2215,15 +2215,15 @@<br />
+ The filetest operators are gone.  We now use a C&lt;Pair&gt; as a<br />
+ pattern that calls an object&#39;s method:<br />
+<br />
+-    if $filename ~~ :e { say &#34;exists&#34; }<br />
++    if $filename.IO ~~ :e { say &#34;exists&#34; }<br />
+<br />
+ is the same as<br />
+<br />
+-    if $filename.e { say &#34;exists&#34; }<br />
++    if $filename.IO.e { say &#34;exists&#34; }<br />
+<br />
+ The 1st form actually translates to the latter form, so the object&#39;s<br />
+ class decides how to dispatch methods.  It just happens that<br />
+-C&lt;Str&gt; &#40;filenames&#41;, C&lt;IO&gt; &#40;filehandles&#41;, and C&lt;Statbuf&gt; &#40;stat buffers&#41;<br />
++C&lt;IO&gt; &#40;filehandles&#41; and C&lt;Statbuf&gt; &#40;stat buffers&#41;<br />
+ default to the expected filetest semantics, but C&lt;$regex.i&gt; might<br />
+ tell you whether the regex is case insensitive, for instance.<br />
+<br />
+@@ -2245,19 +2245,31 @@<br />
+     when :r &#38; :w &#38; :x<br />
+     when all&#40;:r,:w,:x&#41;<br />
+<br />
+-The advantage of the method form is that it can be used in places that<br />
+-require tighter precedence than C&lt;~~&gt; provides:<br />
++The pair forms are useful only for boolean tests, so the<br />
++method form must be used for any numeric-based tests:<br />
+<br />
+-    sort { $^a.M &lt;=&gt; $^b.M }, @files<br />
++    if stat&#40;$filename&#41;.s &gt; 1024 {...}<br />
+<br />
++However, these still work:<br />
++<br />
++    given $fh {<br />
++        when :s  {...} # file has size &gt; 0<br />
++        when :!s {...} # file size == 0<br />
++    }<br />
++<br />
++One advantage of the method form is that it can be used in places that<br />
++require tighter precedence than C&lt;~~&gt; provides<br />
++<br />
++    sort { $^a.M &lt;=&gt; $^b.M }, @files».IO<br />
++<br />
+ though that&#39;s a silly example since you could just write:<br />
+<br />
+-    sort { .M }, @files<br />
++    sort { .M }, @files».IO<br />
+<br />
+ But that demonstrates the other advantage of the method form, which is<br />
+ that it allows the &#34;unary dot&#34; syntax to test the current topic.<br />
+<br />
+-Unlike in earlier versions of Perl 6, these filetests do not return<br />
++Unlike in earlier versions of Perl 6, these filetest methods do not return<br />
+ stat buffers, but simple scalars of type C&lt;Bool&gt;, C&lt;Int&gt;, or C&lt;Num&gt;.<br />
+<br />
+ In general, the user need not worry about caching the stat buffer<br />
+@@ -2272,11 +2284,6 @@<br />
+ object doesn&#39;t know its filename but does know its IO handle, then<br />
+ C&lt;.file&gt; attempts to return C&lt;.io.file&gt;.<br />
+<br />
+-Note that C&lt;:s&gt; still returns the filesize, but C&lt;:!s&gt; is true<br />
+-only if the file is of size 0, since it is smartmatched<br />
+-against the implicit False argument.  By the same token,<br />
+-C&lt;:s&#40;0..1024&#41;&gt; will be true only for files of size 1K or less.<br />
+-<br />
+ &#40;Inadvertent use of the Perl 5 forms will normally result in treatment<br />
+ as a negated postdeclared subroutine, which is likely to produce an<br />
+ error message at the end of compilation.&#41;<br />
+@@ -3077,7 +3084,7 @@<br />
+     Any       Str       string equality         ~$_ eq X<br />
+<br />
+     Hash      Pair      test hash mapping       $_{X.key} ~~ X.value<br />
+-    Any       Pair      test object attribute   .&#34;{X.key}&#34; ~~ X.value<br />
+&#40;e.g. filetests&#41;<br />
++    Any       Pair      test object attribute   ?.&#34;{X.key}&#34; ===<br />
+?X.value &#40;e.g. filetests&#41;<br />
+<br />
+     Set       Set       identical sets          $_ === X<br />
+     Hash      Set       hash keys same set      $_.keys === X<br />
+@@ -3538,7 +3545,7 @@<br />
+ Note that logical operators such as C&lt;||&gt; and C&lt;^^&gt; do not return a Bool,<br />
+ but rather one of the operands.<br />
+<br />
+-=head2 Reversed comparison operators<br />
++=head2 Reversed operators<br />
+<br />
+ Any infix operator may be called with its two arguments reversed<br />
+ by prefixing with C&lt;R&gt;.  For instance, to do reversed comparisons:<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-593626" href="/rt3/Ticket/Display.html?id=68160#txn-593626">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;03&nbsp;12:25:43&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Todo added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595298" href="/rt3/Ticket/Display.html?id=68160#txn-595298">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;17:12:43&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595298/283832/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 226b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Aug 03 12:25:41 2009, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; The spec for file test operations changed; basically it&#39;s now $str.IO ~~<br />
+&gt; $pair instead of just $str ~~ $pair.<br />
+</div>
+<br />
+What should the old form do now?  Is &#40; &#34;filename&#34; ~~ :e &#41; an error?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595302" href="/rt3/Ticket/Display.html?id=68160#txn-595302">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;17:12:44&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.928719</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

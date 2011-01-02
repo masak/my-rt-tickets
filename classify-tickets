@@ -1,0 +1,130 @@
+use v6;
+
+sub to-epoch($date) {
+    $date ~~ / ^ <alpha>**3 ' ' (<alpha>**3) ' ' (\d+)
+                 ' ' (\d\d)\:(\d\d)\:(\d\d) ' ' (\d**4) $ /
+        or die "Unknown date format '$date'";
+
+    my ($day, $hour, $minute, $second, $year) = $/[1..5]>>.int;
+    # RAKUDO: The below doesn't work for some reason
+    #my $month = %(<. Jan Feb Mar Apr Jun Jul Aug Sep Oct Nov Dec>.kv)[~$0];
+    my $month = index('JanFebMarAprMayJunJulAugSepOctNovDec', ~$0)/3 + 1;
+    Temporal::DateTime.new( date => Temporal::Date.new(:$year, :$month, :$day),
+                            time => Temporal::Time.new(:$hour, :$minute,
+                                                         :$second)
+    ).epoch();
+}
+
+sub scale($epoch, $oldest, $newest) {
+    return ($epoch - $oldest) / ($newest - $oldest) * 946.78778 + 51.147833;
+}
+
+my $oldest = 1034632248;
+my $newest = time;
+my $y      = 650;
+my @tickets;
+
+for qx<ls ?????.html>.split("\n").grep({$_}) -> $file {
+    last if $y <= 10;
+
+    my %ticket = :x(51.147833), :y($y),
+                 :width(946.78778), :height(0.325),
+                 :style<fill:#7c86ed>;
+    $y -= .5;
+    for qqx[grep -A3 'td class="date"' $file].split("\n")
+        -> $date is copy, $, $description is copy, $, $foo? {
+
+        given $date {
+            .=subst(/ ^ \s* '<td class="date">'/, '');
+            .=subst(/ '</td>' \s* $ /, '');
+            .=subst(/ '&nbsp;' /, ' ', :g);
+        }
+
+        # $description.=subst(/ '&#' (\d+) ';' /, { chr(+$0) }, :g);
+        # The above doesn't work. I have no idea why.
+        while $description ~~ / '&#' (\d+) ';' / {
+            $description = $description.substr(0, $/.from)
+                           ~ chr($description.substr($/.from + 2))
+                           ~ $description.substr($/.to);
+        }
+        $description.=subst(/ ^ \s+ /, '');
+
+        given $description {
+            when /'Ticket created'/ {
+                %ticket<x> = scale(to-epoch($date), $oldest, $newest);
+                %ticket<width> = scale($newest, $oldest, $newest) - %ticket<x>;
+            }
+            when /'Correspondence added' $/ {}
+            when /'Status changed from ' \'\w+\' ' to \''
+                  (resolved|open|rejected|stalled|new)'\''/ {
+                %ticket<width> = scale(to-epoch($date), $oldest, $newest)
+                                 - %ticket<x>;
+            }
+            when /'Keyword/' \d+ ' changed'/ {}
+            when /'Taken'/ {}
+            when /'Queue changed'/ {}
+            when /'Comments added'/ {}
+            when /'Requestor ' \w+ ' added'/ {}
+            when /'Requestor ' .*? ' deleted'/ {}
+            when /'Subject changed from '/ {}
+            when /'Given to '/ {}
+            when /(Tag|'Patch Status'|Severity|Cc) ' ' \S+ ' added'/ {}
+            when /(Dependency|Reference|Membership) ' ' (to|by|in|on)
+                  [' ticket #' \d+|' http://' (\S*)] ' ' (added|deleted)/ {}
+            when /'Ticket ' \d+ ':  Merged into ticket #' \d+/ {}
+            when /'Merged into ticket #' \d+/ {}
+            when /'Stolen from '/ {}
+            when /'Priority changed '/ {}
+            default { die "Unknown description: $description" }
+        }
+    }
+    push @tickets, 'rect' => [ %ticket.pairs ];
+}
+
+use SVG;
+
+say SVG.serialize(
+    'svg' => ([ :xmlns<http://www.w3.org/2000/svg>,
+                'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+                :width<297mm>, :height<210mm>,
+        :defs([
+            :marker([ :refX(0), :refY(0), :orient<auto>, :id<Arrow2Lend>,
+                      :style<overflow:visible>,
+                :path([
+                    :d('M 8.7185878,4.0337352 L -2.2072895,0.016013256
+                        L 8.7185884,-4.0017078 C 6.97309,-1.6296469
+                          6.9831476,1.6157441 8.7185878,4.0337352 z'),
+                    :transform<matrix(-1.1,0,0,-1.1,-1.1,0)>,
+                    :style('font-size:12px;fill:#c0c0c0;fill-rule:evenodd;
+                            stroke-width:0.625;stroke-linejoin:round'),
+                ]),
+            ]),
+            :linearGradient([ :id<linearGradient3166>,
+                :stop([:style<stop-color:#100020;stop-opacity:1>,:offset(0)]),
+                :stop([:style<stop-color:#000000;stop-opacity:1>,:offset(1)]),
+            ]),
+            :linearGradient([ :id<linearGradient3172>,
+                :x1(290.21667), :y1(761.36926),
+                :x2(301.73322), :y2(-1.0253485),
+                'xlink:href' => '#linearGradient3166',
+                :gradientUnits<userSpaceOnUse>,
+                :gradientTransform<translate(-0.1245546,-2.3664618)>
+            ]),
+        ]),
+        :rect([ :x(-13.944397), :y(-13.756683),
+                :width(1080.251), :height(771.60785),
+                :style<fill:url(#linearGradient3172)> ]),
+        :path([ :d('M 51.147833,670.33358 L 997.93573,670.33358'),
+                :style('stroke:#c0c0c0;stroke-width:4;
+                       marker-end:url(#Arrow2Lend)') ]),
+        (map {;
+            :rect([ :x(scale(Temporal::DateTime.new(
+                                 date => Temporal::Date.new(:year($_)
+                             )).epoch, $oldest, $newest)),
+                    :y(670.33358),
+                    :width(4), :height(20),
+                    :style('fill:#c0c0c0') ])
+        }, 2003..2009),
+        @tickets,
+    ])
+);

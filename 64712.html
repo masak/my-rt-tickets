@@ -1,0 +1,1153 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64712: something is wrong with gen_parrot.pl</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64712">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64712: something is wrong with gen_parrot.pl</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64712">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64712</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64712">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+sammydc [at] gmail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64712">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=64712">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64712">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551908" href="/rt3/Ticket/Display.html?id=64712#txn-551908">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;14&nbsp;01:44:39&nbsp;2009</td>
+    <td class="description">
+      sammydc <!-- x --> at gmail.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">something is wrong with gen_parrot.pl</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 14 Apr 2009 01:44:01 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Sam Dela Cruz &lt;sammydc <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/551908/262378/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 407b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+<br />
+I think this line is wrong:<br />
+line 47:  system&#40;qw&#40;svn checkout -r&#41;,  $required , qw&#40;<br />
+https://svn.parrot.org/parrot/trunk parrot&#41;&#41;;<br />
+<br />
+all qw should be removed, in my ubuntu, i think what&#39; s happening is it&#39;s<br />
+removing all the spaces, so I&#39;m getting a bunch of error messages, i think<br />
+this is better:<br />
+system&#40;&#34;svn checkout -r&#34; . $required . &#34; &#34; . &#34;<br />
+https://svn.parrot.org/parrot/trunk parrot&#34;&#41;;<br />
+<br />
+Regards,<br />
+Sam<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/551908/262380/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 583b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551936" href="/rt3/Ticket/Display.html?id=64712#txn-551936">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;14&nbsp;05:17:07&nbsp;2009</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/551936/262396/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 686b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Apr 14 01:44:39 2009, sammydc <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi,<br />
+&gt; <br />
+&gt; I think this line is wrong:<br />
+&gt; line 47:  system&#40;qw&#40;svn checkout -r&#41;,  $required , qw&#40;<br />
+&gt; https://svn.parrot.org/parrot/trunk parrot&#41;&#41;;<br />
+&gt; <br />
+&gt; all qw should be removed, in my ubuntu, i think what&#39; s happening is <br />
+</div>
+it&#39;s<br />
+<div class="message-stanza-depth-1">
+&gt; removing all the spaces, so I&#39;m getting a bunch of error messages, i <br />
+</div>
+think<br />
+<div class="message-stanza-depth-1">
+&gt; this is better:<br />
+&gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34; &#34; . &#34;<br />
+&gt; https://svn.parrot.org/parrot/trunk parrot&#34;&#41;;<br />
+&gt; <br />
+&gt; Regards,<br />
+&gt; Sam<br />
+</div>
+<br />
+Out of curiosity, what error messages are you getting?<br />
+<br />
+BTW, this command looks right to me, passing a list to system&#40;&#41; instead <br />
+of a string avoids shell escaping issues.<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551940" href="/rt3/Ticket/Display.html?id=64712#txn-551940">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;14&nbsp;05:17:08&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551956" href="/rt3/Ticket/Display.html?id=64712#txn-551956">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;14&nbsp;07:49:06&nbsp;2009</td>
+    <td class="description">
+      john <!-- x --> at perlwolf.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64712] something is wrong with gen_parrot.pl</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 14 Apr 2009 10:48:51 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Will Coleda via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">John Macdonald &lt;john <!-- x --> at perlwolf.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/551956/262408/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Apr 14, 2009 at 05:17:08AM -0700, Will Coleda via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue Apr 14 01:44:39 2009, sammydc <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hi,<br />
+&gt; &gt; <br />
+&gt; &gt; I think this line is wrong:<br />
+&gt; &gt; line 47:  system&#40;qw&#40;svn checkout -r&#41;,  $required , qw&#40;<br />
+&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#41;&#41;;<br />
+&gt; &gt; <br />
+&gt; &gt; all qw should be removed, in my ubuntu, i think what&#39; s happening is <br />
+</div>
+&gt; it&#39;s<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; removing all the spaces, so I&#39;m getting a bunch of error messages, i <br />
+</div>
+&gt; think<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; this is better:<br />
+&gt; &gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34; &#34; . &#34;<br />
+&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#34;&#41;;<br />
+&gt; &gt; <br />
+&gt; &gt; Regards,<br />
+&gt; &gt; Sam<br />
+</div>
+&gt; <br />
+&gt; Out of curiosity, what error messages are you getting?<br />
+&gt; <br />
+&gt; BTW, this command looks right to me, passing a list to system&#40;&#41; instead <br />
+&gt; of a string avoids shell escaping issues.<br />
+</div>
+<br />
+The original looks right to me too, as long as $required contains<br />
+a single file name and not a blank separated list.  &#40;But that would<br />
+get treated instead as a single file name that had embedded blanks,<br />
+which is the opposite symptom to the original description.&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-551998" href="/rt3/Ticket/Display.html?id=64712#txn-551998">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;14&nbsp;10:06:28&nbsp;2009</td>
+    <td class="description">
+      sammydc <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64712] something is wrong with gen_parrot.pl</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 14 Apr 2009 07:54:19 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Sam Dela Cruz &lt;sammydc <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/551998/262428/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi Will,<br />
+<br />
+Thanks for the reply.  Here&#39;s the error message I&#39;m getting:<br />
+<br />
+Generating Parrot ...<br />
+/usr/bin/perl build/gen_parrot.pl<br />
+<br />
+ via svn...t Parrot r37980<br />
+&#39;vn: Syntax error in revision argument &#39;37980<br />
+<br />
+And I just tried it again, after changing line 47 to:<br />
+<br />
+system&#40;&#34;svn checkout -r&#34; . $required . &#34;<br />
+https://svn.parrot.org/parrot/trunkparrot&#34;&#41;;<br />
+<br />
+I was able to do a checkout of parrot.<br />
+<br />
+Btw, my machine is running Ubuntu, Intrepid Ibex.<br />
+<br />
+Regards,<br />
+Sam<br />
+<br />
+On Tue, Apr 14, 2009 at 5:17 AM, Will Coleda via RT &lt;<br />
+perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue Apr 14 01:44:39 2009, sammydc <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hi,<br />
+&gt; &gt;<br />
+&gt; &gt; I think this line is wrong:<br />
+&gt; &gt; line 47:  system&#40;qw&#40;svn checkout -r&#41;,  $required , qw&#40;<br />
+&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#41;&#41;;<br />
+&gt; &gt;<br />
+&gt; &gt; all qw should be removed, in my ubuntu, i think what&#39; s happening is<br />
+</div>
+&gt; it&#39;s<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; removing all the spaces, so I&#39;m getting a bunch of error messages, i<br />
+</div>
+&gt; think<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; this is better:<br />
+&gt; &gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34; &#34; . &#34;<br />
+&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#34;&#41;;<br />
+&gt; &gt;<br />
+&gt; &gt; Regards,<br />
+&gt; &gt; Sam<br />
+</div>
+&gt;<br />
+&gt; Out of curiosity, what error messages are you getting?<br />
+&gt;<br />
+&gt; BTW, this command looks right to me, passing a list to system&#40;&#41; instead<br />
+&gt; of a string avoids shell escaping issues.<br />
+&gt;<br />
+&gt; --<br />
+&gt; Will &#34;Coke&#34; Coleda<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-552108" href="/rt3/Ticket/Display.html?id=64712#txn-552108">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;14&nbsp;16:06:13&nbsp;2009</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64712] something is wrong with gen_parrot.pl</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 14 Apr 2009 19:05:47 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Sam Dela Cruz &lt;sammydc <!-- x --> at gmail.com&gt;, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/552108/262474/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Please do not replace system&#40;LIST&#41; with system&#40;STR&#41;.  All sorts of<br />
+complexities arise.<br />
+<br />
+What is the exact value of $required? Is something maybe adding<br />
+quotation marks to it?  That would fit the symptom.<br />
+<br />
+<br />
+On 4/14/09, Sam Dela Cruz &lt;sammydc <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi Will,<br />
+&gt;<br />
+&gt; Thanks for the reply.  Here&#39;s the error message I&#39;m getting:<br />
+&gt;<br />
+&gt; Generating Parrot ...<br />
+&gt; /usr/bin/perl build/gen_parrot.pl<br />
+&gt;<br />
+&gt;  via svn...t Parrot r37980<br />
+&gt; &#39;vn: Syntax error in revision argument &#39;37980<br />
+&gt;<br />
+&gt; And I just tried it again, after changing line 47 to:<br />
+&gt;<br />
+&gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34;<br />
+&gt; https://svn.parrot.org/parrot/trunkparrot&#34;&#41;;<br />
+&gt;<br />
+&gt; I was able to do a checkout of parrot.<br />
+&gt;<br />
+&gt; Btw, my machine is running Ubuntu, Intrepid Ibex.<br />
+&gt;<br />
+&gt; Regards,<br />
+&gt; Sam<br />
+&gt;<br />
+&gt; On Tue, Apr 14, 2009 at 5:17 AM, Will Coleda via RT &lt;<br />
+&gt; perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; On Tue Apr 14 01:44:39 2009, sammydc <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; Hi,<br />
+&gt;&gt; &gt;<br />
+&gt;&gt; &gt; I think this line is wrong:<br />
+&gt;&gt; &gt; line 47:  system&#40;qw&#40;svn checkout -r&#41;,  $required , qw&#40;<br />
+&gt;&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#41;&#41;;<br />
+&gt;&gt; &gt;<br />
+&gt;&gt; &gt; all qw should be removed, in my ubuntu, i think what&#39; s happening is<br />
+</div>
+&gt;&gt; it&#39;s<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; removing all the spaces, so I&#39;m getting a bunch of error messages, i<br />
+</div>
+&gt;&gt; think<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; this is better:<br />
+&gt;&gt; &gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34; &#34; . &#34;<br />
+&gt;&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#34;&#41;;<br />
+&gt;&gt; &gt;<br />
+&gt;&gt; &gt; Regards,<br />
+&gt;&gt; &gt; Sam<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; Out of curiosity, what error messages are you getting?<br />
+&gt;&gt;<br />
+&gt;&gt; BTW, this command looks right to me, passing a list to system&#40;&#41; instead<br />
+&gt;&gt; of a string avoids shell escaping issues.<br />
+&gt;&gt;<br />
+&gt;&gt; --<br />
+&gt;&gt; Will &#34;Coke&#34; Coleda<br />
+&gt;&gt;<br />
+</div>
+&gt;<br />
+</div>
+<br />
+-- <br />
+Sent from my mobile device<br />
+<br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-552204" href="/rt3/Ticket/Display.html?id=64712#txn-552204">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;15&nbsp;04:37:21&nbsp;2009</td>
+    <td class="description">
+      sammydc <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64712] something is wrong with gen_parrot.pl</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 14 Apr 2009 23:53:13 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Sam Dela Cruz &lt;sammydc <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/552204/262508/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi, I tried installing rakudo again just a minute ago, following this:<br />
+http://rakudo.org/how-to-get-rakudo.  It works ok now.  Thanks guys!<br />
+<br />
+Regards,<br />
+Sam<br />
+<br />
+On Tue, Apr 14, 2009 at 4:05 PM, Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Please do not replace system&#40;LIST&#41; with system&#40;STR&#41;.  All sorts of<br />
+&gt; complexities arise.<br />
+&gt;<br />
+&gt; What is the exact value of $required? Is something maybe adding<br />
+&gt; quotation marks to it?  That would fit the symptom.<br />
+&gt;<br />
+&gt;<br />
+&gt; On 4/14/09, Sam Dela Cruz &lt;sammydc <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hi Will,<br />
+&gt; &gt;<br />
+&gt; &gt; Thanks for the reply.  Here&#39;s the error message I&#39;m getting:<br />
+&gt; &gt;<br />
+&gt; &gt; Generating Parrot ...<br />
+&gt; &gt; /usr/bin/perl build/gen_parrot.pl<br />
+&gt; &gt;<br />
+&gt; &gt;  via svn...t Parrot r37980<br />
+&gt; &gt; &#39;vn: Syntax error in revision argument &#39;37980<br />
+&gt; &gt;<br />
+&gt; &gt; And I just tried it again, after changing line 47 to:<br />
+&gt; &gt;<br />
+&gt; &gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34;<br />
+&gt; &gt; https://svn.parrot.org/parrot/trunkparrot&#34;&#41;;<br />
+&gt; &gt;<br />
+&gt; &gt; I was able to do a checkout of parrot.<br />
+&gt; &gt;<br />
+&gt; &gt; Btw, my machine is running Ubuntu, Intrepid Ibex.<br />
+&gt; &gt;<br />
+&gt; &gt; Regards,<br />
+&gt; &gt; Sam<br />
+&gt; &gt;<br />
+&gt; &gt; On Tue, Apr 14, 2009 at 5:17 AM, Will Coleda via RT &lt;<br />
+&gt; &gt; perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+&gt; &gt;<br />
+<div class="message-stanza-depth-3">
+&gt; &gt;&gt; On Tue Apr 14 01:44:39 2009, sammydc <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-4">
+&gt; &gt;&gt; &gt; Hi,<br />
+&gt; &gt;&gt; &gt;<br />
+&gt; &gt;&gt; &gt; I think this line is wrong:<br />
+&gt; &gt;&gt; &gt; line 47:  system&#40;qw&#40;svn checkout -r&#41;,  $required , qw&#40;<br />
+&gt; &gt;&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#41;&#41;;<br />
+&gt; &gt;&gt; &gt;<br />
+&gt; &gt;&gt; &gt; all qw should be removed, in my ubuntu, i think what&#39; s happening is<br />
+</div>
+&gt; &gt;&gt; it&#39;s<br />
+<div class="message-stanza-depth-4">
+&gt; &gt;&gt; &gt; removing all the spaces, so I&#39;m getting a bunch of error messages, i<br />
+</div>
+&gt; &gt;&gt; think<br />
+<div class="message-stanza-depth-4">
+&gt; &gt;&gt; &gt; this is better:<br />
+&gt; &gt;&gt; &gt; system&#40;&#34;svn checkout -r&#34; . $required . &#34; &#34; . &#34;<br />
+&gt; &gt;&gt; &gt; https://svn.parrot.org/parrot/trunk parrot&#34;&#41;;<br />
+&gt; &gt;&gt; &gt;<br />
+&gt; &gt;&gt; &gt; Regards,<br />
+&gt; &gt;&gt; &gt; Sam<br />
+</div>
+&gt; &gt;&gt;<br />
+&gt; &gt;&gt; Out of curiosity, what error messages are you getting?<br />
+&gt; &gt;&gt;<br />
+&gt; &gt;&gt; BTW, this command looks right to me, passing a list to system&#40;&#41; instead<br />
+&gt; &gt;&gt; of a string avoids shell escaping issues.<br />
+&gt; &gt;&gt;<br />
+&gt; &gt;&gt; --<br />
+&gt; &gt;&gt; Will &#34;Coke&#34; Coleda<br />
+&gt; &gt;&gt;<br />
+</div>
+&gt; &gt;<br />
+</div>
+&gt;<br />
+&gt; --<br />
+&gt; Sent from my mobile device<br />
+&gt;<br />
+&gt; Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-552206" href="/rt3/Ticket/Display.html?id=64712#txn-552206">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;15&nbsp;05:23:59&nbsp;2009</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/552206/262510/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 276b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Apr 15 04:37:21 2009, sammydc <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi, I tried installing rakudo again just a minute ago, following this:<br />
+&gt; http://rakudo.org/how-to-get-rakudo.  It works ok now.  Thanks guys!<br />
+&gt; <br />
+&gt; Regards,<br />
+&gt; Sam<br />
+</div>
+<br />
+Good luck. =-&#41;<br />
+<br />
+Resolving ticket.<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-552212" href="/rt3/Ticket/Display.html?id=64712#txn-552212">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;15&nbsp;05:24:02&nbsp;2009</td>
+    <td class="description">
+      coke -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.608384</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

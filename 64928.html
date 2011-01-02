@@ -1,0 +1,621 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64928: The undefinedness of optional arguments and typed attributes in  Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64928">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64928: The undefinedness of optional arguments and typed attributes in  Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64928">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64928</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">new</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64928">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64928">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=64928">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64928">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-555002" href="/rt3/Ticket/Display.html?id=64928#txn-555002">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;21&nbsp;06:35:05&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">The undefinedness of optional arguments and typed attributes in  Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 21 Apr 2009 15:34:33 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/555002/263954/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 7.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Apologies, the below discussion is long and involved. I&#39;ve tried to<br />
+simplify and reduce as much as I can.<br />
+<br />
+&lt;masak&gt; rakudo: class A { multi method dispatch&#40;@chunks, %param?&#41; {<br />
+say %param.perl, defined %param } }; A.new.dispatch&#40;[1,2,3]&#41;;<br />
+A.new.dispatch&#40;[1,2,3], { &#34;OH&#34; =&gt; &#34;HAI&#34; }&#41;<br />
+&lt;p6eval&gt; rakudo 69b318: OUTPUT«{}1␤{&#34;OH&#34; =&gt; &#34;HAI&#34;}1␤»<br />
+&lt;masak&gt; I&#39;m slightly surprised that the former is defined.<br />
+&lt;masak&gt; but maybe it has to be that way.<br />
+&lt;moritz_&gt; masak: that&#39;s because %param is an instance<br />
+&lt;masak&gt; an instance?<br />
+&lt;moritz_&gt; objects<br />
+&lt;jnthn&gt; An instance of Hash<br />
+&lt;moritz_&gt; objects of normal classes are always defined<br />
+&lt;masak&gt; ok, you two don&#39;t seem to think this is an error, so I guess it isn&#39;t :&#41;<br />
+&lt;frettled&gt; masak: I think I grokked the code in your previous example<br />
+now, and yes,  think it makes sense that it works the way it did.<br />
+&lt;masak&gt; frettled: with the instantiated hash?<br />
+&lt;frettled&gt; masak: yep<br />
+&lt;masak&gt; frettled: well, I just want a simple way to test if the<br />
+parameter was passed.<br />
+&lt;masak&gt; frettled: or maybe {} is the default for Hash...<br />
+&lt;frettled&gt; masak: the way I read the spec, the default values are the<br />
+ones you specify in the sub declaration.<br />
+&lt;moritz_&gt; frettled: if %h were undef, you couldn&#39;t assign values to it<br />
+&lt;masak&gt; ack. it&#39;s more dwimmy that it&#39;s {}.<br />
+&lt;frettled&gt; moritz_: hrm, that&#39;s breaking the principle of least surprise.<br />
+&lt;masak&gt; but... I just want a nice way to see if the hash was passed or not.<br />
+&lt;moritz_&gt; frettled: maybe the spec needs to be updated to only refer<br />
+to scalar optional parameters<br />
+&lt;frettled&gt; moritz_: or to allow assignment to undefined non-scalars ;&#41;<br />
+&lt;p6eval&gt; rakudo 69b318: OUTPUT«{&#34;a&#34; =&gt; 5, &#34;b&#34; =&gt; 2, &#34;c&#34; =&gt; 3}␤»<br />
+&lt;moritz_&gt; frettled: that would be much weirder, overall<br />
+&lt;frettled&gt; moritz_: would it?<br />
+&lt;moritz_&gt; frettled: yes.<br />
+&lt;frettled&gt; moritz_: I don&#39;t see how, though.<br />
+&lt;moritz_&gt; frettled: if you have an undef value, it&#39;s usually not a<br />
+&#34;normal&#34; object, but a proto object<br />
+&lt;moritz_&gt; frettled: so if a default value is such a proto object, a<br />
+%h&lt;a&gt; = 3 would call the postcircumfix:&lt;&lt; &lt; &gt; &gt;&gt; method as a class<br />
+method<br />
+&lt;moritz_&gt; frettled: which doesn&#39;t have access to attributes - so it&#39;s<br />
+going to barf<br />
+&lt;masak&gt; moritz_: what does &#39;my %h;&#39; do?<br />
+&lt;moritz_&gt; masak: it calls Hash.new under the hood, I assume<br />
+&lt;masak&gt; then it can be argued that &#39;%h?&#39; should, too.<br />
+&lt;frettled&gt; moritz_: so essentially, it&#39;s been designed into a corner<br />
+where you can&#39;t get out of without getting hacks all over your feet ;&#41;<br />
+&lt;moritz_&gt; frettled: right<br />
+&lt;frettled&gt; moritz_: $expletive<br />
+&lt;moritz_&gt; frettled: of course there are other options...<br />
+&lt;frettled&gt; moritz_: yes, _is rw_, for instance, seems like it would help.<br />
+* frettled is a Perl 6 spec n00b, though.<br />
+&lt;moritz_&gt; frettled: like having %h? defaulting to a Hash.new&#40;defined =&gt; 0&#41; or so<br />
+&lt;frettled&gt; moritz_: no, that&#39;s the wrong solution, because it still<br />
+means you can&#39;t say whether you got passed an empty hash or not.<br />
+&lt;moritz_&gt; frettled: you could, because an empty hash defaults to being defined<br />
+&lt;frettled&gt; ah, I misunderstood the magic<br />
+&lt;moritz_&gt; but there&#39;s a drawback... every modifying call to a hash<br />
+would have to set its defined flag<br />
+&lt;frettled&gt; mm<br />
+&lt;frettled&gt; I think this is a design weakness.<br />
+&lt;moritz_&gt; the problem is that we&#39;re doing in-band communication<br />
+&lt;moritz_&gt; instead of asking the hash parameter if it was defined, we<br />
+should ask the capture if that hash was given<br />
+&lt;masak&gt; aye.<br />
+&lt;moritz_&gt; especially since objects can respond with False to .defined<br />
+at will anyway<br />
+&lt;frettled&gt; the way you put it, it seems like there is a<br />
+straight-forward way of doing so, and that would be good.<br />
+&lt;frettled&gt; Conceptually, that&#39;s much cleaner than asking the variable.<br />
+&lt;moritz_&gt; the simplest solution that works with the current spec is to<br />
+split it into two multis<br />
+&lt;moritz_&gt; but that&#39;s not always convenient<br />
+&lt;frettled&gt; I was considering to suggest that, but I thought it would<br />
+be neater to use the optional argument as, well, optional.<br />
+&lt;frettled&gt; In more complex cases it would make more sense to create<br />
+multiple methods.<br />
+&lt;frettled&gt; &#40;going Java&#41;<br />
+&lt;frettled&gt; There doesn&#39;t appear to be a test for this in S06, though.<br />
+Unless I&#39;m misreading the tests or missing a test, only scalars are<br />
+tested.  But my test-fu is weak.<br />
+&lt;moritz_&gt; frettled: it might well be missing... but let&#39;s try to get<br />
+clarification on the spec first, and then write tests :-&#41;<br />
+&lt;frettled&gt; moritz_: yep.<br />
+&lt;frettled&gt; moritz_: though the spec is pretty clear about it, really,<br />
+I just had to read the right part of it.<br />
+&lt;frettled&gt; It&#39;s right there in the intro of S06/Parameters and arguments/<br />
+&lt;frettled&gt; It speaks of &#34;container argument&#34; as opposed to a scalar.<br />
+&lt;frettled&gt; so if anyone has the test-fu to write a test for testing<br />
+whether optional hash and array parameters are 1&#41; immutable, 2&#41;<br />
+defined with their correct default value, and 3&#41; handles correctly<br />
+with is rw, is copy, etc.<br />
+&lt;frettled&gt; ...that would be nice. Then I can leech on and see how<br />
+that&#39;s tested.  :D<br />
+<br />
+...meanwhile, a bit later...<br />
+<br />
+&lt;masak&gt; rakudo: class A { has Callable $.c; method foo&#40;&#41; { say defined<br />
+$.c } }; A.new.foo<br />
+&lt;p6eval&gt; rakudo 69b318: OUTPUT«1␤»<br />
+&lt;masak&gt; I must say this is highly counterintuitive.<br />
+&lt;masak&gt; if that one is defined, what in the world is it defined to be?<br />
+&lt;masak&gt; I feel both this case and the case with the default parameters<br />
+undermines thewhole concept of definedness.<br />
+&lt;masak&gt; to me, &#39;defined&#39; should be able to show whether the variable<br />
+in question has been assigned to, initialized etc.<br />
+&lt;masak&gt; moreover...<br />
+&lt;masak&gt; rakudo: class A { has $.c; method foo&#40;&#41; { say defined $.c } };<br />
+A.new.foo[14:28]<br />
+&lt;p6eval&gt; rakudo 69b318: OUTPUT«0␤»<br />
+&lt;masak&gt; now it works as we all expect it to!<br />
+&lt;masak&gt; so the current behaviour is actually a kind of punishment for<br />
+adding types!<br />
+&lt;baest&gt; masak: I think it&#39;s only Roles<br />
+&lt;baest&gt; rakudo: class B { }; class A { has B $.c; method foo&#40;&#41; { say<br />
+defined $.c;} }; A.new.foo;<br />
+&lt;p6eval&gt; rakudo 69b318: OUTPUT«0␤»<br />
+&lt;masak&gt; baest: I think you&#39;re right.<br />
+&lt;masak&gt; but I don&#39;t think roles should behave like this either.<br />
+&lt;baest&gt; indeed<br />
+&lt;baest&gt; would be _very_ weird<br />
+&lt;masak&gt; moritz_ seemed to argue earlier that the optional-params case<br />
+was correct.<br />
+&lt;frettled&gt; Yes, at least correct according to spec, and as far as I<br />
+could tell, it was.<br />
+&lt;masak&gt; right.<br />
+&lt;masak&gt; that&#39;s why I&#39;m not submitting it as a rakudobug, because it&#39;s<br />
+really a spec issue.<br />
+&lt;frettled&gt; masak: Yes, and I don&#39;t think I quite got an answer to how<br />
+to check whether an argument was used in any other way than doing<br />
+multiple dispatch to eliminate the alternatives.<br />
+&lt;masak&gt; frettled: indeed.<br />
+&lt;masak&gt; this discussion is not-yet-resolved.<br />
+&lt;frettled&gt; Since defined&#40;&#41; obviously isn&#39;t the correct way to do it,<br />
+an alternative method is necessary, e.g. another property for each<br />
+parameter that&#39;s specified in the sub/method definition.<br />
+&lt;frettled&gt; That would be quite useful, since it allows us to separate<br />
+between the following cases:<br />
+&lt;frettled&gt; 1&#41; The parameter was not used.<br />
+&lt;frettled&gt; 2&#41; The parameter was used, but was undefined.<br />
+&lt;frettled&gt; I&#39;m not eager to fight for this, since I&#39;m not sure where<br />
+the snowball will stop rolling.<br />
+&lt;masak&gt; whoa, &#34;obviously isn&#39;t the correct way&#34;? please explain -- I<br />
+didn&#39;t know it was obvious that it isn&#39;t the correct way, let alone<br />
+that it isn&#39;t the correct way...<br />
+&lt;masak&gt; frettled: for a typed parameter, the case 2&#41; will never occur.<br />
+&lt;frettled&gt; masak: ah, right, that was mentioned earlier as well.<br />
+&lt;frettled&gt; I used &#34;obviously&#34; loosely; it&#39;s not quite obvious to me<br />
+that this is the way it _ought_ to be, but it&#39;s obvious that it&#39;s the<br />
+way it _is_.<br />
+&lt;masak&gt; ah. :&#41;<br />
+&lt;masak&gt; I think &#39;defined&#39; should be used to test whether a variable,<br />
+parameter or attribute has been initialized.<br />
+&lt;masak&gt; I think that typing shouldn&#39;t affect this maxim.<br />
+&lt;frettled&gt; Yup.<br />
+&lt;frettled&gt; As I said before, it breaks with the principle of least<br />
+surprise, and it also breaks with the principle of not having special<br />
+exceptions for common cases.<br />
+&lt;masak&gt; mm.<br />
+&lt;masak&gt; I think I&#39;m ready to submit a rakudobug after all.<br />
+&lt;masak&gt; but it&#39;ll be one helluva rakudobug... :&#41;<br />
+* masak submits<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.344277</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

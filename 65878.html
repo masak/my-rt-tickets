@@ -1,0 +1,996 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#65878: Rakudo shouldn&#39;t allow metaops with the same modifier twice in a row</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D65878">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#65878: Rakudo shouldn&#39;t allow metaops with the same modifier twice in a row</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=65878">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">65878</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">rejected</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=65878">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=65878">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=65878">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+signature.asc<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/566874/269448/signature.asc">
+Thu May 21 16:34:29 2009 (198b) by dakkar
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=65878">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-566564" href="/rt3/Ticket/Display.html?id=65878#txn-566564">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;21&nbsp;02:56:22&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo shouldn&#39;t allow metaops with the same modifier twice in a row</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 21 May 2009 11:55:48 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/566564/269310/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;dakkar&gt; rakudo: sub infix:&lt;R&gt;&#40;$a,$b&#41; { $a ~ &#39;-&#39; ~ $b }; sub<br />
+infix:&lt;RR&gt;&#40;$a,$b&#41; { $a ~ &#39;_&#39; ~ $b }; say &#39;x&#39; R &#39;y&#39;; say &#39;x&#39; RR &#39;y&#39;;<br />
+&lt;p6eval&gt; rakudo e6b463: OUTPUT«x-y␤x_y␤»<br />
+&lt;dakkar&gt; now, apart from &#34;don&#39;t do that&#34;, what should happen?<br />
+&lt;masak&gt; dakkar: &#34;don&#39;t do that&#34; only applies after you&#39;ve found out<br />
+that what happens is really not what you want. :&#41;<br />
+&lt;dakkar&gt; masak: fair enough. the general question is: what should P6<br />
+do when meta-generated operators clash with user-defined subs? I<br />
+*think* rakudo is doing a sensible thing, btw<br />
+&lt;masak&gt; dakkar: me too.<br />
+&lt;jnthn&gt; dakkar: Your definition just happens later and wins atm, but<br />
+it&#39;s a little more ty accident than it perhaps should be.<br />
+&lt;masak&gt; depends on whether the auto-defined RR is considered a real<br />
+sub. then it should perhaps complain.<br />
+&lt;jnthn&gt; Well, it&#39;s a real sub. Question is if we make it a multi...<br />
+&lt;jnthn&gt; But in that case we woulda got a failure here.<br />
+&lt;jnthn&gt; I&#39;m not sure. The spec may have answers.<br />
+&lt;jnthn&gt; But I don&#39;t remember seeing any.<br />
+&lt;dakkar&gt; jnthn: about the meta-operator collision thing, S03 says that<br />
+you can&#39;t modify with &#39;!&#39; forms that start with &#39;!&#39;, and you can&#39;t<br />
+modify with &#39;=&#39; forms that end with &#39;=&#39;<br />
+&lt;jnthn&gt; dakkar: Ah, OK, so should probably be an error or some thing for those.<br />
+* masak submits rakuodbug<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-566756" href="/rt3/Ticket/Display.html?id=65878#txn-566756">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;21&nbsp;09:26:19&nbsp;2009</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65878] Rakudo shouldn&#39;t allow metaops with the same modifier twice in a row</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 21 May 2009 09:25:10 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/566756/269380/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, May 21, 2009 at 02:56:23AM -0700, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+: # New Ticket Created by  &#34;Carl Mäsak&#34; <br />
+: # Please include the string:  [perl #65878]<br />
+: # in the subject line of all future correspondence about this issue. <br />
+: # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=65878 &gt;<br />
+</div>
+: <br />
+: <br />
+: &lt;dakkar&gt; rakudo: sub infix:&lt;R&gt;&#40;$a,$b&#41; { $a ~ &#39;-&#39; ~ $b }; sub<br />
+: infix:&lt;RR&gt;&#40;$a,$b&#41; { $a ~ &#39;_&#39; ~ $b }; say &#39;x&#39; R &#39;y&#39;; say &#39;x&#39; RR &#39;y&#39;;<br />
+: &lt;p6eval&gt; rakudo e6b463: OUTPUT«x-y␤x_y␤»<br />
+: &lt;dakkar&gt; now, apart from &#34;don&#39;t do that&#34;, what should happen?<br />
+: &lt;masak&gt; dakkar: &#34;don&#39;t do that&#34; only applies after you&#39;ve found out<br />
+: that what happens is really not what you want. :&#41;<br />
+: &lt;dakkar&gt; masak: fair enough. the general question is: what should P6<br />
+: do when meta-generated operators clash with user-defined subs? I<br />
+: *think* rakudo is doing a sensible thing, btw<br />
+: &lt;masak&gt; dakkar: me too.<br />
+: &lt;jnthn&gt; dakkar: Your definition just happens later and wins atm, but<br />
+: it&#39;s a little more ty accident than it perhaps should be.<br />
+: &lt;masak&gt; depends on whether the auto-defined RR is considered a real<br />
+: sub. then it should perhaps complain.<br />
+: &lt;jnthn&gt; Well, it&#39;s a real sub. Question is if we make it a multi...<br />
+: &lt;jnthn&gt; But in that case we woulda got a failure here.<br />
+: &lt;jnthn&gt; I&#39;m not sure. The spec may have answers.<br />
+: &lt;jnthn&gt; But I don&#39;t remember seeing any.<br />
+: &lt;dakkar&gt; jnthn: about the meta-operator collision thing, S03 says that<br />
+: you can&#39;t modify with &#39;!&#39; forms that start with &#39;!&#39;, and you can&#39;t<br />
+: modify with &#39;=&#39; forms that end with &#39;=&#39;<br />
+: &lt;jnthn&gt; dakkar: Ah, OK, so should probably be an error or some thing for those.<br />
+: * masak submits rakuodbug<br />
+</div>
+<br />
+I don&#39;t see a bug here.  First, there&#39;s no prohibition on multiple<br />
+similar metas anymore.  But with regard to the example above, metas<br />
+are parsed as their own tokens, and the infix:&lt;RR&gt; is longer than<br />
+the meta R, so should take precedence under LTM.  We used to try<br />
+to form tokens out of all possible forms of meta, but that resulted<br />
+in an explosion, even with restrictions on meta recursion.  So we<br />
+lifted the restriction and now parse metas separately, albeit<br />
+still with the requirement of no whitespace between meta and base op.<br />
+<br />
+Anyway, if there is a tie between a meta and a normal, it tries<br />
+the meta first and then backtracks to the normal if the meta<br />
+doesn&#39;t find a base op.  That&#39;s how Xop wins against X.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-566760" href="/rt3/Ticket/Display.html?id=65878#txn-566760">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;21&nbsp;09:26:26&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-566780" href="/rt3/Ticket/Display.html?id=65878#txn-566780">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;21&nbsp;10:57:24&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/566780/269398/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 818b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Larry &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; I don&#39;t see a bug here.  First, there&#39;s no prohibition on multiple<br />
+&gt; similar metas anymore.  But with regard to the example above, metas<br />
+&gt; are parsed as their own tokens, and the infix:&lt;RR&gt; is longer than<br />
+&gt; the meta R, so should take precedence under LTM.  We used to try<br />
+&gt; to form tokens out of all possible forms of meta, but that resulted<br />
+&gt; in an explosion, even with restrictions on meta recursion.  So we<br />
+&gt; lifted the restriction and now parse metas separately, albeit<br />
+&gt; still with the requirement of no whitespace between meta and base op.<br />
+&gt; <br />
+&gt; Anyway, if there is a tie between a meta and a normal, it tries<br />
+&gt; the meta first and then backtracks to the normal if the meta<br />
+&gt; doesn&#39;t find a base op.  That&#39;s how Xop wins against X.<br />
+</div>
+<br />
+I had an inkling this might actually be a non-bug. Rejecting ticket.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-566784" href="/rt3/Ticket/Display.html?id=65878#txn-566784">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;21&nbsp;10:57:25&nbsp;2009</td>
+    <td class="description">
+      masak -  Status changed from &#39;open&#39; to &#39;rejected&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-566874" href="/rt3/Ticket/Display.html?id=65878#txn-566874">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;21&nbsp;16:34:28&nbsp;2009</td>
+    <td class="description">
+      dakkar -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65878] Rakudo shouldn&#39;t allow metaops with the same modifier twice in a row</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 21 May 2009 19:20:57 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Gianni Ceccarelli &lt;dakkar <!-- x --> at thenautilus.net&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/566874/269446/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On 2009-05-21 Larry Wall &lt;larry <!-- x --> at wall.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; : &lt;dakkar&gt; rakudo: sub infix:&lt;R&gt;&#40;$a,$b&#41; { $a ~ &#39;-&#39; ~ $b }; sub<br />
+&gt; : infix:&lt;RR&gt;&#40;$a,$b&#41; { $a ~ &#39;_&#39; ~ $b }; say &#39;x&#39; R &#39;y&#39;; say &#39;x&#39; RR &#39;y&#39;;<br />
+&gt; : &lt;p6eval&gt; rakudo e6b463: OUTPUT«x-y␤x_y␤»<br />
+&gt; : &lt;dakkar&gt; now, apart from &#34;don&#39;t do that&#34;, what should happen?<br />
+&gt; : [snip]<br />
+&gt; : &lt;dakkar&gt; jnthn: about the meta-operator collision thing, S03 says<br />
+&gt; : that you can&#39;t modify with &#39;!&#39; forms that start with &#39;!&#39;, and you<br />
+&gt; : can&#39;t modify with &#39;=&#39; forms that end with &#39;=&#39;<br />
+</div>
+</div>
+<br />
+Ok, let me try to explain what I was aiming at…<br />
+<br />
+If we have a normal operator, whose spelling is the same as a<br />
+meta-modified version of another operator, which one should get<br />
+called? The normal &#40;like rakudo does today&#41;, or the meta-modified? IN<br />
+my example, is the output correct, or should it have been «x-y␤y-x␤» ?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I don&#39;t see a bug here.  First, there&#39;s no prohibition on multiple<br />
+&gt; similar metas anymore.  But with regard to the example above, metas<br />
+&gt; are parsed as their own tokens, and the infix:&lt;RR&gt; is longer than<br />
+&gt; the meta R, so should take precedence under LTM.<br />
+</div>
+<br />
+Ok, so this means that rakudo does the right thing, which looks pretty<br />
+sensible to me.<br />
+<br />
+So normal operators will always take precedence against meta-modified<br />
+operators. Should there be a way to explicitly say &#34;I mean a<br />
+meta-operator here&#34;? If I write:<br />
+<br />
+  sub infix:&lt;»ö«&gt;&#40;$a,$b&#41; { return &#34;butterfly between $a and $b&#34; }<br />
+  sub infix:&lt;ö&gt;&#40;$a,$b&#41; { return abs&#40;$a-$b&#41; }<br />
+<br />
+how do I make:<br />
+<br />
+  say &#40;1,2,3&#41; »ö« &#40;3,4,5&#41;<br />
+<br />
+print:<br />
+<br />
+  2 2 2<br />
+<br />
+&#40;apart from doing it &#34;the hard way&#34; with map, zip, etc&#41;?<br />
+<br />
+-- <br />
+        Dakkar - &lt;Mobilis in mobile&gt;<br />
+        GPG public key fingerprint = A071 E618 DD2C 5901 9574<br />
+                                     6FE2 40EA 9883 7519 3F88<br />
+                            key id = 0x75193F88<br />
+<br />
+   This one&#39;s tricky. You have to use imaginary numbers, like<br />
+   eleventeen ... -- Hobbes<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/566874/269448/signature.asc">Download signature.asc</a>
+<span class="downloadcontenttype">
+[application/pgp-signature 198b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-567566" href="/rt3/Ticket/Display.html?id=65878#txn-567566">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;24&nbsp;23:53:25&nbsp;2009</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65878] Rakudo shouldn&#39;t allow metaops with the same modifier twice in a row</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 24 May 2009 23:52:31 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/567566/269746/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, May 21, 2009 at 07:20:57PM +0200, Gianni Ceccarelli wrote:<br />
+<div class="message-stanza-depth-1">
+: On 2009-05-21 Larry Wall &lt;larry <!-- x --> at wall.org&gt; wrote:<br />
+<div class="message-stanza-depth-2">
+: &gt; : &lt;dakkar&gt; rakudo: sub infix:&lt;R&gt;&#40;$a,$b&#41; { $a ~ &#39;-&#39; ~ $b }; sub<br />
+: &gt; : infix:&lt;RR&gt;&#40;$a,$b&#41; { $a ~ &#39;_&#39; ~ $b }; say &#39;x&#39; R &#39;y&#39;; say &#39;x&#39; RR &#39;y&#39;;<br />
+: &gt; : &lt;p6eval&gt; rakudo e6b463: OUTPUT«x-y␤x_y␤»<br />
+: &gt; : &lt;dakkar&gt; now, apart from &#34;don&#39;t do that&#34;, what should happen?<br />
+: &gt; : [snip]<br />
+: &gt; : &lt;dakkar&gt; jnthn: about the meta-operator collision thing, S03 says<br />
+: &gt; : that you can&#39;t modify with &#39;!&#39; forms that start with &#39;!&#39;, and you<br />
+: &gt; : can&#39;t modify with &#39;=&#39; forms that end with &#39;=&#39;<br />
+</div>
+: <br />
+: Ok, let me try to explain what I was aiming at…<br />
+: <br />
+: If we have a normal operator, whose spelling is the same as a<br />
+: meta-modified version of another operator, which one should get<br />
+: called? The normal &#40;like rakudo does today&#41;, or the meta-modified? IN<br />
+: my example, is the output correct, or should it have been «x-y␤y-x␤» ?<br />
+</div>
+<br />
+The output is correct, though perhaps for the wrong reason.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+: &gt; I don&#39;t see a bug here.  First, there&#39;s no prohibition on multiple<br />
+: &gt; similar metas anymore.  But with regard to the example above, metas<br />
+: &gt; are parsed as their own tokens, and the infix:&lt;RR&gt; is longer than<br />
+: &gt; the meta R, so should take precedence under LTM.<br />
+</div>
+: <br />
+: Ok, so this means that rakudo does the right thing, which looks pretty<br />
+: sensible to me.<br />
+</div>
+<br />
+I think rakudo is relying on ordered rules rather than longest token<br />
+matching here.<br />
+<br />
+<div class="message-stanza-depth-1">
+: So normal operators will always take precedence against meta-modified<br />
+: operators.<br />
+</div>
+<br />
+No, the longest token takes precedence, regardless of whether it&#39;s<br />
+normal or a metaop.  But most metops are short, like « or X.  The<br />
+following infix doesn&#39;t count as part of the token.  RR takes<br />
+precedence over R above by virtue of being a single token.<br />
+<br />
+<div class="message-stanza-depth-1">
+: Should there be a way to explicitly say &#34;I mean a<br />
+: meta-operator here&#34;? If I write:<br />
+: <br />
+:   sub infix:&lt;»ö«&gt;&#40;$a,$b&#41; { return &#34;butterfly between $a and $b&#34; }<br />
+:   sub infix:&lt;ö&gt;&#40;$a,$b&#41; { return abs&#40;$a-$b&#41; }<br />
+: <br />
+: how do I make:<br />
+: <br />
+:   say &#40;1,2,3&#41; »ö« &#40;3,4,5&#41;<br />
+: <br />
+: print:<br />
+: <br />
+:   2 2 2<br />
+</div>
+<br />
+You may always put the actual infix into square brackets to<br />
+disambiguate, so:<br />
+<br />
+  say &#40;1,2,3&#41; »[ö]« &#40;3,4,5&#41;<br />
+<br />
+&#40;I don&#39;t know if rakudo supports that yet though.&#41;<br />
+<br />
+Likewise, you can distinguish R[R] from RR.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.174522</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

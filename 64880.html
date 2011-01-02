@@ -1,0 +1,644 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64880: TODO: Double quotes in regexes</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64880">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64880: TODO: Double quotes in regexes</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64880">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64880</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64880">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+arnsholt
+&lt;arnsholt [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64880">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=64880">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64880">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-554356" href="/rt3/Ticket/Display.html?id=64880#txn-554356">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;20&nbsp;00:32:29&nbsp;2009</td>
+    <td class="description">
+      arnsholt -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">TODO: Double quotes in regexes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 20 Apr 2009 09:31:56 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Arne Skjærholt &lt;arnsholt <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/554356/263602/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+According to S05, the section entitled &#34;Simplified lexical parsing of<br />
+patterns&#34;, double quotes are allowed as quotes, &#34;with the same<br />
+interpolative semantics as the current language in which the regex is<br />
+lexically embedded&#34;. Trying to run the code C&lt;&#34;foo&#34; ~~ /&#34;foo&#34;/&gt;<br />
+currently fails with the following stacktrace:<br />
+<br />
+$ ./perl6 -e &#39;&#34;foo&#34; ~~ /&#34;foo&#34;/&#39;<br />
+Statement not terminated properly at line 1, near &#34;~~ /\&#34;foo\&#34;/&#34;<br />
+<br />
+current instr.: &#39;parrot;PGE;Util;die&#39; pc 129<br />
+&#40;runtime/parrot/library/PGE/Util.pir:85&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;eat_terminator&#39; pc 75081<br />
+&#40;src/gen_grammar.pir:2547&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statementlist&#39; pc 73738<br />
+&#40;src/gen_grammar.pir:2028&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statement_block&#39; pc 71171<br />
+&#40;src/gen_grammar.pir:1001&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;TOP&#39; pc 65910 &#40;src/gen_setting.pir:12905&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;parse&#39; pc 665<br />
+&#40;src/PCT/HLLCompiler.pir:402&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;compile&#39; pc 428<br />
+&#40;src/PCT/HLLCompiler.pir:303&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 920<br />
+&#40;src/PCT/HLLCompiler.pir:521&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1510<br />
+&#40;src/PCT/HLLCompiler.pir:800&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 24053 &#40;perl6.pir:164&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-593874" href="/rt3/Ticket/Display.html?id=64880#txn-593874">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;04&nbsp;12:25:37&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[perl #64880] tests available</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 4 Aug 2009 14:25:05 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">kyleha <!-- x --> at gmail.com</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/593874/283126/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is an automatically generated mail to inform you that tests are now available in t/spec/S05-mass/rx.t<br />
+<br />
+commit 611d1a047e27d43a41f9e5c474340fa9d43617c7<br />
+Author: kyle &lt;kyle@c213334d-75ef-0310-aa23-eaa082d1ae64&gt;<br />
+Date:   Tue Aug 4 19:20:21 2009 +0000<br />
+<br />
+    [t/spec] Label tests for RT #64880<br />
+    <br />
+    git-svn-id: http://svn.pugscode.org/pugs@27870 c213334d-75ef-0310-aa23-eaa082d1ae64<br />
+<br />
+diff --git a/t/spec/S05-mass/rx.t b/t/spec/S05-mass/rx.t<br />
+index 3e85794..da1de99 100644<br />
+--- a/t/spec/S05-mass/rx.t<br />
++++ b/t/spec/S05-mass/rx.t<br />
+@@ -420,32 +420,32 @@ ok &#39;... --- ...&#39; ~~ /&#34;... --- ...&#34;/, &#39;literal match &#40;\&#34;&#41;&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+ #### &#34;... --- ...&#34;             ...---...       n       literal match &#40;\&#34;&#41;<br />
+</div>
+ #?pugs todo &#39;feature&#39;<br />
+</div>
+-#?rakudo skip &#39;parse error&#39;<br />
++#?rakudo skip &#39;parse error &#40;RT #64880&#41;&#39;<br />
+ ok &#39;...---...&#39; !~~ /&#34;... --- ...&#34;/, &#39;literal match &#40;\&#34;&#41;&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+ #### &#34;ab&lt;\&#34;&gt;cd&#34;                ab&lt;&#34;&gt;cd         y       literal match with quote<br />
+</div>
+ #?pugs todo &#39;feature&#39;<br />
+</div>
+-#?rakudo skip &#39;parse error&#39;<br />
++#?rakudo skip &#39;parse error &#40;RT #64880&#41;&#39;<br />
+ ok &#39;ab&lt;&#34;&gt;cd&#39; ~~ /&#34;ab&lt;\&#34;&gt;cd&#34;/, &#39;literal match with quote&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+ #### &#34;ab&lt;&#39;&gt;cd&#34;         ab&lt;\&#39;&gt;cd                y       literal match with quote<br />
+</div>
+ #?pugs todo &#39;feature&#39;<br />
+</div>
+-#?rakudo skip &#39;parse error&#39;<br />
++#?rakudo skip &#39;parse error &#40;RT #64880&#41;&#39;<br />
+ ok &#39;ab&lt;\&#39;&gt;cd&#39; ~~ /&#34;ab&lt;&#39;&gt;cd&#34;/, &#39;literal match with quote&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ #?pugs todo &#39;feature&#39;<br />
+<div class="message-stanza-depth-2">
+ #### &#34;ab\\cd&#34;          ab\x5ccd        y       literal match with backslash<br />
+</div>
+</div>
+-#?rakudo skip &#39;parse error&#39;<br />
++#?rakudo skip &#39;parse error &#40;RT #64880&#41;&#39;<br />
+ ok &#39;ab\x5ccd&#39; ~~ /&#34;ab\\cd&#34;/, &#39;literal match with backslash&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+ #### &#40;ab&#41;x&#34;$0&#34;         abxab           y       literal match with interpolation<br />
+</div>
+ #?pugs todo &#39;feature&#39;<br />
+</div>
+-#?rakudo skip &#39;parse error&#39;<br />
++#?rakudo skip &#39;parse error &#40;RT #64880&#41;&#39;<br />
+ ok &#39;abxab&#39; ~~ /&#40;ab&#41;x&#34;$0&#34;/, &#39;literal match with interpolation&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+ #### &#40;ab&#41;&#34;x$0&#34;         abxab           y       literal match with interpolation<br />
+</div>
+ #?pugs todo &#39;feature&#39;<br />
+</div>
+-#?rakudo skip &#39;parse error&#39;<br />
++#?rakudo skip &#39;parse error &#40;RT #64880&#41;&#39;<br />
+ ok &#39;abxab&#39; ~~ /&#40;ab&#41;&#34;x$0&#34;/, &#39;literal match with interpolation&#39;;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # L&lt;S05/Extensible metasyntax &#40;C&lt;&lt; &lt;...&gt; &gt;&gt;&#41;/&#34;A leading ? indicates&#34;&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-593878" href="/rt3/Ticket/Display.html?id=64880#txn-593878">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;04&nbsp;12:25:39&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.748805</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

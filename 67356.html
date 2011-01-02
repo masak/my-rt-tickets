@@ -1,0 +1,891 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#67356: [TODO] implement two-arg &#38;log in Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D67356">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#67356: [TODO] implement two-arg &#38;log in Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67356">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">67356</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=67356">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67356">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Todo    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=67356">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+0001-move-log-to-the-setting-implement-2-arg-form.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/583772/277442/0001-move-log-to-the-setting-implement-2-arg-form.patch">
+Wed Jul 08 15:16:52 2009 (3.9k) by moritz
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=67356">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583722" href="/rt3/Ticket/Display.html?id=67356#txn-583722">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;14:44:24&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] implement two-arg &#38;log in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 8 Jul 2009 23:43:22 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583722/277408/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;moritz_&gt; rakudo: my @P = 0.2, 0.5, 0.3; say -[+] @P.map: { $^p * log&#40;$^p, 2&#41; }<br />
+&lt;p6eval&gt; rakudo 70bfd5: OUTPUT«too many arguments passed &#40;2&#41; - 1<br />
+params expected [...]<br />
+&lt;moritz_&gt; rakudo: my @P = 0.2, 0.5, 0.3; say -[+] @P.map: { $^p *<br />
+log&#40;$^p&#41;/log&#40;2&#41; }<br />
+&lt;p6eval&gt; rakudo 70bfd5: OUTPUT«1.48547529722733␤»<br />
+&lt;moritz_&gt; our Num multi method log &#40; Num $x: Num :$base = Num::e &#41; is export<br />
+&lt;moritz_&gt; it *should* work.<br />
+&lt;masak&gt; bug? :&#41;<br />
+&lt;moritz_&gt; masak, a job for you!<br />
+&lt;masak&gt; rakudo: say log&#40;1, 10&#41;<br />
+&lt;p6eval&gt; rakudo 70bfd5: OUTPUT«too many arguments passed &#40;2&#41; - 1<br />
+params expected [...]<br />
+* masak submits ze rakudobug<br />
+&lt;jnthn&gt; ooh la la...ze rakudobug<br />
+&lt;masak&gt; incroyable!<br />
+&lt;moritz_&gt; log&#40;&#41; is not even in the setting yet.<br />
+&lt;masak&gt; by the way, is this BUG or TODO?<br />
+&lt;moritz_&gt; a TODO<br />
+&lt;masak&gt; oh, good. for jnthn, I mean. :&#41;<br />
+&lt;skids&gt; Just make sure you use log&#40;$cabin&#41; in the report.<br />
+&lt;moritz_&gt; a subset of the specced functionality is already implemented<br />
+&lt;masak&gt; skids: gotcha.<br />
+&lt;jnthn&gt; log&#40;$that_bug&#41;<br />
+&lt;masak&gt; .oO&#40; nothing wrong with the -Ofun setting... &#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583728" href="/rt3/Ticket/Display.html?id=67356#txn-583728">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;14:44:25&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Todo added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583752" href="/rt3/Ticket/Display.html?id=67356#txn-583752">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;15:00:20&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67356] [TODO] implement two-arg &#38;log in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 8 Jul 2009 16:59:44 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583752/277424/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 320b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Jul 08, 2009 at 02:44:24PM -0700, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;p6eval&gt; rakudo 70bfd5: OUTPUT«1.48547529722733␤»<br />
+&gt; &lt;moritz_&gt; our Num multi method log &#40; Num $x: Num :$base = Num::e &#41; is export<br />
+&gt; &lt;moritz_&gt; it *should* work.<br />
+</div>
+<br />
+Please please please don&#39;t constrain the arguments to Num when<br />
+you actually write this.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583756" href="/rt3/Ticket/Display.html?id=67356#txn-583756">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;15:00:20&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-583772" href="/rt3/Ticket/Display.html?id=67356#txn-583772">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;08&nbsp;15:16:52&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67356] [TODO] implement two-arg &#38;log in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 09 Jul 2009 00:16:19 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583772/277440/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 597b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed, Jul 08, 2009 at 02:44:24PM -0700, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; &lt;p6eval&gt; rakudo 70bfd5: OUTPUT«1.48547529722733␤»<br />
+&gt;&gt; &lt;moritz_&gt; our Num multi method log &#40; Num $x: Num :$base = Num::e &#41; is export<br />
+&gt;&gt; &lt;moritz_&gt; it *should* work.<br />
+</div>
+&gt; <br />
+&gt; Please please please don&#39;t constrain the arguments to Num when<br />
+&gt; you actually write this.<br />
+</div>
+<br />
+Aye.<br />
+<br />
+Attached is a patch that tries to move log&#40;&#41; to the setting and<br />
+implements the two-arg form, but it doesn&#39;t seem to call the<br />
+Complex::log anymore &#40;and thus regresses one test&#41;.<br />
+<br />
+I&#39;ve got no idea why; comments appreciated.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/583772/277442/0001-move-log-to-the-setting-implement-2-arg-form.patch">Download 0001-move-log-to-the-setting-implement-2-arg-form.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 3.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+From 83244d4ab2559c08717462b3348906a5e248d883 Mon Sep 17 00:00:00 2001<br />
+From: Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;<br />
+Date: Thu, 9 Jul 2009 00:13:39 +0200<br />
+Subject: [PATCH] move log&#40;&#41; to the setting; implement 2-arg form<br />
+<br />
+---<br />
+ build/Makefile.in        |    1 +<br />
+ src/builtins/any-num.pir |   19 +------------------<br />
+ src/classes/Complex.pir  |   15 +--------------<br />
+ src/setting/Any-num.pm   |   20 ++++++++++++++++++++<br />
+ src/setting/Complex.pm   |    9 +++++++++<br />
+ src/setting/Num.pm       |    2 ++<br />
+ 6 files changed, 34 insertions&#40;+&#41;, 32 deletions&#40;-&#41;<br />
+ create mode 100644 src/setting/Complex.pm<br />
+<br />
+diff --git a/build/Makefile.in b/build/Makefile.in<br />
+index 891978f..ec6267d 100644<br />
+--- a/build/Makefile.in<br />
++++ b/build/Makefile.in<br />
+@@ -115,6 +115,7 @@ SETTING = \<br />
+   src/setting/Any-str.pm \<br />
+   src/setting/Array.pm \<br />
+   src/setting/Bool.pm \<br />
++  src/setting/Complex.pm \<br />
+   src/setting/Hash.pm \<br />
+   src/setting/IO.pm \<br />
+   src/setting/IO/Socket.pm \<br />
+diff --git a/src/builtins/any-num.pir b/src/builtins/any-num.pir<br />
+index 6eed39c..c0f2f2e 100644<br />
+--- a/src/builtins/any-num.pir<br />
++++ b/src/builtins/any-num.pir<br />
+@@ -21,7 +21,7 @@ the size of that file down and to emphasize their generic,<br />
+ .namespace []<br />
+ .sub &#39;onload&#39; :anon :init :load<br />
+     $P0 = get_hll_namespace [&#39;Any&#39;]<br />
+-    &#39;!EXPORT&#39;&#40;&#39;abs,int,log,polar,sqrt,truncate,unpolar&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
++    &#39;!EXPORT&#39;&#40;&#39;abs,int,polar,sqrt,truncate,unpolar&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
+ <br />
+<div class="message-stanza-depth-1">
+     ##  pre-seed a random number generator<br />
+</div>
+     $P0 = root_new [&#39;parrot&#39;;&#39;Random&#39;]<br />
+@@ -46,23 +46,6 @@ the size of that file down and to emphasize their generic,<br />
+     .tailcall self.&#39;truncate&#39;&#40;&#41;<br />
+ .end<br />
+ <br />
+-=item log<br />
+-<br />
+- our Num multi Num::log         &#40; Num $x: Num :$base &#41;<br />
+- our Num multi Math::Basic::log &#40; Num $x, Num :$base &#41;<br />
+-<br />
+-Logarithm of base C&lt;$base&gt;, default Natural. Calling with C&lt;$x == 0&gt; is an<br />
+-error.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;log&#39; :method :multi&#40;_&#41;<br />
+-    $N0 = self<br />
+-    $N1 = ln $N0<br />
+-    .return &#40;$N1&#41;<br />
+-.end<br />
+-<br />
+-<br />
+ =item polar<br />
+ <br />
+ =cut<br />
+diff --git a/src/classes/Complex.pir b/src/classes/Complex.pir<br />
+index 3bf78d8..e6e9f02 100644<br />
+--- a/src/classes/Complex.pir<br />
++++ b/src/classes/Complex.pir<br />
+@@ -27,7 +27,7 @@ Implementation is a bit different from other basic objects &#40;Int...&#41; because<br />
+     p6meta.&#39;register&#39;&#40;&#39;Complex&#39;, &#39;parent&#39;=&gt;complexproto, &#39;protoobject&#39;=&gt;complexproto&#41;<br />
+ <br />
+     $P0 = get_hll_namespace [&#39;Perl6Complex&#39;]<br />
+-    &#39;!EXPORT&#39;&#40;&#39;log,polar&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
++    &#39;!EXPORT&#39;&#40;&#39;polar&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -61,19 +61,6 @@ Returns the exponential of a Complex.<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+-<br />
+-=item log<br />
+-<br />
+-Returns the logarithm of a Complex.<br />
+-<br />
+-=cut<br />
+-<br />
+-.namespace [&#39;Perl6Complex&#39;]<br />
+-.sub &#39;log&#39; :method :multi&#40;&#39;Complex&#39;&#41;<br />
+-    $P0 = self.&#39;ln&#39;&#40;&#41;<br />
+-    .return &#40;$P0&#41;<br />
+-.end<br />
+-<br />
+ =item polar<br />
+ <br />
+ Returns the polar representation of a Complex.<br />
+diff --git a/src/setting/Any-num.pm b/src/setting/Any-num.pm<br />
+index 80a8821..dcad7c3 100644<br />
+--- a/src/setting/Any-num.pm<br />
++++ b/src/setting/Any-num.pm<br />
+@@ -66,6 +66,26 @@ class Any is also {<br />
+             default { die &#34;Unable to convert to base: $base&#34; }<br />
+         }<br />
+     }<br />
++<br />
++    multi method log&#40;&#41; is export {<br />
++        Q:PIR {<br />
++            $N0 = self<br />
++            $N1 = ln $N0<br />
++            %r = box $N1<br />
++        }<br />
++    }<br />
++    multi method log&#40;$base&#41; is export {<br />
++        Q:PIR {<br />
++            .local num base_log, log_e<br />
++            $N0 = self<br />
++            $P0 = find_lex &#34;$base&#34;<br />
++            $N1 = $P0<br />
++            log_e = ln $N0<br />
++            base_log = ln $N1<br />
++            $N4 = log_e / base_log<br />
++            %r = box $N4<br />
++        }<br />
++    }<br />
+ }<br />
+ <br />
+ our Num sub rand &#40;*@args&#41; {<br />
+diff --git a/src/setting/Complex.pm b/src/setting/Complex.pm<br />
+new file mode 100644<br />
+index 0000000..076b59e<br />
+--- /dev/null<br />
++++ b/src/setting/Complex.pm<br />
+@@ -0,0 +1,9 @@<br />
++class Complex is also {<br />
++    multi method log&#40;&#41; is export {<br />
++        Q:PIR {<br />
++            %r = self.&#39;ln&#39;&#40;&#41;<br />
++          }<br />
++    }<br />
++}<br />
++<br />
++# vim: ft=perl6<br />
+diff --git a/src/setting/Num.pm b/src/setting/Num.pm<br />
+index 157d18f..8038c5b 100644<br />
+--- a/src/setting/Num.pm<br />
++++ b/src/setting/Num.pm<br />
+@@ -257,3 +257,5 @@ class Num is also {<br />
+         self!from-radians&#40;$r, $base&#41;<br />
+     }<br />
+ }<br />
++<br />
++# vim: ft=perl6<br />
+-- <br />
+1.5.6.5<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.442169</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

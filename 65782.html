@@ -1,0 +1,874 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#65782: [spec] rakudo silently ignores remaining code after unmatched pod</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D65782">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#65782: [spec] rakudo silently ignores remaining code after unmatched pod</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=65782">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">65782</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=65782">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ahmadz
+&lt;ahmad.zawawi [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=65782">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=65782">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=65782">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565364" href="/rt3/Ticket/Display.html?id=65782#txn-565364">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;00:30:53&nbsp;2009</td>
+    <td class="description">
+      ahmadz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[Bug] rakudo silently ignores remaining code after unmatched pod</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 19 May 2009 10:30:00 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ahmad Zawawi &lt;ahmad.zawawi <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/565364/268858/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 187b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Given the following:<br />
+<br />
+&#34;1&#34;.say;<br />
+=begin pod<br />
+=end pod1<br />
+&#34;2&#34;.say;<br />
+<br />
+The output is only &#34;1&#34; but should be &#34;1\n2&#34; or at least a runtime<br />
+error message for unmatched POD.<br />
+<br />
+Regards,<br />
+Ahmad M. Zawawi<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565370" href="/rt3/Ticket/Display.html?id=65782#txn-565370">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;00:30:56&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565588" href="/rt3/Ticket/Display.html?id=65782#txn-565588">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;08:25:16&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65782] [Bug] rakudo silently ignores remaining code after unmatched pod</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 19 May 2009 10:24:41 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/565588/268934/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 678b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, May 19, 2009 at 12:30:53AM -0700, Ahmad Zawawi wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Given the following:<br />
+&gt; <br />
+&gt; &#34;1&#34;.say;<br />
+&gt; =begin pod<br />
+&gt; =end pod1<br />
+&gt; &#34;2&#34;.say;<br />
+&gt; <br />
+&gt; The output is only &#34;1&#34; but should be &#34;1\n2&#34; or at least a runtime<br />
+&gt; error message for unmatched POD.<br />
+</div>
+<br />
+Rakudo is simply following STD.pm here, and STD.pm &#40;r26884&#41; allows <br />
+any pod identifier to go to the end of the file.<br />
+<br />
+S02:3319 seems to indicate that the &#34;=begin END&#34; form is special,<br />
+which implies to me that the non-END forms should indeed have<br />
+the required closing marker.  If we can get confirmation that<br />
+only the &#34;=begin END&#34; is special, then I&#39;ll adjust Rakudo&#39;s<br />
+grammar to follow that &#40;and possibly STD.pm as well&#41;.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565592" href="/rt3/Ticket/Display.html?id=65782#txn-565592">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;08:25:18&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565594" href="/rt3/Ticket/Display.html?id=65782#txn-565594">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;08:25:45&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Subject changed from &#39;[Bug] rakudo silently ignores remaining code after unmatched pod&#39; to &#39;[spec] rakudo silently ignores remaining code after unmatched pod&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565612" href="/rt3/Ticket/Display.html?id=65782#txn-565612">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;08:44:57&nbsp;2009</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/565612/268942/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick &#40;&gt;&#41;, Ahmad &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; Given the following:<br />
+&gt; &gt; <br />
+&gt; &gt; &#34;1&#34;.say;<br />
+&gt; &gt; =begin pod<br />
+&gt; &gt; =end pod1<br />
+&gt; &gt; &#34;2&#34;.say;<br />
+&gt; &gt; <br />
+&gt; &gt; The output is only &#34;1&#34; but should be &#34;1\n2&#34; or at least a runtime<br />
+&gt; &gt; error message for unmatched POD.<br />
+</div>
+&gt; <br />
+&gt; Rakudo is simply following STD.pm here, and STD.pm &#40;r26884&#41; allows <br />
+&gt; any pod identifier to go to the end of the file.<br />
+&gt; <br />
+&gt; S02:3319 seems to indicate that the &#34;=begin END&#34; form is special,<br />
+&gt; which implies to me that the non-END forms should indeed have<br />
+&gt; the required closing marker.  If we can get confirmation that<br />
+&gt; only the &#34;=begin END&#34; is special, then I&#39;ll adjust Rakudo&#39;s<br />
+&gt; grammar to follow that &#40;and possibly STD.pm as well&#41;.<br />
+</div>
+<br />
+Even if the pod-identifier-going-to-the-end-of-the-file behaviour is<br />
+correct, isn&#39;t it a problem in itself that an &#39;=end&#39; directive without a<br />
+corresponding &#39;=begin&#39; directive goes unnoticed, both by Rakudo and STD?<br />
+S26 seems to assume that &#39;=begin&#39;/&#39;=end&#39; directives always match up<br />
+&#40;again with the exception of &#39;=begin END&#39;&#41;.<br />
+<br />
+My point is that there are two things that are unmatched here, the<br />
+&#39;=begin pod&#39; and the &#39;=end pod1&#39;. I think both should give fatal errors.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-565644" href="/rt3/Ticket/Display.html?id=65782#txn-565644">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;19&nbsp;10:52:06&nbsp;2009</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65782] [Bug] rakudo silently ignores remaining code after unmatched pod</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 19 May 2009 10:51:05 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/565644/268954/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 807b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, May 19, 2009 at 10:24:41AM -0500, Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+: On Tue, May 19, 2009 at 12:30:53AM -0700, Ahmad Zawawi wrote:<br />
+<div class="message-stanza-depth-2">
+: &gt; Given the following:<br />
+: &gt; <br />
+: &gt; &#34;1&#34;.say;<br />
+: &gt; =begin pod<br />
+: &gt; =end pod1<br />
+: &gt; &#34;2&#34;.say;<br />
+: &gt; <br />
+: &gt; The output is only &#34;1&#34; but should be &#34;1\n2&#34; or at least a runtime<br />
+: &gt; error message for unmatched POD.<br />
+</div>
+: <br />
+: Rakudo is simply following STD.pm here, and STD.pm &#40;r26884&#41; allows <br />
+: any pod identifier to go to the end of the file.<br />
+: <br />
+: S02:3319 seems to indicate that the &#34;=begin END&#34; form is special,<br />
+: which implies to me that the non-END forms should indeed have<br />
+: the required closing marker.  If we can get confirmation that<br />
+: only the &#34;=begin END&#34; is special, then I&#39;ll adjust Rakudo&#39;s<br />
+: grammar to follow that &#40;and possibly STD.pm as well&#41;.<br />
+</div>
+<br />
+STD.pm is now adjusted.  :&#41;<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-570638" href="/rt3/Ticket/Display.html?id=65782#txn-570638">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;02&nbsp;18:57:39&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/570638/271210/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 135b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo now mostly matches STD.pm; at least to the extent of resolving<br />
+the issue identified in this ticket.<br />
+<br />
+Closing ticket, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-570640" href="/rt3/Ticket/Display.html?id=65782#txn-570640">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;02&nbsp;18:57:39&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-570644" href="/rt3/Ticket/Display.html?id=65782#txn-570644">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;02&nbsp;18:57:41&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.622038</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wget -O tickets.html 'http://rt.perl.org/rt3/Search/Results.html?Query=Queue%20%3D%20%27perl6%27&Rows=700'

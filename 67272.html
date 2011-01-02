@@ -1,0 +1,1083 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#67272: [PATCH] change to behavior of push and unshift so they return array not .elems.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D67272">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#67272: [PATCH] change to behavior of push and unshift so they return array not .elems.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67272">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">67272</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=67272">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+kbenson [at] a-1networks.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67272">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=67272">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/582824/276996/0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch">
+Mon Jul 06 21:25:35 2009 (749b) by kbenson@a-1networks.com
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/582792/276974/0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch">
+Mon Jul 06 21:12:12 2009 (749b) by kbenson@a-1networks.com
+</a>
+</font></li>
+</ul>
+
+
+0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/582824/276994/0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch">
+Mon Jul 06 21:25:35 2009 (750b) by kbenson@a-1networks.com
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/582808/276984/0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch">
+Mon Jul 06 21:22:49 2009 (750b) by kbenson@a-1networks.com
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=67272">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582792" href="/rt3/Ticket/Display.html?id=67272#txn-582792">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;06&nbsp;21:12:12&nbsp;2009</td>
+    <td class="description">
+      kbenson@a-1networks.com - Ticket 67268:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH]</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 06 Jul 2009 21:11:34 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kevan Benson &lt;kbenson@a-1networks.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582792/276972/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 36b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<br />
+<br />
+-- <br />
+<br />
+-Kevan Benson<br />
+-A-1 Networks<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582792/276974/0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch">Download 0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 749b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+From e74a445184e0d503e80a59e2d99732596a0a284e Mon Sep 17 00:00:00 2001<br />
+From: Kevan Benson &lt;kbenson <!-- x --> at netcrucial.com&gt;<br />
+Date: Mon, 6 Jul 2009 21:10:52 -0700<br />
+Subject: [PATCH] Patch to change bahavior of .push to return modified array, not number of elements<br />
+<br />
+---<br />
+ src/classes/Array.pir |    2 +-<br />
+ 1 files changed, 1 insertions&#40;+&#41;, 1 deletions&#40;-&#41;<br />
+<br />
+diff --git a/src/classes/Array.pir b/src/classes/Array.pir<br />
+index b3091fe..4a2b454 100644<br />
+--- a/src/classes/Array.pir<br />
++++ b/src/classes/Array.pir<br />
+@@ -175,7 +175,7 @@ Add C&lt;args&gt; to the end of the Array.<br />
+   it_loop_end:<br />
+     $I0 = elements self<br />
+     splice self, args, $I0, 0<br />
+-    .tailcall self.&#39;elems&#39;&#40;&#41;<br />
++    .return &#40;self&#41;<br />
+   type_error:<br />
+     &#39;die&#39;&#40;&#39;Type check failure in push&#39;&#41;<br />
+ .end<br />
+-- <br />
+1.5.2.1<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582798" href="/rt3/Ticket/Display.html?id=67272#txn-582798">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;06&nbsp;21:12:14&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 67268:  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582808" href="/rt3/Ticket/Display.html?id=67272#txn-582808">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;06&nbsp;21:22:49&nbsp;2009</td>
+    <td class="description">
+      kbenson@a-1networks.com - Ticket 67270:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH]</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 06 Jul 2009 21:22:14 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kevan Benson &lt;kbenson@a-1networks.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582808/276982/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 84b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+Forgot to also fix .unshift in previous patch...<br />
+<br />
+-- <br />
+<br />
+-Kevan Benson<br />
+-A-1 Networks<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582808/276984/0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch">Download 0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 750b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+From a994184685bfb08a34c76cf2f1ba6a4f9ce10ea5 Mon Sep 17 00:00:00 2001<br />
+From: Kevan Benson &lt;kbenson <!-- x --> at netcrucial.com&gt;<br />
+Date: Mon, 6 Jul 2009 21:21:16 -0700<br />
+Subject: [PATCH] Patch to change bahavior of .unshift to return modified array, not number of elements<br />
+<br />
+---<br />
+ src/classes/Array.pir |    2 +-<br />
+ 1 files changed, 1 insertions&#40;+&#41;, 1 deletions&#40;-&#41;<br />
+<br />
+diff --git a/src/classes/Array.pir b/src/classes/Array.pir<br />
+index 4a2b454..6b62722 100644<br />
+--- a/src/classes/Array.pir<br />
++++ b/src/classes/Array.pir<br />
+@@ -238,7 +238,7 @@ Adds C&lt;args&gt; to the beginning of the Array.<br />
+     goto it_loop<br />
+   it_loop_end:<br />
+     splice self, args, 0, 0<br />
+-    .tailcall self.&#39;elems&#39;&#40;&#41;<br />
++    .return &#40;self&#41;<br />
+   type_error:<br />
+     &#39;die&#39;&#40;&#39;Type check failure in push&#39;&#41;<br />
+ .end<br />
+-- <br />
+1.5.2.1<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582814" href="/rt3/Ticket/Display.html?id=67272#txn-582814">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;06&nbsp;21:22:51&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 67270:  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582824" href="/rt3/Ticket/Display.html?id=67272#txn-582824">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;06&nbsp;21:25:35&nbsp;2009</td>
+    <td class="description">
+      kbenson@a-1networks.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] change to behavior of push and unshift so they return array not .elems.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 06 Jul 2009 21:24:59 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kevan Benson &lt;kbenson@a-1networks.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582824/276992/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 203b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+Sorry to be spammy, forgot to add useful subject to previous two patch <br />
+emails.  As such, these are resubmits for two patches I submitted within <br />
+the last 30 minutes.<br />
+<br />
+<br />
+-- <br />
+<br />
+-Kevan Benson<br />
+-A-1 Networks<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582824/276994/0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch">Download 0001-Patch-to-change-bahavior-of-.unshift-to-return-modif.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 750b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+From a994184685bfb08a34c76cf2f1ba6a4f9ce10ea5 Mon Sep 17 00:00:00 2001<br />
+From: Kevan Benson &lt;kbenson <!-- x --> at netcrucial.com&gt;<br />
+Date: Mon, 6 Jul 2009 21:21:16 -0700<br />
+Subject: [PATCH] Patch to change bahavior of .unshift to return modified array, not number of elements<br />
+<br />
+---<br />
+ src/classes/Array.pir |    2 +-<br />
+ 1 files changed, 1 insertions&#40;+&#41;, 1 deletions&#40;-&#41;<br />
+<br />
+diff --git a/src/classes/Array.pir b/src/classes/Array.pir<br />
+index 4a2b454..6b62722 100644<br />
+--- a/src/classes/Array.pir<br />
++++ b/src/classes/Array.pir<br />
+@@ -238,7 +238,7 @@ Adds C&lt;args&gt; to the beginning of the Array.<br />
+     goto it_loop<br />
+   it_loop_end:<br />
+     splice self, args, 0, 0<br />
+-    .tailcall self.&#39;elems&#39;&#40;&#41;<br />
++    .return &#40;self&#41;<br />
+   type_error:<br />
+     &#39;die&#39;&#40;&#39;Type check failure in push&#39;&#41;<br />
+ .end<br />
+-- <br />
+1.5.2.1<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582824/276996/0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch">Download 0001-Patch-to-change-bahavior-of-.push-to-return-modified.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 749b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+From e74a445184e0d503e80a59e2d99732596a0a284e Mon Sep 17 00:00:00 2001<br />
+From: Kevan Benson &lt;kbenson <!-- x --> at netcrucial.com&gt;<br />
+Date: Mon, 6 Jul 2009 21:10:52 -0700<br />
+Subject: [PATCH] Patch to change bahavior of .push to return modified array, not number of elements<br />
+<br />
+---<br />
+ src/classes/Array.pir |    2 +-<br />
+ 1 files changed, 1 insertions&#40;+&#41;, 1 deletions&#40;-&#41;<br />
+<br />
+diff --git a/src/classes/Array.pir b/src/classes/Array.pir<br />
+index b3091fe..4a2b454 100644<br />
+--- a/src/classes/Array.pir<br />
++++ b/src/classes/Array.pir<br />
+@@ -175,7 +175,7 @@ Add C&lt;args&gt; to the end of the Array.<br />
+   it_loop_end:<br />
+     $I0 = elements self<br />
+     splice self, args, $I0, 0<br />
+-    .tailcall self.&#39;elems&#39;&#40;&#41;<br />
++    .return &#40;self&#41;<br />
+   type_error:<br />
+     &#39;die&#39;&#40;&#39;Type check failure in push&#39;&#41;<br />
+ .end<br />
+-- <br />
+1.5.2.1<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582830" href="/rt3/Ticket/Display.html?id=67272#txn-582830">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;06&nbsp;21:25:36&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582900" href="/rt3/Ticket/Display.html?id=67272#txn-582900">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;02:13:19&nbsp;2009</td>
+    <td class="description">
+      moritz - Ticket 67270:  Merged into ticket #67272
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582902" href="/rt3/Ticket/Display.html?id=67272#txn-582902">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;02:13:19&nbsp;2009</td>
+    <td class="description">
+      moritz -  Merged into ticket #67272
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582904" href="/rt3/Ticket/Display.html?id=67272#txn-582904">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;02:16:00&nbsp;2009</td>
+    <td class="description">
+      moritz - Ticket 67268:  Merged into ticket #67272
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582906" href="/rt3/Ticket/Display.html?id=67272#txn-582906">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;02:16:00&nbsp;2009</td>
+    <td class="description">
+      moritz -  Merged into ticket #67272
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582960" href="/rt3/Ticket/Display.html?id=67272#txn-582960">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;04:51:40&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/582960/277056/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 35b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Thanks, applied and pushed.<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582964" href="/rt3/Ticket/Display.html?id=67272#txn-582964">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;04:51:42&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-582966" href="/rt3/Ticket/Display.html?id=67272#txn-582966">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;07&nbsp;04:51:42&nbsp;2009</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.73464</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

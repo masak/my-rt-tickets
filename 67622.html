@@ -1,0 +1,863 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#67622: [PATCH] Make Test.pm consider &#34;Null PMC access&#34; an invalid death in  dies_ok</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D67622">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#67622: [PATCH] Make Test.pm consider &#34;Null PMC access&#34; an invalid death in  dies_ok</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67622">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">67622</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=67622">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+KyleHa
+&lt;kyleha [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=67622">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=67622">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/586872/279344/0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch">
+Thu Jul 16 21:00:50 2009 (1.4k) by KyleHa
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/586692/279246/0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch">
+Thu Jul 16 09:13:10 2009 (1.1k) by KyleHa
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=67622">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-586692" href="/rt3/Ticket/Display.html?id=67622#txn-586692">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;16&nbsp;09:13:10&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Make Test.pm consider &#34;Null PMC access&#34; an invalid death in  dies_ok</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 16 Jul 2009 11:12:42 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/586692/279244/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 271b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Sometimes something dies, as it should, but with the wrong error.  The<br />
+best way to test this is to specify the correct error, but we don&#39;t<br />
+always have the correct error.  This patch makes dies_ok reject a<br />
+particular Rakudo-specific error that is always incorrect.<br />
+<br />
+Kyle.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/586692/279246/0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch">Download 0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-586698" href="/rt3/Ticket/Display.html?id=67622#txn-586698">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;16&nbsp;09:13:11&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-586816" href="/rt3/Ticket/Display.html?id=67622#txn-586816">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;16&nbsp;14:30:03&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67622] [PATCH] Make Test.pm consider &#34;Null PMC access&#34; an invalid death in  dies_ok</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 16 Jul 2009 23:29:29 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/586816/279312/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 582b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Kyle Hasselbacher &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Sometimes something dies, as it should, but with the wrong error.  The<br />
+&gt; best way to test this is to specify the correct error, but we don&#39;t<br />
+&gt; always have the correct error.  This patch makes dies_ok reject a<br />
+&gt; particular Rakudo-specific error that is always incorrect.<br />
+</div>
+<br />
+I like the idea very much, but the current implementation is a bit<br />
+confusing. The test code dies, but dies_ok still fails. Maybe adding a<br />
+diag&#40;$explanation&#41; might improve that. &#40;Maybe I get around to implement<br />
+that, but right now I&#39;m not very concentrated&#41;.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-586820" href="/rt3/Ticket/Display.html?id=67622#txn-586820">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;16&nbsp;14:30:05&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-586872" href="/rt3/Ticket/Display.html?id=67622#txn-586872">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;16&nbsp;21:00:50&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #67622] [PATCH] Make Test.pm consider &#34;Null PMC access&#34; an  invalid death in dies_ok</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 16 Jul 2009 23:00:19 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/586872/279342/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 577b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Jul 16, 2009 at 4:30 PM, Moritz Lenz via<br />
+RT&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I like the idea very much, but the current implementation is a bit<br />
+&gt; confusing. The test code dies, but dies_ok still fails. Maybe adding a<br />
+&gt; diag&#40;$explanation&#41; might improve that. &#40;Maybe I get around to implement<br />
+&gt; that, but right now I&#39;m not very concentrated&#41;.<br />
+</div>
+<br />
+Here&#39;s a new patch.  Now a failure looks like this &#40;example from<br />
+S05-metasyntax/angle-brackets.t&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+# wrong way to die: &#39;Null PMC access in invoke&#40;&#41;&#39;<br />
+</div>
+not ok 3 - &lt;...&gt; without whitespace calls a function &#40;not quote words&#41;<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/586872/279344/0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch">Download 0001--Test.pm-dies_ok-should-not-be-ok-when-death-is-fro.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-586948" href="/rt3/Ticket/Display.html?id=67622#txn-586948">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;16&nbsp;23:59:37&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/586948/279398/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 471b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Jul 16 21:00:50 2009, KyleHa wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Here&#39;s a new patch.  Now a failure looks like this &#40;example from<br />
+&gt; S05-metasyntax/angle-brackets.t&#41;<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; # wrong way to die: &#39;Null PMC access in invoke&#40;&#41;&#39;<br />
+</div>
+&gt; not ok 3 - &lt;...&gt; without whitespace calls a function &#40;not quote words&#41;<br />
+</div>
+<br />
+Thanks for the new patch, that behaviour looks much better. I&#39;ll test it<br />
+over the weekend &#40;I&#39;ll be mostly offline&#41; and fudge the places in the<br />
+test suite where it becomes necessary.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-588006" href="/rt3/Ticket/Display.html?id=67622#txn-588006">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;19&nbsp;23:17:47&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/588006/280014/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 298b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Jul 16 21:00:50 2009, KyleHa wrote:<br />
+<div class="message-stanza-depth-1">
+ &gt; Here&#39;s a new patch.  Now a failure looks like this &#40;example from<br />
+&gt; S05-metasyntax/angle-brackets.t&#41;<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; # wrong way to die: &#39;Null PMC access in invoke&#40;&#41;&#39;<br />
+</div>
+&gt; not ok 3 - &lt;...&gt; without whitespace calls a function &#40;not quote words&#41;<br />
+</div>
+<br />
+Thanks, applied.<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-588010" href="/rt3/Ticket/Display.html?id=67622#txn-588010">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;19&nbsp;23:17:48&nbsp;2009</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.705901</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

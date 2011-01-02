@@ -1,0 +1,1171 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#68306: Rakudo 2009-07 - Introspection with .^methods</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D68306">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#68306: Rakudo 2009-07 - Introspection with .^methods</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=68306">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">68306</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=68306">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ajs
+&lt;ajs [at] ajs.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=68306">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=68306">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=68306">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595234" href="/rt3/Ticket/Display.html?id=68306#txn-595234">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;12:16:06&nbsp;2009</td>
+    <td class="description">
+      ajs -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo 2009-07</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 7 Aug 2009 15:15:34 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Aaron Sherman &lt;ajs <!-- x --> at ajs.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595234/283794/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;m working in a firewalled environment today where I can&#39;t get access to<br />
+git, so here&#39;s what I see in 2009-07 downloaded from<br />
+http://github.com/rakudo/rakudo/downloads<br />
+<br />
+S12 says:<br />
+<br />
+&#34;The .^methods method returns method-descriptors containing:<br />
+<br />
+    name                the name of the method<br />
+    signature           the parameters of the method<br />
+    as                  the coercion type of the method<br />
+    multi               whether duplicate names are allowed<br />
+    do                  the method body&#34;<br />
+<br />
+<br />
+<br />
+That doesn&#39;t tell me exactly what I&#39;m looking for, but I tried:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say Str.^methods[0]<br />
+</div>
+sprintf<br />
+<br />
+Which looks suspiciously like a single string, but just in case, I tried:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say Str.^methods[0]&lt;signature&gt;<br />
+</div>
+get_pmc_keyed&#40;&#41; not implemented in class &#39;Sub&#39;<br />
+in Main &#40;&lt;unknown&gt;:1&#41;<br />
+<div class="message-stanza-depth-1">
+&gt; say Str.^methods[0].^signature<br />
+</div>
+Method &#39;signature&#39; not found for invocant of class &#39;P6metaclass&#39;<br />
+<div class="message-stanza-depth-1">
+&gt; say Str.^methods[0].signature<br />
+</div>
+No signature found<br />
+<br />
+That last one looks more promising, but still not quite as advertised. Oddly<br />
+enough if I try another one of the &#34;descriptors&#34; listed, it gets stranger:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say Str.^methods[0].name<br />
+</div>
+pred<br />
+<br />
+eh? The rest of the names &#40;as, multi, do&#41; don&#39;t seem to exist at all. I<br />
+expect that this is because I&#39;m not actually looking at a &#34;descriptor&#34; at<br />
+all, but rather a Sub object that stringifies itself to &#34;sprintf&#34;. Is that a<br />
+bug in Rakudo or S12?<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595234/283796/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595240" href="/rt3/Ticket/Display.html?id=68306#txn-595240">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Aug&nbsp;07&nbsp;12:50:05&nbsp;2009</td>
+    <td class="description">
+      ajs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #68306] AutoReply: Rakudo 2009-07 &#40;^methods returning list  of Subs?&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 7 Aug 2009 15:49:34 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Aaron Sherman &lt;ajs <!-- x --> at ajs.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595240/283802/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Oddly, I chose the world&#39;s worst subject. I meant to go back and add<br />
+&#34;^methods returning list of Subs?&#34; but failed.<br />
+<br />
+<br />
+<br />
+On Fri, Aug 7, 2009 at 3:16 PM, perl6 via RT<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt;wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; -------------------------------------------------------------------------<br />
+&gt; I&#39;m working in a firewalled environment today where I can&#39;t get access to<br />
+&gt; git, so here&#39;s what I see in 2009-07 downloaded from<br />
+&gt; http://github.com/rakudo/rakudo/downloads<br />
+&gt;<br />
+&gt; S12 says:<br />
+&gt;<br />
+&gt; &#34;The .^methods method returns method-descriptors containing:<br />
+&gt;<br />
+&gt;    name                the name of the method<br />
+&gt;    signature           the parameters of the method<br />
+&gt;    as                  the coercion type of the method<br />
+&gt;    multi               whether duplicate names are allowed<br />
+&gt;    do                  the method body&#34;<br />
+&gt;<br />
+&gt;<br />
+&gt;<br />
+&gt; That doesn&#39;t tell me exactly what I&#39;m looking for, but I tried:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say Str.^methods[0]<br />
+</div>
+&gt; sprintf<br />
+&gt;<br />
+&gt; Which looks suspiciously like a single string, but just in case, I tried:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say Str.^methods[0]&lt;signature&gt;<br />
+</div>
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Sub&#39;<br />
+&gt; in Main &#40;&lt;unknown&gt;:1&#41;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say Str.^methods[0].^signature<br />
+</div>
+&gt; Method &#39;signature&#39; not found for invocant of class &#39;P6metaclass&#39;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say Str.^methods[0].signature<br />
+</div>
+&gt; No signature found<br />
+&gt;<br />
+&gt; That last one looks more promising, but still not quite as advertised.<br />
+&gt; Oddly<br />
+&gt; enough if I try another one of the &#34;descriptors&#34; listed, it gets stranger:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say Str.^methods[0].name<br />
+</div>
+&gt; pred<br />
+&gt;<br />
+&gt; eh? The rest of the names &#40;as, multi, do&#41; don&#39;t seem to exist at all. I<br />
+&gt; expect that this is because I&#39;m not actually looking at a &#34;descriptor&#34; at<br />
+&gt; all, but rather a Sub object that stringifies itself to &#34;sprintf&#34;. Is that<br />
+&gt; a<br />
+&gt; bug in Rakudo or S12?<br />
+&gt;<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595568" href="/rt3/Ticket/Display.html?id=68306#txn-595568">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;08&nbsp;09:25:50&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #68306] Rakudo 2009-07</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 08 Aug 2009 18:25:14 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595568/283926/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<br />
+Aaron Sherman &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Aaron Sherman <br />
+&gt; # Please include the string:  [perl #68306]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=68306 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; I&#39;m working in a firewalled environment today where I can&#39;t get access to<br />
+&gt; git, so here&#39;s what I see in 2009-07 downloaded from<br />
+&gt; http://github.com/rakudo/rakudo/downloads<br />
+&gt; <br />
+&gt; S12 says:<br />
+&gt; <br />
+&gt; &#34;The .^methods method returns method-descriptors containing:<br />
+&gt; <br />
+&gt;     name                the name of the method<br />
+&gt;     signature           the parameters of the method<br />
+&gt;     as                  the coercion type of the method<br />
+&gt;     multi               whether duplicate names are allowed<br />
+&gt;     do                  the method body&#34;<br />
+&gt; <br />
+&gt; <br />
+&gt; <br />
+&gt; That doesn&#39;t tell me exactly what I&#39;m looking for, but I tried:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0]<br />
+</div>
+&gt; sprintf<br />
+&gt; <br />
+&gt; Which looks suspiciously like a single string,<br />
+</div>
+<br />
+It&#39;s not, it&#39;s just an object that returns the method name in string<br />
+context.<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; but just in case, I tried:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0]&lt;signature&gt;<br />
+</div>
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Sub&#39;<br />
+</div>
+<br />
+You&#39;re trying to use a hash key, not calling a method.<br />
+<br />
+$ perl6 -e &#39;say Str.^methods[0].signature&#39;<br />
+Signature&#40;&#41;&lt;0x7fff2799f5b0&gt;<br />
+$ perl6 -e &#39;say Str.^methods[0].signature.perl&#39;<br />
+<div class="message-stanza-depth-1">
+:&#40;Object self, Any $encoding?, Any $nf?, Object *%_&#41;<br />
+</div>
+<br />
+&#40;Note that the order of the returned methods is not fixed, so you might<br />
+see something different&#41;.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0].name<br />
+</div>
+&gt; pred<br />
+</div>
+<br />
+Yes, there&#39;s a method &#39;pred&#39;. So what?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; eh? The rest of the names &#40;as, multi, do&#41; don&#39;t seem to exist at all. I<br />
+&gt; expect that this is because I&#39;m not actually looking at a &#34;descriptor&#34; at<br />
+&gt; all, but rather a Sub object that stringifies itself to &#34;sprintf&#34;. Is that a<br />
+&gt; bug in Rakudo or S12?<br />
+</div>
+<br />
+I think it&#39;s just not yet implemented.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595572" href="/rt3/Ticket/Display.html?id=68306#txn-595572">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;08&nbsp;09:25:51&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595634" href="/rt3/Ticket/Display.html?id=68306#txn-595634">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;08&nbsp;14:14:10&nbsp;2009</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #68306] Rakudo 2009-07</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 8 Aug 2009 23:13:31 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595634/283958/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 320b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz Lenz &#40;&gt;&#41;, Aaron Sherman &#40;via RT&#41; &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; say Str.^methods[0]<br />
+</div>
+&gt;&gt; sprintf<br />
+&gt;&gt; [...]<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; say Str.^methods[0].name<br />
+</div>
+&gt;&gt; pred<br />
+</div>
+&gt;<br />
+&gt; Yes, there&#39;s a method &#39;pred&#39;. So what?<br />
+</div>
+<br />
+I, for one, find that pair of results... surprising. If the method<br />
+object stringifies to its name, shouldn&#39;t the above two print the<br />
+same?<br />
+<br />
+// Carl<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595638" href="/rt3/Ticket/Display.html?id=68306#txn-595638">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;08&nbsp;16:34:38&nbsp;2009</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #68306] Rakudo 2009-07</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 09 Aug 2009 01:34:04 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595638/283962/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Aaron Sherman &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;m working in a firewalled environment today where I can&#39;t get access to<br />
+&gt; git, so here&#39;s what I see in 2009-07 downloaded from<br />
+&gt; http://github.com/rakudo/rakudo/downloads<br />
+&gt;<br />
+&gt; S12 says:<br />
+&gt;<br />
+&gt; &#34;The .^methods method returns method-descriptors containing:<br />
+&gt;<br />
+&gt;     name                the name of the method<br />
+&gt;     signature           the parameters of the method<br />
+&gt;     as                  the coercion type of the method<br />
+&gt;     multi               whether duplicate names are allowed<br />
+&gt;     do                  the method body&#34;<br />
+&gt;<br />
+&gt;<br />
+&gt;<br />
+&gt; That doesn&#39;t tell me exactly what I&#39;m looking for, but I tried:<br />
+&gt;<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0]<br />
+&gt;&gt;     <br />
+</div>
+&gt; sprintf<br />
+&gt;<br />
+&gt; Which looks suspiciously like a single string, but just in case, I tried:<br />
+&gt;<br />
+&gt;   <br />
+</div>
+It&#39;s a Method object, or at least should be. &#40;The S12 wording is maybe a <br />
+little misleading in its use of &#34;descriptor&#34; which suggests you get <br />
+something other than the Method object itself. Would be good to clarify <br />
+S12 there.&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0]&lt;signature&gt;<br />
+&gt;&gt;     <br />
+</div>
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Sub&#39;<br />
+&gt; in Main &#40;&lt;unknown&gt;:1&#41;<br />
+&gt;   <br />
+</div>
+Pretty much correct - subs don&#39;t do associative indexing &#40;fine, better <br />
+error message would be good, but it&#39;s not so wrong&#41;. You should call <br />
+.signature to get the signature.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0].^signature<br />
+&gt;&gt;     <br />
+</div>
+&gt; Method &#39;signature&#39; not found for invocant of class &#39;P6metaclass&#39;<br />
+&gt;   <br />
+</div>
+Correct. .signature is a method on the Method object, not it&#39;s metaclass.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0].signature<br />
+&gt;&gt;     <br />
+</div>
+&gt; No signature found<br />
+&gt;<br />
+&gt; That last one looks more promising, but still not quite as advertised. <br />
+</div>
+This is a Rakudo issue. Basically, subs written in the Perl 6 setting <br />
+get a signature object set up for them. Those written in PIR don&#39;t. We <br />
+can fix that and have in some cases already, but it&#39;s easier to wait on <br />
+that than do it now, as more and more stuff gets moved into the Perl 6 <br />
+setting. ;-&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Oddly enough if I try another one of the &#34;descriptors&#34; listed, it gets stranger:<br />
+&gt;<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; say Str.^methods[0].name<br />
+&gt;&gt;     <br />
+</div>
+&gt; pred<br />
+&gt;<br />
+&gt; eh? The rest of the names &#40;as, multi, do&#41; don&#39;t seem to exist at all. I<br />
+&gt; expect that this is because I&#39;m not actually looking at a &#34;descriptor&#34; at<br />
+&gt; all, but rather a Sub object that stringifies itself to &#34;sprintf&#34;. Is that a<br />
+&gt; bug in Rakudo or S12?<br />
+&gt;   <br />
+</div>
+As mentioned earlier in this message, the descriptor and the Sub object <br />
+are the same thing. .multi should work though was only recently <br />
+implemented; .as doesn&#39;t because Rakudo doesn&#39;t implement coercion yet; <br />
+.do I don&#39;t really grok, and I suspect should be removed from S12 unless <br />
+somebody can actually provide an implementable spec that distinguishes <br />
+it from the object itself.<br />
+<br />
+So anyway, my feelings from this are mostly that S12 needs patching a <br />
+little to be clearer that the descriptor and the Method object itself <br />
+are not different things and - depending on feedback - the removal of <br />
+.do, and Rakudo needs to make the difference between things in PIR and <br />
+things in the setting be invisible to people using Perl 6, plus <br />
+implement coercion and then make .as work Ah, and the spec had better <br />
+mention the &#40;implemented!&#41; .of and .returns...<br />
+<br />
+Visiting friends and being sick at the moment...will try and chase up <br />
+both sides of this once I&#39;m back home and healthy. :-&#41;<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595660" href="/rt3/Ticket/Display.html?id=68306#txn-595660">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;08&nbsp;20:44:24&nbsp;2009</td>
+    <td class="description">
+      ajs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #68306] Rakudo 2009-07</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 8 Aug 2009 23:43:47 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Aaron Sherman &lt;ajs <!-- x --> at ajs.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/595660/283972/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 698b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Aug 8, 2009 at 5:13 PM, Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Moritz Lenz &#40;&gt;&#41;, Aaron Sherman &#40;via RT&#41; &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+<div class="message-stanza-depth-4">
+&gt; &gt;&gt;&gt; say Str.^methods[0]<br />
+</div>
+&gt; &gt;&gt; sprintf<br />
+&gt; &gt;&gt; [...]<br />
+<div class="message-stanza-depth-4">
+&gt; &gt;&gt;&gt; say Str.^methods[0].name<br />
+</div>
+&gt; &gt;&gt; pred<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt; Yes, there&#39;s a method &#39;pred&#39;. So what?<br />
+</div>
+&gt;<br />
+&gt; I, for one, find that pair of results... surprising. If the method<br />
+&gt; object stringifies to its name, shouldn&#39;t the above two print the<br />
+&gt; same?<br />
+&gt;<br />
+</div>
+<br />
+<br />
+Yes, that was the one that had me scratching my head the most. I was trying<br />
+to figure out which usage was correct, and was getting different, but<br />
+seemingly &#34;correct&#34; answers. Is the name of this method &#34;sprintf&#34; or &#34;pred&#34;<br />
+or am I getting both in some sort of odd quantum super-positioning?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-595702" href="/rt3/Ticket/Display.html?id=68306#txn-595702">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;09&nbsp;03:55:58&nbsp;2009</td>
+    <td class="description">
+      moritz -  Subject changed from &#39;Rakudo 2009-07&#39; to &#39;Rakudo 2009-07 - Introspection with .^methods&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.096158</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

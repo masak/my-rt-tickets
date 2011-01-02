@@ -1,0 +1,918 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#66840: [BUG] rakudo dies when Ternary Error occurs</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D66840">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#66840: [BUG] rakudo dies when Ternary Error occurs</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66840">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">66840</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=66840">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+amoc
+&lt;amoc.yn [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=66840">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=66840">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=66840">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-577476" href="/rt3/Ticket/Display.html?id=66840#txn-577476">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;21&nbsp;23:57:17&nbsp;2009</td>
+    <td class="description">
+      amoc -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] rakudo dies when Ternary Error occurs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Jun 2009 15:56:44 +0900</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">hojung yoon &lt;amoc.yn <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/577476/274282/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 390b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+at revision: 1b06df80900096dab8a9f74467f504f73a6115dd<br />
+and also at release #18.<br />
+<br />
+<div class="message-stanza-depth-1">
+: bash$ perl6<br />
+<div class="message-stanza-depth-2">
+: &gt; 1 ?? 2 !! 3<br />
+: &gt; 1 ?? &#40;1,2&#41; !! &#40;3,4&#41;<br />
+: &gt; 1 ?? 1,2 !! 3,4<br />
+</div>
+: Ternary error<br />
+: bash$<br />
+</div>
+<br />
+this is not wrong as infix:&lt;,&gt; has looser precedence than the ternary<br />
+operator&#40; ?? !! &#41;<br />
+but when ternary error occurs, the program emits the error and dies.<br />
+<br />
+should provide the proper error message and not die.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/577476/274284/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 459b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-577482" href="/rt3/Ticket/Display.html?id=66840#txn-577482">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;21&nbsp;23:57:19&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-577702" href="/rt3/Ticket/Display.html?id=66840#txn-577702">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;22&nbsp;09:50:09&nbsp;2009</td>
+    <td class="description">
+      amoc -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66840] AutoReply: [BUG] rakudo dies when Ternary Error  occurs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Jun 2009 16:59:07 +0900</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">hojung yoon &lt;amoc.yn <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/577702/274370/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 292b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+from S03:<br />
+http://perlcabal.org/syn/S03.html#Conditional_operator_precedence<br />
+<br />
+<div class="message-stanza-depth-1">
+: It is a syntax error to use an operator in the middle part that binds<br />
+</div>
+looser in precedence, such as =.<br />
+<br />
+<div class="message-stanza-depth-1">
+:     my $x;<br />
+:     hmm&#40;&#41; ?? $x = 1 !! $x = 2;        # ERROR<br />
+:     hmm&#40;&#41; ?? &#40;$x = 1&#41; !! &#40;$x = 2&#41;;    # works<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-577704" href="/rt3/Ticket/Display.html?id=66840#txn-577704">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;22&nbsp;09:55:26&nbsp;2009</td>
+    <td class="description">
+      KyleHa -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66840] [BUG] rakudo dies when Ternary Error occurs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Jun 2009 11:54:55 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Kyle Hasselbacher &lt;kyleha <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/577704/274372/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1012b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+By my reading, it really is an error, not valid code.  The infix:&lt;,&gt; is<br />
+looser than the ternary, as you say, so without parens, it parses as:<br />
+<br />
+&#40;1 ?? 1&#41;,&#40;2 !! 3&#41;,4<br />
+<br />
+I agree, however, that this shouldn&#39;t die.<br />
+<br />
+I&#39;ve added a test for this in t/spec/S03-operators/ternary.t<br />
+<br />
+Thanks.<br />
+<br />
+Kyle.<br />
+<br />
+On Mon, Jun 22, 2009 at 1:57 AM, Hojung Yoon<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt;wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Hojung Yoon<br />
+&gt; # Please include the string:  [perl #66840]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=66840 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; at revision: 1b06df80900096dab8a9f74467f504f73a6115dd<br />
+&gt; and also at release #18.<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt; : bash$ perl6<br />
+<div class="message-stanza-depth-3">
+&gt; : &gt; 1 ?? 2 !! 3<br />
+&gt; : &gt; 1 ?? &#40;1,2&#41; !! &#40;3,4&#41;<br />
+&gt; : &gt; 1 ?? 1,2 !! 3,4<br />
+</div>
+&gt; : Ternary error<br />
+&gt; : bash$<br />
+</div>
+&gt;<br />
+&gt; this is not wrong as infix:&lt;,&gt; has looser precedence than the ternary<br />
+&gt; operator&#40; ?? !! &#41;<br />
+&gt; but when ternary error occurs, the program emits the error and dies.<br />
+&gt;<br />
+&gt; should provide the proper error message and not die.<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-577708" href="/rt3/Ticket/Display.html?id=66840#txn-577708">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;22&nbsp;09:55:28&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-577724" href="/rt3/Ticket/Display.html?id=66840#txn-577724">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;22&nbsp;10:33:36&nbsp;2009</td>
+    <td class="description">
+      john <!-- x --> at perlwolf.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #66840] AutoReply: [BUG] rakudo dies when Ternary Error occurs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Jun 2009 13:34:30 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">hojung yoon &lt;amoc.yn <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">John Macdonald &lt;john <!-- x --> at perlwolf.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/577724/274382/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, Jun 22, 2009 at 04:59:07PM +0900, hojung yoon wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; from S03:<br />
+&gt; http://perlcabal.org/syn/S03.html#Conditional_operator_precedence<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; : It is a syntax error to use an operator in the middle part that binds<br />
+</div>
+&gt; looser in precedence, such as =.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; :     my $x;<br />
+&gt; :     hmm&#40;&#41; ?? $x = 1 !! $x = 2;        # ERROR<br />
+&gt; :     hmm&#40;&#41; ?? &#40;$x = 1&#41; !! &#40;$x = 2&#41;;    # works<br />
+</div>
+</div>
+<br />
+This seems like something that is eligible for DWIMery.  If the<br />
+tokenizer were to automatically turn &#34;??&#34; and &#34;!!&#34; into &#34;?? &#40;&#34; and<br />
+&#34;&#41; !!&#34;, it would permit such constructions.  This pair of operators<br />
+should be acting like a bracketing pair, and not be especially<br />
+susceptible to issues of precedence - it is only the expressions<br />
+before the ?? and after the !! that should be affected by the<br />
+precedence of the ??!! operator, any expression in between them<br />
+should be allowed.  &#40;Rather than inserting imaginary parens, it<br />
+can be done by treating the precedence of ?? as extremely low when<br />
+compared to operators to its right, e.g. -1; and the precedence of<br />
+<div class="message-stanza-depth-1">
+!! as even lower &#40;e.g. -2&#41; when compared to operators on its left.<br />
+</div>
+Operators outside of the ?? ... !! area are compared using the<br />
+official precedence of the ??!! operators.  &#40;Way back in compiler<br />
+construction course I did a similar sort of thing to allow assignment<br />
+to be put into the middle of an expression without requiring parens<br />
+to bind the lvalue. &#40;E.g. i=10*j=l+m was parsed as i=10*&#40;j=l+m&#41;<br />
+with assignment being high precedence over operators to its left<br />
+and low precedence to operators on its right.&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-580924" href="/rt3/Ticket/Display.html?id=66840#txn-580924">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;30&nbsp;19:45:31&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/580924/276042/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 743b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Jun 21 23:57:17 2009, amoc wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; : bash$ perl6<br />
+<div class="message-stanza-depth-3">
+&gt; : &gt; 1 ?? 1,2 !! 3,4<br />
+</div>
+&gt; : Ternary error<br />
+&gt; : bash$<br />
+</div>
+&gt; <br />
+&gt; this is not wrong as infix:&lt;,&gt; has looser precedence than the ternary<br />
+&gt; operator&#40; ?? !! &#41;<br />
+&gt; but when ternary error occurs, the program emits the error and dies.<br />
+&gt; <br />
+&gt; should provide the proper error message and not die.<br />
+</div>
+<br />
+Now fixed in 5351a33:<br />
+<br />
+  $ ./perl6<br />
+<div class="message-stanza-depth-1">
+  &gt; 1 ?? 1,2 !! 3,4<br />
+</div>
+  Ternary error at offset 6, found &#39;,&#39;<br />
+  in Main &#40;src/gen_setting.pm:3279&#41;<br />
+<div class="message-stanza-depth-1">
+  &gt; <br />
+</div>
+<br />
+I grant that the error message should be a bit more helpful, but I think<br />
+I&#39;ll postpone that part for the overall refactor of error message<br />
+handling and parsing that will be coming up soon.  As shown above, the<br />
+ternary error no longer forces an exit.<br />
+<br />
+Closing ticket,<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-580930" href="/rt3/Ticket/Display.html?id=66840#txn-580930">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;30&nbsp;19:45:35&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.202974</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

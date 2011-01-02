@@ -1,0 +1,861 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#65344: Rakudo&#39;s &#38;hash is broken</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D65344">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#65344: Rakudo&#39;s &#38;hash is broken</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=65344">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">65344</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=65344">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=65344">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="ticket-info-links">
+  <div class="titlebox ticket-info-links" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyLinks.html?id=65344">Links</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-links----Links---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="labeltop">Depends on:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Depended on by:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Parents:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Children:</td>
+    <td class="value"></td>
+  </tr>
+  <tr>
+    <td class="labeltop">Refers to:</td>
+    <td class="value">
+<ul>
+</ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="labeltop">Referred to by:</td>
+    <td class="value">
+    <ul>
+</ul>
+    </td>
+  </tr>
+
+
+</table>
+
+
+              <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=65344">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-560434" href="/rt3/Ticket/Display.html?id=65344#txn-560434">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;03&nbsp;13:24:39&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo&#39;s &#38;hash is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 3 May 2009 22:24:08 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/560434/266712/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 395b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;moritz_&gt; rakudo: say &#40;hash&#40;a =&gt; &#39;3&#39; &#41;&#41;.perl<br />
+&lt;p6eval&gt; rakudo cddb16: OUTPUT«{}␤»<br />
+&lt;moritz_&gt; wait a sec<br />
+&lt;moritz_&gt; let me look up the semantics of hash&#40;&#41; first<br />
+&lt;masak&gt; sure.<br />
+&lt;moritz_&gt; If you wish to be less ambiguous, the C&lt;hash&gt; list operator will<br />
+&lt;moritz_&gt; explicitly evaluate a list and compose a hash of the returned value,<br />
+&lt;moritz_&gt; &#40;from S04&#41;<br />
+&lt;moritz_&gt; S04:1187<br />
+* masak submits rakudobug<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-560848" href="/rt3/Ticket/Display.html?id=65344#txn-560848">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;04&nbsp;13:45:20&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/560848/266856/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun May 03 13:24:39 2009, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;moritz_&gt; rakudo: say &#40;hash&#40;a =&gt; &#39;3&#39; &#41;&#41;.perl<br />
+&gt; &lt;p6eval&gt; rakudo cddb16: OUTPUT«{}␤»<br />
+&gt; &lt;moritz_&gt; wait a sec<br />
+&gt; &lt;moritz_&gt; let me look up the semantics of hash&#40;&#41; first<br />
+&gt; &lt;masak&gt; sure.<br />
+&gt; &lt;moritz_&gt; If you wish to be less ambiguous, the C&lt;hash&gt; list operator<br />
+&gt; will<br />
+&gt; &lt;moritz_&gt; explicitly evaluate a list and compose a hash of the<br />
+&gt; returned value,<br />
+&gt; &lt;moritz_&gt; &#40;from S04&#41;<br />
+&gt; &lt;moritz_&gt; S04:1187<br />
+&gt; * masak submits rakudobug<br />
+</div>
+<br />
+This has come up before in the context of the list&#40;&#41; function, but I<br />
+don&#39;t think it was ever resolved, and hash&#40;&#41; will seem to want a similar<br />
+resolution.<br />
+<br />
+In particular, while we might expect  list&#40;1,2,x=&gt;3,4&#41;  to give us a<br />
+list of three elements, syntactically the above has only three<br />
+positional arguments and a named argument &#39;x&#39;.  It&#39;s not clear how<br />
+list&#40;&#41; should function in that case.<br />
+<br />
+With hash&#40;&#41; it might be a bit easier -- we simply use all of the named<br />
+arguments as part of constructing the hash.  But ordering becomes a bit<br />
+of an issue -- what to do with...?<br />
+<br />
+    hash&#40;&#39;x&#39; =&gt; 3, &#39;x&#39;, 4&#41;<br />
+<br />
+Does the resulting entry for &#39;x&#39; become [3, 4] or [4, 3]?  Or do we need<br />
+to know the relative ordering of the named/positional arguments &#40;as in<br />
+list&#40;&#41; above&#41;?<br />
+<br />
+At any rate, the spec seems to want a slight clarification here.<br />
+<br />
+Thanks,<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-560852" href="/rt3/Ticket/Display.html?id=65344#txn-560852">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;04&nbsp;13:45:22&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-561234" href="/rt3/Ticket/Display.html?id=65344#txn-561234">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;05&nbsp;11:13:42&nbsp;2009</td>
+    <td class="description">
+      not.com <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65344] Rakudo&#39;s &#38;hash is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 5 May 2009 11:12:53 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/561234/267064/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, May 4, 2009 at 1:45 PM, Patrick R. Michaud via RT<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;moritz_&gt; rakudo: say &#40;hash&#40;a =&gt; &#39;3&#39; &#41;&#41;.perl<br />
+</div>
+<br />
+should that be &#34;say &#40;hash&#40;&#39;a&#39; =&gt; &#39;3&#39; &#41;&#41;.perl&#34; - is the bareword a intentional?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say a =&gt; 3<br />
+</div>
+   &#40;no output&#41;<br />
+<div class="message-stanza-depth-1">
+&gt; say &#39;a&#39; =&gt; 3<br />
+</div>
+a       3<br />
+<div class="message-stanza-depth-1">
+&gt; say &#40;hash&#40;&#39;a&#39; =&gt; &#39;3&#39; &#41;&#41;.perl<br />
+</div>
+{&#34;a&#34; =&gt; &#34;3&#34;}<br />
+<br />
+...<br />
+<div class="message-stanza-depth-1">
+&gt; In particular, while we might expect  list&#40;1,2,x=&gt;3,4&#41;  to give us a<br />
+&gt; list of three elements, syntactically the above has only three<br />
+&gt; positional arguments and a named argument &#39;x&#39;.  It&#39;s not clear how<br />
+&gt; list&#40;&#41; should function in that case.<br />
+&gt;<br />
+&gt; With hash&#40;&#41; it might be a bit easier -- we simply use all of the named<br />
+&gt; arguments as part of constructing the hash.  But ordering becomes a bit<br />
+&gt; of an issue -- what to do with...?<br />
+&gt;<br />
+&gt;    hash&#40;&#39;x&#39; =&gt; 3, &#39;x&#39;, 4&#41;<br />
+&gt;<br />
+&gt; Does the resulting entry for &#39;x&#39; become [3, 4] or [4, 3]?  Or do we need<br />
+&gt; to know the relative ordering of the named/positional arguments &#40;as in<br />
+&gt; list&#40;&#41; above&#41;?<br />
+</div>
+<br />
+Or does it become just 3, or just 4, or &#40;ow&#41; 3|4...<br />
+<br />
+while we&#39;re at it, how do tell &#34;hash&#40;&#41;&#34; to create a hash with a pair as a key?<br />
+<div class="message-stanza-depth-1">
+&gt; say hash&#40;{&#39;y&#39;=&gt;6},4&#41;<br />
+</div>
+Odd number of elements found where hash expected<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-561238" href="/rt3/Ticket/Display.html?id=65344#txn-561238">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;05&nbsp;11:37:34&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65344] Rakudo&#39;s &#38;hash is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 05 May 2009 20:36:37 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/561238/267068/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+yary wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon, May 4, 2009 at 1:45 PM, Patrick R. Michaud via RT<br />
+&gt; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; &lt;moritz_&gt; rakudo: say &#40;hash&#40;a =&gt; &#39;3&#39; &#41;&#41;.perl<br />
+</div>
+&gt; <br />
+&gt; should that be &#34;say &#40;hash&#40;&#39;a&#39; =&gt; &#39;3&#39; &#41;&#41;.perl&#34; - is the bareword a intentional?<br />
+</div>
+<br />
+Yes, it&#39;s intentional.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; In particular, while we might expect  list&#40;1,2,x=&gt;3,4&#41;  to give us a<br />
+&gt;&gt; list of three elements, syntactically the above has only three<br />
+&gt;&gt; positional arguments and a named argument &#39;x&#39;.  It&#39;s not clear how<br />
+&gt;&gt; list&#40;&#41; should function in that case.<br />
+&gt;&gt;<br />
+&gt;&gt; With hash&#40;&#41; it might be a bit easier -- we simply use all of the named<br />
+&gt;&gt; arguments as part of constructing the hash.  But ordering becomes a bit<br />
+&gt;&gt; of an issue -- what to do with...?<br />
+&gt;&gt;<br />
+&gt;&gt;    hash&#40;&#39;x&#39; =&gt; 3, &#39;x&#39;, 4&#41;<br />
+&gt;&gt;<br />
+&gt;&gt; Does the resulting entry for &#39;x&#39; become [3, 4] or [4, 3]?  Or do we need<br />
+&gt;&gt; to know the relative ordering of the named/positional arguments &#40;as in<br />
+&gt;&gt; list&#40;&#41; above&#41;?<br />
+</div>
+</div>
+<br />
+I see your point, but I&#39;d still prefer the simple hash&#40;a =&gt; 3&#41; thing to<br />
+work for now ;-&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Or does it become just 3, or just 4, or &#40;ow&#41; 3|4...<br />
+</div>
+<br />
+Surely not 3|4. &#40;Why should we prefer an any&#40;&#41; junction about all the<br />
+other junctions?&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; while we&#39;re at it, how do tell &#34;hash&#40;&#41;&#34; to create a hash with a pair as a key?<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; say hash&#40;{&#39;y&#39;=&gt;6},4&#41;<br />
+</div>
+</div>
+<br />
+hash&#40;&#40;a =&gt; 2&#41; =&gt; 3&#41;<br />
+<br />
+Note that this stringifies the pair.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-561530" href="/rt3/Ticket/Display.html?id=65344#txn-561530">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;06&nbsp;06:29:16&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #65344] Rakudo&#39;s &#38;hash is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 6 May 2009 08:28:13 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/561530/267158/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 250b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, May 05, 2009 at 08:36:37PM +0200, Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; hash&#40;&#40;a =&gt; 2&#41; =&gt; 3&#41;<br />
+&gt; <br />
+&gt; Note that this stringifies the pair.<br />
+</div>
+<br />
+Clarification:  In Rakudo it currently stringifies the pair.  <br />
+In Perl 6 hash keys are &#40;afaik&#41; allowed to be any type.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.112997</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>
